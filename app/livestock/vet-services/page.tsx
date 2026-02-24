@@ -15,8 +15,9 @@ import { MapView } from "@/components/map/map-view";
 import { Card } from "@/components/ui/card";
 import { Target, TrendingUp } from "lucide-react";
 
-import aiData from "@/data/artificial-insemination.json";
 import type { KpiCardData, RelatedMetricCard } from "@/lib/types";
+import { useFilterContext } from "@/lib/filter-context";
+import { getDistrictData } from "@/lib/district-data";
 
 const TABLE_COLUMNS: DataTableColumn[] = [
   { key: "year", label: "Year", sortable: true },
@@ -31,10 +32,14 @@ export default function VetServicesPage() {
   const [viewMode, setViewMode] = useState<"chart" | "table" | "map">("chart");
   const [currentYear, setCurrentYear] = useState(2021);
   const [selectedTaluka, setSelectedTaluka] = useState<string | null>(null);
+  const { filters, districtInfo } = useFilterContext();
+  const aiData = getDistrictData("artificial-insemination", filters.district);
 
-  const { kpis: rawKpis, chartData, tableData, relatedMetrics: rawMetrics, talukas } = aiData;
-  const kpis = rawKpis as KpiCardData[];
-  const relatedMetrics = rawMetrics as RelatedMetricCard[];
+  const kpis = aiData.kpis as KpiCardData[];
+  const chartData = aiData.chartData as any[];
+  const tableData = aiData.tableData as any[];
+  const relatedMetrics = aiData.relatedMetrics as RelatedMetricCard[];
+  const talukas = aiData.talukas as any[];
 
   /* Dual-axis: Target & Actual (left, in thousands) + Achievement % (right) */
   const series = useMemo(() => [
@@ -64,7 +69,7 @@ export default function VetServicesPage() {
   ], []);
 
   const filteredData = useMemo(
-    () => chartData.filter((d) => Number(d.year) <= currentYear),
+    () => (chartData as any[]).filter((d: any) => Number(d.year) <= currentYear),
     [chartData, currentYear]
   );
 
@@ -73,7 +78,7 @@ export default function VetServicesPage() {
       <AppHeader
         variant="detail"
         title="Artificial Insemination Services"
-        description="AI target achievement data across all 14 talukas of Ahilyanagar (2012–2021)."
+        description={`AI target achievement data across all talukas of ${districtInfo.name} (2012–2021).`}
         breadcrumbs={[
           { label: "Dashboard", href: "/" },
           { label: "Livestock", href: "/livestock/milk-production" },
@@ -142,8 +147,8 @@ export default function VetServicesPage() {
                 <Card className="overflow-hidden border-border-light">
                   <MapView
                     className="h-[420px]"
-                    center={[74.7, 19.1]}
-                    zoom={9}
+                    center={districtInfo.center as [number, number]}
+                    zoom={districtInfo.zoom}
                     markers={talukas.map((t) => ({
                       lng: t.lng,
                       lat: t.lat,

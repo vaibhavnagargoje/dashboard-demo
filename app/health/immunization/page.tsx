@@ -15,8 +15,9 @@ import { MapView } from "@/components/map/map-view";
 import { Card } from "@/components/ui/card";
 import { Syringe, ShieldCheck } from "lucide-react";
 
-import data from "@/data/health-immunization.json";
 import type { KpiCardData, RelatedMetricCard } from "@/lib/types";
+import { useFilterContext } from "@/lib/filter-context";
+import { getDistrictData } from "@/lib/district-data";
 
 const TABLE_COLUMNS: DataTableColumn[] = [
   { key: "year", label: "Year", sortable: true },
@@ -32,10 +33,14 @@ export default function ImmunizationPage() {
   const [viewMode, setViewMode] = useState<"chart" | "table" | "map">("chart");
   const [currentYear, setCurrentYear] = useState(2021);
   const [selectedTaluka, setSelectedTaluka] = useState<string | null>(null);
+  const { filters, districtInfo } = useFilterContext();
+  const data = getDistrictData("health-immunization", filters.district);
 
-  const { kpis: rawKpis, chartData, tableData, relatedMetrics: rawMetrics, talukas } = data;
-  const kpis = rawKpis as KpiCardData[];
-  const relatedMetrics = rawMetrics as RelatedMetricCard[];
+  const kpis = data.kpis as KpiCardData[];
+  const chartData = data.chartData as any[];
+  const tableData = data.tableData as any[];
+  const relatedMetrics = data.relatedMetrics as RelatedMetricCard[];
+  const talukas = data.talukas as any[];
 
   const series = useMemo(() => [
     { dataKey: "dptPenta", name: "DPT/Pentavalent", color: "#2c699a" },
@@ -45,7 +50,7 @@ export default function ImmunizationPage() {
   ], []);
 
   const filteredData = useMemo(
-    () => chartData.filter((d) => Number(d.year) <= currentYear),
+    () => (chartData as any[]).filter((d: any) => Number(d.year) <= currentYear),
     [chartData, currentYear]
   );
 
@@ -54,7 +59,7 @@ export default function ImmunizationPage() {
       <AppHeader
         variant="detail"
         title="Immunization"
-        description="Vaccine coverage data across all 14 talukas of Ahmednagar district (2012–2021)."
+        description={`Vaccine coverage data across all talukas of ${districtInfo.name} district (2012–2021).`}
         breadcrumbs={[
           { label: "Dashboard", href: "/" },
           { label: "Health", href: "/health" },
@@ -120,8 +125,8 @@ export default function ImmunizationPage() {
                 <Card className="overflow-hidden border-border-light">
                   <MapView
                     className="h-[420px]"
-                    center={[74.7, 19.1]}
-                    zoom={9}
+                    center={districtInfo.center as [number, number]}
+                    zoom={districtInfo.zoom}
                     markers={talukas.map((t) => ({
                       lng: t.lng,
                       lat: t.lat,

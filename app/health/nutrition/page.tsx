@@ -15,8 +15,9 @@ import { MapView } from "@/components/map/map-view";
 import { Card } from "@/components/ui/card";
 import { HeartPulse, AlertTriangle, Home } from "lucide-react";
 
-import data from "@/data/health-nutrition.json";
 import type { KpiCardData, RelatedMetricCard } from "@/lib/types";
+import { useFilterContext } from "@/lib/filter-context";
+import { getDistrictData } from "@/lib/district-data";
 
 const TABLE_COLUMNS: DataTableColumn[] = [
   { key: "year", label: "Year", sortable: true },
@@ -33,10 +34,14 @@ export default function NutritionPage() {
   const [viewMode, setViewMode] = useState<"chart" | "table" | "map">("chart");
   const [currentYear, setCurrentYear] = useState(2021);
   const [selectedTaluka, setSelectedTaluka] = useState<string | null>(null);
+  const { filters, districtInfo } = useFilterContext();
+  const data = getDistrictData("health-nutrition", filters.district);
 
-  const { kpis: rawKpis, chartData, tableData, relatedMetrics: rawMetrics, talukas } = data;
-  const kpis = rawKpis as KpiCardData[];
-  const relatedMetrics = rawMetrics as RelatedMetricCard[];
+  const kpis = data.kpis as KpiCardData[];
+  const chartData = data.chartData as any[];
+  const tableData = data.tableData as any[];
+  const relatedMetrics = data.relatedMetrics as RelatedMetricCard[];
+  const talukas = data.talukas as any[];
 
   const series = useMemo(() => [
     { dataKey: "normalPct", name: "Normal Weight %", color: "#10b981", yAxisId: "left" as const, fill: true, strokeWidth: 2.5 },
@@ -46,7 +51,7 @@ export default function NutritionPage() {
   ], []);
 
   const filteredData = useMemo(
-    () => chartData.filter((d) => Number(d.year) <= currentYear),
+    () => (chartData as any[]).filter((d: any) => Number(d.year) <= currentYear),
     [chartData, currentYear]
   );
 
@@ -55,7 +60,7 @@ export default function NutritionPage() {
       <AppHeader
         variant="detail"
         title="Nutrition & Anganwadis"
-        description="Child malnutrition rates and Anganwadi centre coverage across Ahmednagar district (2012–2021)."
+        description={`Child malnutrition rates and Anganwadi centre coverage across ${districtInfo.name} district (2012–2021).`}
         breadcrumbs={[
           { label: "Dashboard", href: "/" },
           { label: "Health", href: "/health" },
@@ -123,8 +128,8 @@ export default function NutritionPage() {
                 <Card className="overflow-hidden border-border-light">
                   <MapView
                     className="h-[420px]"
-                    center={[74.7, 19.1]}
-                    zoom={9}
+                    center={districtInfo.center as [number, number]}
+                    zoom={districtInfo.zoom}
                     markers={talukas.map((t) => ({
                       lng: t.lng,
                       lat: t.lat,

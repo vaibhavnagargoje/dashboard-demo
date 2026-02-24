@@ -1,0 +1,86 @@
+{
+  "center": [
+    79.65,
+    21.17
+  ],
+  "zoom": 9,
+  "talukas": [
+    {
+      "name": "Bhandara",
+      "lng": 79.65,
+      "lat": 21.17,
+      "milkDaily": 28,
+      "vetFacilities": 12,
+      "fishProd": 91,
+      "aiAchievement": 20,
+      "societies": 55,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Tumsar",
+      "lng": 79.74,
+      "lat": 21.38,
+      "milkDaily": 130,
+      "vetFacilities": 9,
+      "fishProd": 50,
+      "aiAchievement": 20,
+      "societies": 81,
+      "color": "#008450"
+    },
+    {
+      "name": "Pauni",
+      "lng": 79.63,
+      "lat": 20.79,
+      "milkDaily": 53,
+      "vetFacilities": 4,
+      "fishProd": 7,
+      "aiAchievement": 13,
+      "societies": 41,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Mohadi",
+      "lng": 79.67,
+      "lat": 21.31,
+      "milkDaily": 9,
+      "vetFacilities": 6,
+      "fishProd": 4,
+      "aiAchievement": 25,
+      "societies": 34,
+      "color": "#3c4e6a"
+    },
+    {
+      "name": "Sakoli",
+      "lng": 79.98,
+      "lat": 21.07,
+      "milkDaily": 0,
+      "vetFacilities": 5,
+      "fishProd": 54,
+      "aiAchievement": 18,
+      "societies": 10,
+      "color": "#d4af37"
+    },
+    {
+      "name": "Lakhni",
+      "lng": 79.85,
+      "lat": 20.88,
+      "milkDaily": 12,
+      "vetFacilities": 6,
+      "fishProd": 8,
+      "aiAchievement": 18,
+      "societies": 13,
+      "color": "#10b981"
+    },
+    {
+      "name": "Lakhandur",
+      "lng": 79.88,
+      "lat": 20.85,
+      "milkDaily": 0,
+      "vetFacilities": 6,
+      "fishProd": 5,
+      "aiAchievement": 19,
+      "societies": 10,
+      "color": "#e07b39"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "center": [
+    75.7581,
+    18.9893
+  ],
+  "zoom": 9,
+  "talukas": [
+    {
+      "name": "Beed",
+      "lng": 75.7581,
+      "lat": 18.9893,
+      "milkDaily": 55,
+      "vetFacilities": 19,
+      "fishProd": 158,
+      "aiAchievement": 34,
+      "societies": 95,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Ashti",
+      "lng": 75.38,
+      "lat": 18.95,
+      "milkDaily": 223,
+      "vetFacilities": 16,
+      "fishProd": 77,
+      "aiAchievement": 28,
+      "societies": 130,
+      "color": "#008450"
+    },
+    {
+      "name": "Patoda",
+      "lng": 75.25,
+      "lat": 19.17,
+      "milkDaily": 94,
+      "vetFacilities": 8,
+      "fishProd": 9,
+      "aiAchievement": 21,
+      "societies": 69,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Shirur Kasar",
+      "lng": 75.02,
+      "lat": 19.27,
+      "milkDaily": 18,
+      "vetFacilities": 11,
+      "fishProd": 8,
+      "aiAchievement": 32,
+      "societies": 48,
+      "color": "#3c4e6a"
+    },
+    {
+      "name": "Georai",
+      "lng": 75.68,
+      "lat": 19.26,
+      "milkDaily": 0,
+      "vetFacilities": 7,
+      "fishProd": 100,
+      "aiAchievement": 25,
+      "societies": 17,
+      "color": "#d4af37"
+    },
+    {
+      "name": "Majalgaon",
+      "lng": 76.21,
+      "lat": 19.15,
+      "milkDaily": 18,
+      "vetFacilities": 10,
+      "fishProd": 15,
+      "aiAchievement": 32,
+      "societies": 17,
+      "color": "#10b981"
+    },
+    {
+      "name": "Wadwani",
+      "lng": 76.01,
+      "lat": 18.8,
+      "milkDaily": 0,
+      "vetFacilities": 9,
+      "fishProd": 9,
+      "aiAchievement": 27,
+      "societies": 14,
+      "color": "#e07b39"
+    },
+    {
+      "name": "Kaij",
+      "lng": 76.3,
+      "lat": 18.85,
+      "milkDaily": 4,
+      "vetFacilities": 10,
+      "fishProd": 87,
+      "aiAchievement": 33,
+      "societies": 20,
+      "color": "#dc2626"
+    },
+    {
+      "name": "Dharur",
+      "lng": 76.09,
+      "lat": 18.82,
+      "milkDaily": 3,
+      "vetFacilities": 12,
+      "fishProd": 118,
+      "aiAchievement": 26,
+      "societies": 30,
+      "color": "#7c3aed"
+    },
+    {
+      "name": "Parli",
+      "lng": 76.53,
+      "lat": 18.85,
+      "milkDaily": 6,
+      "vetFacilities": 12,
+      "fishProd": 286,
+      "aiAchievement": 39,
+      "societies": 25,
+      "color": "#0891b2"
+    },
+    {
+      "name": "Ambejogai",
+      "lng": 76.39,
+      "lat": 18.73,
+      "milkDaily": 2,
+      "vetFacilities": 13,
+      "fishProd": 73,
+      "aiAchievement": 29,
+      "societies": 54,
+      "color": "#65a30d"
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "kpis": [
+    {
+      "label": "DPT / Pentavalent",
+      "value": "63,601",
+      "icon": "Syringe",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "up",
+        "value": "+13.4%",
+        "context": ""
+      }
+    },
+    {
+      "label": "Polio Doses",
+      "value": "56,294",
+      "icon": "ShieldCheck",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "up",
+        "value": "+10.3%",
+        "context": ""
+      }
+    },
+    {
+      "label": "BCG Coverage",
+      "value": "65,838",
+      "icon": "ShieldPlus",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "up",
+        "value": "+15.5%",
+        "context": ""
+      }
+    },
+    {
+      "label": "Measles Vaccines",
+      "value": "55,204",
+      "icon": "HeartPulse",
+      "iconBg": "bg-purple-50",
+      "trend": {
+        "direction": "up",
+        "value": "+16.8%",
+        "context": ""
+      }
+    }
+  ],
+  "chartData": [
+    {
+      "year": "2012",
+      "dptPenta": 59953,
+      "polio": 52024,
+      "bcg": 48375,
+      "measles": 47668
+    },
+    {
+      "year": "2013",
+      "dptPenta": 58185,
+      "polio": 65041,
+      "bcg": 68230,
+      "measles": 54449
+    },
+    {
+      "year": "2014",
+      "dptPenta": 161472,
+      "polio": 204867,
+      "bcg": 53572,
+      "measles": 133803
+    },
+    {
+      "year": "2015",
+      "dptPenta": 166086,
+      "polio": 239960,
+      "bcg": 62290,
+      "measles": 105538
+    },
+    {
+      "year": "2016",
+      "dptPenta": 177279,
+      "polio": 155345,
+      "bcg": 68300,
+      "measles": 131198
+    },
+    {
+      "year": "2017",
+      "dptPenta": 0,
+      "polio": 0,
+      "bcg": 0,
+      "measles": 0
+    },
+    {
+      "year": "2018",
+      "dptPenta": 156944,
+      "polio": 176309,
+      "bcg": 66393,
+      "measles": 92198
+    },
+    {
+      "year": "2019",
+      "dptPenta": 164748,
+      "polio": 249013,
+      "bcg": 50668,
+      "measles": 106692
+    },
+    {
+      "year": "2020",
+      "dptPenta": 52504,
+      "polio": 62737,
+      "bcg": 51811,
+      "measles": 60124
+    },
+    {
+      "year": "2021",
+      "dptPenta": 55185,
+      "polio": 58927,
+      "bcg": 67021,
+      "measles": 51984
+    }
+  ],
+  "tableData": [
+    {
+      "year": "2012",
+      "dptPenta": "140,420",
+      "polio": "140,506",
+      "bcg": "136,128",
+      "measles": "139,637",
+      "tetanus": "140,393"
+    },
+    {
+      "year": "2013",
+      "dptPenta": "160,049",
+      "polio": "159,698",
+      "bcg": "167,309",
+      "measles": "159,830",
+      "tetanus": "140,535"
+    },
+    {
+      "year": "2014",
+      "dptPenta": "466,778",
+      "polio": "551,707",
+      "bcg": "154,302",
+      "measles": "297,142",
+      "tetanus": "236,708"
+    },
+    {
+      "year": "2015",
+      "dptPenta": "475,125",
+      "polio": "552,016",
+      "bcg": "156,696",
+      "measles": "307,748",
+      "tetanus": "235,106"
+    },
+    {
+      "year": "2016",
+      "dptPenta": "457,356",
+      "polio": "452,696",
+      "bcg": "161,558",
+      "measles": "299,444",
+      "tetanus": "232,240"
+    },
+    {
+      "year": "2017",
+      "dptPenta": "0",
+      "polio": "0",
+      "bcg": "0",
+      "measles": "0",
+      "tetanus": "0"
+    },
+    {
+      "year": "2018",
+      "dptPenta": "390,736",
+      "polio": "392,874",
+      "bcg": "148,596",
+      "measles": "235,992",
+      "tetanus": "240,190"
+    },
+    {
+      "year": "2019",
+      "dptPenta": "375,988",
+      "polio": "610,790",
+      "bcg": "119,108",
+      "measles": "249,688",
+      "tetanus": "216,578"
+    },
+    {
+      "year": "2020",
+      "dptPenta": "135,542",
+      "polio": "137,026",
+      "bcg": "133,462",
+      "measles": "134,778",
+      "tetanus": "150,806"
+    },
+    {
+      "year": "2021",
+      "dptPenta": "153,328",
+      "polio": "153,328",
+      "bcg": "151,030",
+      "measles": "152,322",
+      "tetanus": "150,778"
+    }
+  ],
+  "talukas": [
+    {
+      "name": "Bhandara",
+      "lng": 79.65,
+      "lat": 21.17,
+      "color": "#2c699a",
+      "polio": 3486,
+      "bcg": 3360,
+      "measles": 3206,
+      "dptPenta": 4020
+    },
+    {
+      "name": "Tumsar",
+      "lng": 79.74,
+      "lat": 21.38,
+      "color": "#008450",
+      "polio": 6160,
+      "bcg": 5741,
+      "measles": 6043,
+      "dptPenta": 5866
+    },
+    {
+      "name": "Pauni",
+      "lng": 79.63,
+      "lat": 20.79,
+      "color": "#cf5c36",
+      "polio": 4317,
+      "bcg": 4367,
+      "measles": 3688,
+      "dptPenta": 3854
+    },
+    {
+      "name": "Mohadi",
+      "lng": 79.67,
+      "lat": 21.31,
+      "color": "#3c4e6a",
+      "polio": 4479,
+      "bcg": 4531,
+      "measles": 4877,
+      "dptPenta": 3746
+    },
+    {
+      "name": "Sakoli",
+      "lng": 79.98,
+      "lat": 21.07,
+      "color": "#d4af37",
+      "polio": 3654,
+      "bcg": 3218,
+      "measles": 4496,
+      "dptPenta": 0
+    },
+    {
+      "name": "Lakhni",
+      "lng": 79.85,
+      "lat": 20.88,
+      "color": "#10b981",
+      "polio": 4208,
+      "bcg": 4221,
+      "measles": 4763,
+      "dptPenta": 0
+    },
+    {
+      "name": "Lakhandur",
+      "lng": 79.88,
+      "lat": 20.85,
+      "color": "#e07b39",
+      "polio": 3868,
+      "bcg": 3372,
+      "measles": 3022,
+      "dptPenta": 3110
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Fully Immunized (K)",
+      "subtitle": "District-level fully immunized children",
+      "icon": "ShieldCheck",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2014",
+          "value": 33
+        },
+        {
+          "label": "2015",
+          "value": 29
+        },
+        {
+          "label": "2016",
+          "value": 34
+        },
+        {
+          "label": "2017",
+          "value": 28
+        },
+        {
+          "label": "2018",
+          "value": 30
+        },
+        {
+          "label": "2019",
+          "value": 29
+        }
+      ]
+    },
+    {
+      "title": "Vaccine Mix (2021)",
+      "subtitle": "Distribution of key vaccines",
+      "icon": "Syringe",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "DPT/Penta",
+          "value": 53153
+        },
+        {
+          "label": "Polio",
+          "value": 59663
+        },
+        {
+          "label": "BCG",
+          "value": 61688
+        },
+        {
+          "label": "Measles",
+          "value": 54846
+        }
+      ]
+    },
+    {
+      "title": "Tetanus (Pregnant)",
+      "subtitle": "Tetanus vaccines for pregnant women",
+      "icon": "Baby",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "2016",
+          "value": 99361
+        },
+        {
+          "label": "2017",
+          "value": 0
+        },
+        {
+          "label": "2018",
+          "value": 91355
+        },
+        {
+          "label": "2019",
+          "value": 79394
+        },
+        {
+          "label": "2020",
+          "value": 66440
+        },
+        {
+          "label": "2021",
+          "value": 67642
+        }
+      ]
+    }
+  ]
+}

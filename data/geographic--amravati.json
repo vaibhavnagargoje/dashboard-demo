@@ -1,0 +1,163 @@
+{
+  "center": [
+    77.7523,
+    20.932
+  ],
+  "zoom": 9,
+  "talukas": [
+    {
+      "name": "Amravati",
+      "lng": 77.7523,
+      "lat": 20.932,
+      "milkDaily": 67,
+      "vetFacilities": 22,
+      "fishProd": 186,
+      "aiAchievement": 35,
+      "societies": 93,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Bhatkuli",
+      "lng": 77.58,
+      "lat": 20.87,
+      "milkDaily": 257,
+      "vetFacilities": 18,
+      "fishProd": 88,
+      "aiAchievement": 36,
+      "societies": 142,
+      "color": "#008450"
+    },
+    {
+      "name": "Nandgaon-Khandeshwar",
+      "lng": 77.68,
+      "lat": 21.07,
+      "milkDaily": 82,
+      "vetFacilities": 8,
+      "fishProd": 12,
+      "aiAchievement": 28,
+      "societies": 79,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Chandur Railway",
+      "lng": 77.62,
+      "lat": 20.82,
+      "milkDaily": 22,
+      "vetFacilities": 10,
+      "fishProd": 9,
+      "aiAchievement": 40,
+      "societies": 60,
+      "color": "#3c4e6a"
+    },
+    {
+      "name": "Daryapur",
+      "lng": 77.32,
+      "lat": 20.92,
+      "milkDaily": 0,
+      "vetFacilities": 9,
+      "fishProd": 95,
+      "aiAchievement": 31,
+      "societies": 20,
+      "color": "#d4af37"
+    },
+    {
+      "name": "Anjangaon-Surji",
+      "lng": 77.3,
+      "lat": 21.16,
+      "milkDaily": 22,
+      "vetFacilities": 13,
+      "fishProd": 15,
+      "aiAchievement": 36,
+      "societies": 18,
+      "color": "#10b981"
+    },
+    {
+      "name": "Achalpur",
+      "lng": 77.51,
+      "lat": 21.26,
+      "milkDaily": 0,
+      "vetFacilities": 11,
+      "fishProd": 9,
+      "aiAchievement": 38,
+      "societies": 20,
+      "color": "#e07b39"
+    },
+    {
+      "name": "Chandur Bazar",
+      "lng": 77.8,
+      "lat": 20.77,
+      "milkDaily": 5,
+      "vetFacilities": 10,
+      "fishProd": 103,
+      "aiAchievement": 41,
+      "societies": 25,
+      "color": "#dc2626"
+    },
+    {
+      "name": "Morshi",
+      "lng": 78.01,
+      "lat": 21.3,
+      "milkDaily": 4,
+      "vetFacilities": 14,
+      "fishProd": 126,
+      "aiAchievement": 34,
+      "societies": 34,
+      "color": "#7c3aed"
+    },
+    {
+      "name": "Warud",
+      "lng": 78.28,
+      "lat": 21.47,
+      "milkDaily": 7,
+      "vetFacilities": 11,
+      "fishProd": 373,
+      "aiAchievement": 39,
+      "societies": 22,
+      "color": "#0891b2"
+    },
+    {
+      "name": "Dharni",
+      "lng": 76.88,
+      "lat": 21.44,
+      "milkDaily": 2,
+      "vetFacilities": 13,
+      "fishProd": 86,
+      "aiAchievement": 37,
+      "societies": 68,
+      "color": "#65a30d"
+    },
+    {
+      "name": "Chikhaldara",
+      "lng": 77.31,
+      "lat": 21.42,
+      "milkDaily": 5,
+      "vetFacilities": 13,
+      "fishProd": 330,
+      "aiAchievement": 23,
+      "societies": 24,
+      "color": "#c026d3"
+    },
+    {
+      "name": "Teosa",
+      "lng": 77.96,
+      "lat": 20.75,
+      "milkDaily": 9,
+      "vetFacilities": 9,
+      "fishProd": 178,
+      "aiAchievement": 30,
+      "societies": 31,
+      "color": "#ea580c"
+    },
+    {
+      "name": "Tiosa",
+      "lng": 77.9564,
+      "lat": 20.7513,
+      "milkDaily": 0,
+      "vetFacilities": 8,
+      "fishProd": 132,
+      "aiAchievement": 18,
+      "societies": 13,
+      "color": "#0d9488"
+    }
+  ]
+}

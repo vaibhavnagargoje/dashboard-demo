@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, Search, Bell, Maximize, SlidersHorizontal, ArrowLeft, ChevronDown, Check } from "lucide-react";
+import { Menu, Search, Bell, Maximize, SlidersHorizontal, ArrowLeft, ChevronDown, Check, MapPin } from "lucide-react";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
@@ -8,6 +8,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { FISCAL_YEARS } from "@/lib/constants";
 import notificationsData from "@/data/notifications.json";
 import { cn } from "@/lib/utils";
+import { useFilterContext } from "@/lib/filter-context";
 
 interface BreadcrumbItem {
   label: string;
@@ -37,6 +38,7 @@ export function AppHeader({
   onMenuClick,
   onFilterClick,
 }: AppHeaderProps) {
+  const { districtInfo } = useFilterContext();
   const [selectedFY, setSelectedFY] = useState(FISCAL_YEARS[0]);
   const [fyOpen, setFyOpen] = useState(false);
   const [notifOpen, setNotifOpen] = useState(false);
@@ -111,10 +113,16 @@ export function AppHeader({
               <p className="text-xs text-primary/70 uppercase tracking-wider font-medium">{subtitle}</p>
             )}
 
-            {/* Title */}
-            <h1 className="font-display text-xl md:text-2xl font-bold text-primary leading-tight">
-              {title}
-            </h1>
+            {/* Title + district badge */}
+            <div className="flex items-center gap-2.5">
+              <h1 className="font-display text-xl md:text-2xl font-bold text-primary leading-tight">
+                {title}
+              </h1>
+              <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-primary/10 text-primary border border-primary/20">
+                <MapPin size={10} />
+                {districtInfo.name}
+              </span>
+            </div>
 
             {/* Description (detail pages) */}
             {description && (

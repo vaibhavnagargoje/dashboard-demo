@@ -1,0 +1,393 @@
+{
+  "kpis": [
+    {
+      "label": "District Target (2021)",
+      "value": "3L",
+      "icon": "Target",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "neutral",
+        "value": "9.9 Talukas",
+        "context": "covered"
+      }
+    },
+    {
+      "label": "Achieved (2021)",
+      "value": "38%",
+      "icon": "TrendingUp",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "down",
+        "value": "8.3%",
+        "context": "vs 2020"
+      }
+    },
+    {
+      "label": "Top Performer",
+      "value": "Rahuri",
+      "icon": "Award",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "up",
+        "value": "67.8%",
+        "context": "achievement"
+      }
+    },
+    {
+      "label": "Lowest Performer",
+      "value": "Jamkhed",
+      "icon": "AlertTriangle",
+      "iconBg": "bg-red-50",
+      "trend": {
+        "direction": "down",
+        "value": "30.4%",
+        "context": "achievement"
+      }
+    }
+  ],
+  "chartData": [
+    {
+      "year": "2012",
+      "districtTarget": 200,
+      "districtActual": 159,
+      "achievement": 64
+    },
+    {
+      "year": "2013",
+      "districtTarget": 245,
+      "districtActual": 187,
+      "achievement": 67
+    },
+    {
+      "year": "2014",
+      "districtTarget": 234,
+      "districtActual": 187,
+      "achievement": 60
+    },
+    {
+      "year": "2015",
+      "districtTarget": 275,
+      "districtActual": 160,
+      "achievement": 54
+    },
+    {
+      "year": "2016",
+      "districtTarget": 204,
+      "districtActual": 165,
+      "achievement": 45
+    },
+    {
+      "year": "2017",
+      "districtTarget": 657,
+      "districtActual": 155,
+      "achievement": 17
+    },
+    {
+      "year": "2018",
+      "districtTarget": 794,
+      "districtActual": 145,
+      "achievement": 14
+    },
+    {
+      "year": "2019",
+      "districtTarget": 283,
+      "districtActual": 160,
+      "achievement": 50
+    },
+    {
+      "year": "2020",
+      "districtTarget": 213,
+      "districtActual": 116,
+      "achievement": 42
+    },
+    {
+      "year": "2021",
+      "districtTarget": 239,
+      "districtActual": 127,
+      "achievement": 30
+    }
+  ],
+  "tableData": [
+    {
+      "year": "2012",
+      "districtTarget": "2,62,111",
+      "districtActual": "2,19,009",
+      "achievement": "83.6%",
+      "topTaluka": "Parner (96%)"
+    },
+    {
+      "year": "2013",
+      "districtTarget": "2,89,697",
+      "districtActual": "2,30,071",
+      "achievement": "79.4%",
+      "topTaluka": "Parner (95.2%)"
+    },
+    {
+      "year": "2014",
+      "districtTarget": "2,89,697",
+      "districtActual": "2,40,231",
+      "achievement": "82.9%",
+      "topTaluka": "Parner (106.4%)"
+    },
+    {
+      "year": "2015",
+      "districtTarget": "3,22,200",
+      "districtActual": "2,14,820",
+      "achievement": "66.7%",
+      "topTaluka": "Parner (83.5%)"
+    },
+    {
+      "year": "2016",
+      "districtTarget": "3,09,560",
+      "districtActual": "1,91,630",
+      "achievement": "61.9%",
+      "topTaluka": "Parner (77.5%)"
+    },
+    {
+      "year": "2017",
+      "districtTarget": "8,00,405",
+      "districtActual": "1,91,213",
+      "achievement": "23.9%",
+      "topTaluka": "Akole (40.4%)"
+    },
+    {
+      "year": "2018",
+      "districtTarget": "9,41,608",
+      "districtActual": "1,98,619",
+      "achievement": "21.1%",
+      "topTaluka": "Akole (30.3%)"
+    },
+    {
+      "year": "2019",
+      "districtTarget": "3,31,359",
+      "districtActual": "2,14,938",
+      "achievement": "64.9%",
+      "topTaluka": "Karjat (112.8%)"
+    },
+    {
+      "year": "2020",
+      "districtTarget": "3,31,359",
+      "districtActual": "1,79,556",
+      "achievement": "54.2%",
+      "topTaluka": "Karjat (64.8%)"
+    },
+    {
+      "year": "2021",
+      "districtTarget": "3,31,359",
+      "districtActual": "1,51,386",
+      "achievement": "45.7%",
+      "topTaluka": "Rahuri (57.9%)"
+    }
+  ],
+  "talukas": [
+    {
+      "name": "Amravati",
+      "lng": 77.7523,
+      "lat": 20.932,
+      "target": 20680,
+      "achievement": 44,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Bhatkuli",
+      "lng": 77.58,
+      "lat": 20.87,
+      "target": 14324,
+      "achievement": 48,
+      "color": "#008450"
+    },
+    {
+      "name": "Nandgaon-Khandeshwar",
+      "lng": 77.68,
+      "lat": 21.07,
+      "target": 17562,
+      "achievement": 43,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Chandur Railway",
+      "lng": 77.62,
+      "lat": 20.82,
+      "target": 19556,
+      "achievement": 31,
+      "color": "#3c4e6a"
+    },
+    {
+      "name": "Daryapur",
+      "lng": 77.32,
+      "lat": 20.92,
+      "target": 22057,
+      "achievement": 35,
+      "color": "#d4af37"
+    },
+    {
+      "name": "Anjangaon-Surji",
+      "lng": 77.3,
+      "lat": 21.16,
+      "target": 22290,
+      "achievement": 34,
+      "color": "#10b981"
+    },
+    {
+      "name": "Achalpur",
+      "lng": 77.51,
+      "lat": 21.26,
+      "target": 13999,
+      "achievement": 39,
+      "color": "#e07b39"
+    },
+    {
+      "name": "Chandur Bazar",
+      "lng": 77.8,
+      "lat": 20.77,
+      "target": 22637,
+      "achievement": 34,
+      "color": "#dc2626"
+    },
+    {
+      "name": "Morshi",
+      "lng": 78.01,
+      "lat": 21.3,
+      "target": 28021,
+      "achievement": 32,
+      "color": "#7c3aed"
+    },
+    {
+      "name": "Warud",
+      "lng": 78.28,
+      "lat": 21.47,
+      "target": 10766,
+      "achievement": 29,
+      "color": "#0891b2"
+    },
+    {
+      "name": "Dharni",
+      "lng": 76.88,
+      "lat": 21.44,
+      "target": 6110,
+      "achievement": 30,
+      "color": "#65a30d"
+    },
+    {
+      "name": "Chikhaldara",
+      "lng": 77.31,
+      "lat": 21.42,
+      "target": 9955,
+      "achievement": 26,
+      "color": "#c026d3"
+    },
+    {
+      "name": "Teosa",
+      "lng": 77.96,
+      "lat": 20.75,
+      "target": 21534,
+      "achievement": 22,
+      "color": "#ea580c"
+    },
+    {
+      "name": "Tiosa",
+      "lng": 77.9564,
+      "lat": 20.7513,
+      "target": 15541,
+      "achievement": 20,
+      "color": "#0d9488"
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Veterinary Facilities",
+      "subtitle": "Total across district",
+      "icon": "Stethoscope",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "2012",
+          "value": 118
+        },
+        {
+          "label": "2014",
+          "value": 189
+        },
+        {
+          "label": "2016",
+          "value": 192
+        },
+        {
+          "label": "2018",
+          "value": 188
+        },
+        {
+          "label": "2020",
+          "value": 170
+        },
+        {
+          "label": "2021",
+          "value": 192
+        }
+      ],
+      "colors": [
+        "#008450"
+      ]
+    },
+    {
+      "title": "Livestock Composition",
+      "subtitle": "Ahilyanagar 2021",
+      "icon": "PawPrint",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "Hybrid Cows",
+          "value": 66
+        },
+        {
+          "label": "Native Cows",
+          "value": 3
+        },
+        {
+          "label": "Buffalo",
+          "value": 6
+        }
+      ],
+      "colors": [
+        "#3c4e6a",
+        "#2c699a",
+        "#d4af37"
+      ]
+    },
+    {
+      "title": "Dairy Production",
+      "subtitle": "District Daily Milk (k L/day)",
+      "icon": "Droplets",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2012",
+          "value": 474
+        },
+        {
+          "label": "2014",
+          "value": 436
+        },
+        {
+          "label": "2016",
+          "value": 322
+        },
+        {
+          "label": "2018",
+          "value": 429
+        },
+        {
+          "label": "2020",
+          "value": 495
+        },
+        {
+          "label": "2021",
+          "value": 519
+        }
+      ],
+      "colors": [
+        "#2c699a"
+      ]
+    }
+  ]
+}

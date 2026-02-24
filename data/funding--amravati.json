@@ -1,0 +1,312 @@
+{
+  "kpis": [
+    {
+      "label": "Total Budget",
+      "value": "₹378 Cr",
+      "icon": "Wallet",
+      "iconBg": "bg-primary/10",
+      "trend": {
+        "direction": "neutral",
+        "value": "",
+        "context": "FY 2023-24 allocation"
+      }
+    },
+    {
+      "label": "Utilized",
+      "value": "₹409 Cr",
+      "icon": "TrendingDown",
+      "iconBg": "bg-red-50",
+      "trend": {
+        "direction": "up",
+        "value": "122.2%",
+        "context": "utilization rate"
+      }
+    },
+    {
+      "label": "Remaining",
+      "value": "₹4 Cr",
+      "icon": "PiggyBank",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "neutral",
+        "value": "0.9%",
+        "context": "unallocated"
+      }
+    },
+    {
+      "label": "Largest Head",
+      "value": "₹142 Cr",
+      "icon": "Building",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "neutral",
+        "value": "40.2%",
+        "context": "Infra Development"
+      }
+    }
+  ],
+  "waterfallData": [
+    {
+      "category": "Total Budget",
+      "base": 0,
+      "value": 378,
+      "type": "total"
+    },
+    {
+      "category": "Infra Dev",
+      "base": 221,
+      "value": 136,
+      "type": "expense"
+    },
+    {
+      "category": "Fodder Mgmt",
+      "base": 170,
+      "value": 82,
+      "type": "expense"
+    },
+    {
+      "category": "Disease Ctrl",
+      "base": 95,
+      "value": 66,
+      "type": "expense"
+    },
+    {
+      "category": "Direct Subsidy",
+      "base": 38,
+      "value": 48,
+      "type": "expense"
+    },
+    {
+      "category": "Admin & Logistics",
+      "base": 16,
+      "value": 25,
+      "type": "expense"
+    },
+    {
+      "category": "Emergency Funds",
+      "base": 4,
+      "value": 11,
+      "type": "expense"
+    },
+    {
+      "category": "Remaining",
+      "base": 0,
+      "value": 4,
+      "type": "balance"
+    }
+  ],
+  "tableData": [
+    {
+      "category": "Total Budget (Allocated)",
+      "amount": 370,
+      "pct": "100%",
+      "status": "Base",
+      "statusColor": "primary"
+    },
+    {
+      "category": "Infra Development",
+      "amount": -163,
+      "pct": "40%",
+      "status": "Spent",
+      "statusColor": "red"
+    },
+    {
+      "category": "Fodder Management",
+      "amount": -66,
+      "pct": "20%",
+      "status": "Spent",
+      "statusColor": "red"
+    },
+    {
+      "category": "Disease Control",
+      "amount": -67,
+      "pct": "16%",
+      "status": "Spent",
+      "statusColor": "red"
+    },
+    {
+      "category": "Direct Subsidy",
+      "amount": -54,
+      "pct": "14%",
+      "status": "Spent",
+      "statusColor": "red"
+    },
+    {
+      "category": "Admin & Logistics",
+      "amount": -23,
+      "pct": "6%",
+      "status": "Spent",
+      "statusColor": "red"
+    },
+    {
+      "category": "Emergency Funds",
+      "amount": -10,
+      "pct": "3%",
+      "status": "Reserve",
+      "statusColor": "orange"
+    },
+    {
+      "category": "Remaining Balance",
+      "amount": 4,
+      "pct": "1%",
+      "status": "Available",
+      "statusColor": "emerald"
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Veterinary Facilities",
+      "subtitle": "Hospitals & First Aid Centres",
+      "icon": "Hospital",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "2018",
+          "value": 34
+        },
+        {
+          "label": "2019",
+          "value": 40
+        },
+        {
+          "label": "2020",
+          "value": 40
+        },
+        {
+          "label": "2021",
+          "value": 39
+        },
+        {
+          "label": "2022",
+          "value": 50
+        },
+        {
+          "label": "2023",
+          "value": 48
+        },
+        {
+          "label": "2024",
+          "value": 57
+        }
+      ],
+      "colors": [
+        "#3c4e6a"
+      ]
+    },
+    {
+      "title": "AI Targets Achieved",
+      "subtitle": "Target vs Actual Numbers",
+      "icon": "FlaskConical",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "Achieved",
+          "value": 50
+        },
+        {
+          "label": "Remaining",
+          "value": 17
+        }
+      ],
+      "colors": [
+        "#10b981",
+        "#e2e5ea"
+      ]
+    },
+    {
+      "title": "Fisheries Cooperatives",
+      "subtitle": "Active cooperatives count",
+      "icon": "Fish",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2018",
+          "value": 17
+        },
+        {
+          "label": "2019",
+          "value": 18
+        },
+        {
+          "label": "2020",
+          "value": 21
+        },
+        {
+          "label": "2021",
+          "value": 22
+        },
+        {
+          "label": "2022",
+          "value": 26
+        },
+        {
+          "label": "2023",
+          "value": 26
+        },
+        {
+          "label": "2024",
+          "value": 27
+        }
+      ],
+      "colors": [
+        "#2c699a"
+      ]
+    }
+  ],
+  "filterConfig": {
+    "metricCategories": [
+      {
+        "id": "total",
+        "label": "Total Allocation",
+        "checked": true
+      },
+      {
+        "id": "infra",
+        "label": "Infra Development",
+        "checked": true
+      },
+      {
+        "id": "fodder",
+        "label": "Fodder Mgmt",
+        "checked": true
+      },
+      {
+        "id": "disease",
+        "label": "Disease Control",
+        "checked": true
+      }
+    ],
+    "breakdownLevels": [
+      {
+        "label": "High Level (Major Heads)",
+        "value": "high"
+      },
+      {
+        "label": "Detailed (Sub-schemes)",
+        "value": "detailed"
+      }
+    ],
+    "talukas": [
+      {
+        "name": "All Talukas",
+        "selected": true
+      },
+      {
+        "name": "Sangamner",
+        "selected": false
+      },
+      {
+        "name": "Akole",
+        "selected": false
+      },
+      {
+        "name": "Kopargaon",
+        "selected": false
+      },
+      {
+        "name": "Shrirampur",
+        "selected": false
+      }
+    ]
+  }
+}

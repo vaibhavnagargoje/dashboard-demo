@@ -1,0 +1,410 @@
+{
+  "kpis": [
+    {
+      "label": "District Daily Milk",
+      "value": "4L L/day",
+      "icon": "Droplets",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "down",
+        "value": "5.7%",
+        "context": "vs 2020"
+      },
+      "href": "/livestock/milk-production"
+    },
+    {
+      "label": "Top Taluka",
+      "value": "Sangamner",
+      "icon": "Award",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "up",
+        "value": "254.2k L/day",
+        "context": "daily avg"
+      }
+    },
+    {
+      "label": "Dairy Societies",
+      "value": "755",
+      "icon": "Building2",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "up",
+        "value": "1.0%",
+        "context": "vs 2020"
+      }
+    },
+    {
+      "label": "Total Members",
+      "value": "59,138",
+      "icon": "Users",
+      "iconBg": "bg-violet-50",
+      "trend": {
+        "direction": "up",
+        "value": "46.2%",
+        "context": "vs 2020"
+      }
+    }
+  ],
+  "chartData": [
+    {
+      "year": "2012",
+      "districtTotal": 481,
+      "sangamner": 222,
+      "kopargaon": 44
+    },
+    {
+      "year": "2013",
+      "districtTotal": 376,
+      "sangamner": 172,
+      "kopargaon": 37
+    },
+    {
+      "year": "2014",
+      "districtTotal": 378,
+      "sangamner": 205,
+      "kopargaon": 37
+    },
+    {
+      "year": "2015",
+      "districtTotal": 466,
+      "sangamner": 224,
+      "kopargaon": 51
+    },
+    {
+      "year": "2016",
+      "districtTotal": 375,
+      "sangamner": 220,
+      "kopargaon": 42
+    },
+    {
+      "year": "2017",
+      "districtTotal": 431,
+      "sangamner": 251,
+      "kopargaon": 46
+    },
+    {
+      "year": "2018",
+      "districtTotal": 398,
+      "sangamner": 238,
+      "kopargaon": 103
+    },
+    {
+      "year": "2019",
+      "districtTotal": 404,
+      "sangamner": 255,
+      "kopargaon": 90
+    },
+    {
+      "year": "2020",
+      "districtTotal": 436,
+      "sangamner": 242,
+      "kopargaon": 94
+    },
+    {
+      "year": "2021",
+      "districtTotal": 444,
+      "sangamner": 231,
+      "kopargaon": 108
+    }
+  ],
+  "tableData": [
+    {
+      "year": "2012",
+      "districtTotal": 481,
+      "sangamner": 222,
+      "kopargaon": 44,
+      "societies": 2367,
+      "members": 111520
+    },
+    {
+      "year": "2013",
+      "districtTotal": 373,
+      "sangamner": 216,
+      "kopargaon": 40,
+      "societies": 2037,
+      "members": 124785
+    },
+    {
+      "year": "2014",
+      "districtTotal": 391,
+      "sangamner": 215,
+      "kopargaon": 39,
+      "societies": 1095,
+      "members": 62171
+    },
+    {
+      "year": "2015",
+      "districtTotal": 375,
+      "sangamner": 211,
+      "kopargaon": 53,
+      "societies": 601,
+      "members": 38044
+    },
+    {
+      "year": "2016",
+      "districtTotal": 330,
+      "sangamner": 185,
+      "kopargaon": 43,
+      "societies": 673,
+      "members": 48541
+    },
+    {
+      "year": "2017",
+      "districtTotal": 430,
+      "sangamner": 209,
+      "kopargaon": 44,
+      "societies": 732,
+      "members": 34644
+    },
+    {
+      "year": "2018",
+      "districtTotal": 407,
+      "sangamner": 262,
+      "kopargaon": 98,
+      "societies": 689,
+      "members": 35491
+    },
+    {
+      "year": "2019",
+      "districtTotal": 505,
+      "sangamner": 238,
+      "kopargaon": 90,
+      "societies": 619,
+      "members": 36193
+    },
+    {
+      "year": "2020",
+      "districtTotal": 484,
+      "sangamner": 222,
+      "kopargaon": 86,
+      "societies": 695,
+      "members": 46561
+    },
+    {
+      "year": "2021",
+      "districtTotal": 499,
+      "sangamner": 257,
+      "kopargaon": 105,
+      "societies": 724,
+      "members": 75533
+    }
+  ],
+  "talukas": [
+    {
+      "name": "Amravati",
+      "lng": 77.7523,
+      "lat": 20.932,
+      "milkDaily": 201,
+      "societies": 173,
+      "members": 32572,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Bhatkuli",
+      "lng": 77.58,
+      "lat": 20.87,
+      "milkDaily": 96,
+      "societies": 72,
+      "members": 11925,
+      "color": "#008450"
+    },
+    {
+      "name": "Nandgaon-Khandeshwar",
+      "lng": 77.68,
+      "lat": 21.07,
+      "milkDaily": 65,
+      "societies": 101,
+      "members": 7653,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Chandur Railway",
+      "lng": 77.62,
+      "lat": 20.82,
+      "milkDaily": 25,
+      "societies": 20,
+      "members": 1075,
+      "color": "#3c4e6a"
+    },
+    {
+      "name": "Daryapur",
+      "lng": 77.32,
+      "lat": 20.92,
+      "milkDaily": 19,
+      "societies": 57,
+      "members": 4322,
+      "color": "#d4af37"
+    },
+    {
+      "name": "Anjangaon-Surji",
+      "lng": 77.3,
+      "lat": 21.16,
+      "milkDaily": 8,
+      "societies": 29,
+      "members": 922,
+      "color": "#10b981"
+    },
+    {
+      "name": "Achalpur",
+      "lng": 77.51,
+      "lat": 21.26,
+      "milkDaily": 9,
+      "societies": 25,
+      "members": 880,
+      "color": "#e07b39"
+    },
+    {
+      "name": "Chandur Bazar",
+      "lng": 77.8,
+      "lat": 20.77,
+      "milkDaily": 5,
+      "societies": 24,
+      "members": 1059,
+      "color": "#dc2626"
+    },
+    {
+      "name": "Morshi",
+      "lng": 78.01,
+      "lat": 21.3,
+      "milkDaily": 6,
+      "societies": 25,
+      "members": 1057,
+      "color": "#7c3aed"
+    },
+    {
+      "name": "Warud",
+      "lng": 78.28,
+      "lat": 21.47,
+      "milkDaily": 4,
+      "societies": 34,
+      "members": 1841,
+      "color": "#0891b2"
+    },
+    {
+      "name": "Dharni",
+      "lng": 76.88,
+      "lat": 21.44,
+      "milkDaily": 2,
+      "societies": 57,
+      "members": 2914,
+      "color": "#65a30d"
+    },
+    {
+      "name": "Chikhaldara",
+      "lng": 77.31,
+      "lat": 21.42,
+      "milkDaily": 0,
+      "societies": 21,
+      "members": 456,
+      "color": "#c026d3"
+    },
+    {
+      "name": "Teosa",
+      "lng": 77.96,
+      "lat": 20.75,
+      "milkDaily": 0,
+      "societies": 16,
+      "members": 763,
+      "color": "#ea580c"
+    },
+    {
+      "name": "Tiosa",
+      "lng": 77.9564,
+      "lat": 20.7513,
+      "milkDaily": 0,
+      "societies": 10,
+      "members": 391,
+      "color": "#0d9488"
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Livestock Population",
+      "subtitle": "Ahilyanagar Census 2021",
+      "icon": "PawPrint",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "Hybrid Cows",
+          "value": 58
+        },
+        {
+          "label": "Native Cows",
+          "value": 3
+        },
+        {
+          "label": "Buffalo",
+          "value": 7
+        }
+      ],
+      "colors": [
+        "#3c4e6a",
+        "#2c699a",
+        "#d4af37"
+      ]
+    },
+    {
+      "title": "Dairy By-Products",
+      "subtitle": "Production (MT) — 2021",
+      "icon": "FlaskConical",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "Ghee",
+          "value": 293
+        },
+        {
+          "label": "Powder",
+          "value": 261
+        },
+        {
+          "label": "Butter",
+          "value": 127
+        },
+        {
+          "label": "Lassi",
+          "value": 23
+        }
+      ],
+      "colors": [
+        "#3c4e6a"
+      ]
+    },
+    {
+      "title": "Cold Storage Capacity",
+      "subtitle": "District Total ('000 L)",
+      "icon": "Snowflake",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2012",
+          "value": 679
+        },
+        {
+          "label": "2014",
+          "value": 526
+        },
+        {
+          "label": "2016",
+          "value": 522
+        },
+        {
+          "label": "2018",
+          "value": 618
+        },
+        {
+          "label": "2020",
+          "value": 596
+        },
+        {
+          "label": "2021",
+          "value": 522
+        }
+      ],
+      "colors": [
+        "#2c699a"
+      ]
+    }
+  ]
+}

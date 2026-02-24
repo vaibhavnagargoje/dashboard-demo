@@ -11,8 +11,9 @@ import { WaterfallChart, type WaterfallItem } from "@/components/charts/waterfal
 import { ViewModeTabs } from "@/components/controls/view-mode-tabs";
 import { DataTable, type DataTableColumn } from "@/components/controls/data-table";
 
-import fundingData from "@/data/funding.json";
 import type { KpiCardData, RelatedMetricCard } from "@/lib/types";
+import { useFilterContext } from "@/lib/filter-context";
+import { getDistrictData } from "@/lib/district-data";
 
 const TABLE_COLUMNS: DataTableColumn[] = [
   { key: "category", label: "Category", sortable: true },
@@ -36,11 +37,13 @@ const TABLE_COLUMNS: DataTableColumn[] = [
 export default function FundingPage() {
   const [filterOpen, setFilterOpen] = useState(false);
   const [viewMode, setViewMode] = useState<"chart" | "table">("chart");
+  const { filters, districtInfo } = useFilterContext();
+  const fundingData = getDistrictData("funding", filters.district);
 
-  const { kpis: rawKpis, waterfallData: rawWaterfall, tableData, relatedMetrics: rawMetrics } = fundingData;
-  const kpis = rawKpis as KpiCardData[];
-  const waterfallData = rawWaterfall as WaterfallItem[];
-  const relatedMetrics = rawMetrics as RelatedMetricCard[];
+  const kpis = fundingData.kpis as KpiCardData[];
+  const waterfallData = fundingData.waterfallData as WaterfallItem[];
+  const tableData = fundingData.tableData as any[];
+  const relatedMetrics = fundingData.relatedMetrics as RelatedMetricCard[];
 
   return (
     <>

@@ -1,0 +1,254 @@
+{
+  "kpis": [
+    {
+      "label": "Total Livestock",
+      "value": "5.07L",
+      "icon": "PawPrint",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "up",
+        "value": "9.1%",
+        "context": "vs 2020"
+      },
+      "href": "/livestock/census"
+    },
+    {
+      "label": "Daily Milk Collection",
+      "value": "616k L/day",
+      "icon": "Droplets",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "down",
+        "value": "4.6%",
+        "context": "vs 2020"
+      },
+      "href": "/livestock/milk-production"
+    },
+    {
+      "label": "Vet Facilities",
+      "value": "228",
+      "icon": "Stethoscope",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "up",
+        "value": "2.2%",
+        "context": "vs 2020"
+      },
+      "href": "/livestock/census"
+    },
+    {
+      "label": "Dairy Societies",
+      "value": "902",
+      "icon": "Building2",
+      "iconBg": "bg-violet-50",
+      "trend": {
+        "direction": "up",
+        "value": "0.8%",
+        "context": "vs 2020"
+      },
+      "href": "/livestock/milk-production"
+    }
+  ],
+  "livestockComposition": [
+    {
+      "name": "Hybrid Cows",
+      "value": 447574,
+      "color": "#3c4e6a"
+    },
+    {
+      "name": "Native Cows",
+      "value": 20645,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Buffalo",
+      "value": 38692,
+      "color": "#d4af37"
+    }
+  ],
+  "milkTrends": [
+    {
+      "year": "2012",
+      "districtTotal": 558,
+      "sangamner": 271,
+      "kopargaon": 54
+    },
+    {
+      "year": "2013",
+      "districtTotal": 504,
+      "sangamner": 267,
+      "kopargaon": 52
+    },
+    {
+      "year": "2014",
+      "districtTotal": 510,
+      "sangamner": 253,
+      "kopargaon": 48
+    },
+    {
+      "year": "2015",
+      "districtTotal": 580,
+      "sangamner": 291,
+      "kopargaon": 73
+    },
+    {
+      "year": "2016",
+      "districtTotal": 489,
+      "sangamner": 259,
+      "kopargaon": 51
+    },
+    {
+      "year": "2017",
+      "districtTotal": 551,
+      "sangamner": 291,
+      "kopargaon": 67
+    },
+    {
+      "year": "2018",
+      "districtTotal": 617,
+      "sangamner": 329,
+      "kopargaon": 141
+    },
+    {
+      "year": "2019",
+      "districtTotal": 597,
+      "sangamner": 342,
+      "kopargaon": 113
+    },
+    {
+      "year": "2020",
+      "districtTotal": 646,
+      "sangamner": 339,
+      "kopargaon": 111
+    },
+    {
+      "year": "2021",
+      "districtTotal": 616,
+      "sangamner": 310,
+      "kopargaon": 127
+    }
+  ],
+  "serviceTrends": [
+    {
+      "year": "2012",
+      "vetFacilities": 145,
+      "aiAchievement": 83.6,
+      "fishProd": 1200
+    },
+    {
+      "year": "2013",
+      "vetFacilities": 142,
+      "aiAchievement": 79.4,
+      "fishProd": 2165
+    },
+    {
+      "year": "2014",
+      "vetFacilities": 226,
+      "aiAchievement": 82.9,
+      "fishProd": 2220
+    },
+    {
+      "year": "2015",
+      "vetFacilities": 233,
+      "aiAchievement": 66.7,
+      "fishProd": 1239
+    },
+    {
+      "year": "2016",
+      "vetFacilities": 233,
+      "aiAchievement": 61.9,
+      "fishProd": 1379
+    },
+    {
+      "year": "2017",
+      "vetFacilities": 233,
+      "aiAchievement": 23.9,
+      "fishProd": 1791
+    },
+    {
+      "year": "2018",
+      "vetFacilities": 224,
+      "aiAchievement": 21.1,
+      "fishProd": 1940
+    },
+    {
+      "year": "2019",
+      "vetFacilities": 224,
+      "aiAchievement": 64.9,
+      "fishProd": 2730
+    },
+    {
+      "year": "2020",
+      "vetFacilities": 223,
+      "aiAchievement": 54.2,
+      "fishProd": 2730
+    },
+    {
+      "year": "2021",
+      "vetFacilities": 228,
+      "aiAchievement": 45.7,
+      "fishProd": 2216
+    }
+  ],
+  "infraSummary": [
+    {
+      "label": "Vet Facilities",
+      "value": "228",
+      "icon": "Stethoscope",
+      "sub": "Hospitals + First-Aid Centres across 14 talukas",
+      "trend": "+2.2% vs 2020"
+    },
+    {
+      "label": "AI Achievement",
+      "value": "45.7%",
+      "icon": "FlaskConical",
+      "sub": "District AI target achievement (2021)",
+      "trend": "-8.5% vs 2020"
+    },
+    {
+      "label": "Fish Production",
+      "value": "2,216 T",
+      "icon": "Truck",
+      "sub": "Across 46 cooperatives, 3000 members",
+      "trend": "-18.8% vs 2020"
+    }
+  ],
+  "fundingWaterfall": [
+    {
+      "category": "Central Grants",
+      "base": 0,
+      "value": 45,
+      "type": "expense"
+    },
+    {
+      "category": "State Budget",
+      "base": 45,
+      "value": 30,
+      "type": "expense"
+    },
+    {
+      "category": "Dairy Co-ops",
+      "base": 75,
+      "value": 15,
+      "type": "expense"
+    },
+    {
+      "category": "Subsidies",
+      "base": 90,
+      "value": 8,
+      "type": "expense"
+    },
+    {
+      "category": "Other",
+      "base": 98,
+      "value": 2,
+      "type": "expense"
+    },
+    {
+      "category": "Total",
+      "base": 0,
+      "value": 100,
+      "type": "total"
+    }
+  ]
+}

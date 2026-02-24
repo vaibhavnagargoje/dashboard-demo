@@ -12,9 +12,10 @@ import { DonutChart, DonutLegend } from "@/components/charts/donut-chart";
 import { DashboardLineChart } from "@/components/charts/line-chart";
 import { WaterfallChart, type WaterfallItem } from "@/components/charts/waterfall-chart";
 
-import overviewData from "@/data/overview.json";
 import sectorsData from "@/data/sectors.json";
 import type { KpiCardData } from "@/lib/types";
+import { useFilterContext } from "@/lib/filter-context";
+import { getDistrictData } from "@/lib/district-data";
 import {
   Stethoscope,
   FlaskConical,
@@ -32,24 +33,22 @@ const INFRA_ICON_MAP: Record<string, React.ElementType> = {
 
 export default function OverviewPage() {
   const [filterOpen, setFilterOpen] = useState(false);
+  const { filters, districtInfo } = useFilterContext();
+  const overviewData = getDistrictData("overview", filters.district);
 
-  const {
-    kpis: rawKpis,
-    livestockComposition,
-    serviceTrends,
-    infraSummary,
-    fundingWaterfall: rawFunding,
-    milkTrends,
-  } = overviewData;
-  const kpis = rawKpis as KpiCardData[];
-  const fundingWaterfall = rawFunding as WaterfallItem[];
+  const kpis = overviewData.kpis as KpiCardData[];
+  const livestockComposition = overviewData.livestockComposition as any[];
+  const serviceTrends = overviewData.serviceTrends as any[];
+  const infraSummary = overviewData.infraSummary as any[];
+  const fundingWaterfall = overviewData.fundingWaterfall as WaterfallItem[];
+  const milkTrends = overviewData.milkTrends as any[];
 
   return (
     <>
       {/* Header */}
       <AppHeader
         variant="overview"
-        title="Ahilyanagar District Dashboard"
+        title={`${districtInfo.name} District Dashboard`}
         subtitle="Consolidated Overview"
         onMenuClick={() => {}}
         onFilterClick={() => setFilterOpen(true)}

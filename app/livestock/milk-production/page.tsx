@@ -15,8 +15,9 @@ import { MapView } from "@/components/map/map-view";
 import { Card } from "@/components/ui/card";
 import { Droplets, MapPin } from "lucide-react";
 
-import milkData from "@/data/milk-production.json";
 import type { KpiCardData, RelatedMetricCard } from "@/lib/types";
+import { useFilterContext } from "@/lib/filter-context";
+import { getDistrictData } from "@/lib/district-data";
 
 const TABLE_COLUMNS: DataTableColumn[] = [
   { key: "year", label: "Year", sortable: true },
@@ -32,10 +33,14 @@ export default function MilkProductionPage() {
   const [viewMode, setViewMode] = useState<"chart" | "table" | "map">("chart");
   const [currentYear, setCurrentYear] = useState(2021);
   const [selectedTaluka, setSelectedTaluka] = useState<string | null>(null);
+  const { filters, districtInfo } = useFilterContext();
+  const milkData = getDistrictData("milk-production", filters.district);
 
-  const { kpis: rawKpis, chartData, tableData, relatedMetrics: rawMetrics, talukas } = milkData;
-  const kpis = rawKpis as KpiCardData[];
-  const relatedMetrics = rawMetrics as RelatedMetricCard[];
+  const kpis = milkData.kpis as KpiCardData[];
+  const chartData = milkData.chartData as any[];
+  const tableData = milkData.tableData as any[];
+  const relatedMetrics = milkData.relatedMetrics as RelatedMetricCard[];
+  const talukas = milkData.talukas as any[];
 
   /* Build series list */
   const series = useMemo(() => [
@@ -46,7 +51,7 @@ export default function MilkProductionPage() {
 
   /* Filtered chart data up to selected year */
   const filteredData = useMemo(
-    () => chartData.filter((d) => Number(d.year) <= currentYear),
+    () => (chartData as any[]).filter((d: any) => Number(d.year) <= currentYear),
     [chartData, currentYear]
   );
 
@@ -55,7 +60,7 @@ export default function MilkProductionPage() {
       <AppHeader
         variant="detail"
         title="Milk Production Trends"
-        description="District & taluka-wise daily milk collection trends from 2012 to 2021."
+        description={`District & taluka-wise daily milk collection trends from 2012 to 2021 — ${districtInfo.name}.`}
         breadcrumbs={[
           { label: "Dashboard", href: "/" },
           { label: "Livestock", href: "/livestock/milk-production" },
@@ -125,8 +130,8 @@ export default function MilkProductionPage() {
                 <Card className="overflow-hidden border-border-light">
                   <MapView
                     className="h-[400px]"
-                    center={[74.7, 19.1]}
-                    zoom={9}
+                    center={districtInfo.center as [number, number]}
+                    zoom={districtInfo.zoom}
                     markers={talukas.map((t) => ({
                       lng: t.lng,
                       lat: t.lat,

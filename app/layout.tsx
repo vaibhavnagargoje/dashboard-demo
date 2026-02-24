@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { Sidebar } from "@/components/layout/sidebar-new";
+import { FilterProvider } from "@/lib/filter-context";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -27,16 +28,18 @@ export default function RootLayout({
       <body
         className={`${lato.variable} font-body antialiased`}
       >
-        <div className="flex h-screen overflow-hidden bg-bg-light">
-          {/* Desktop sidebar */}
-          <Sidebar />
+        <FilterProvider>
+          <div className="flex h-screen overflow-hidden bg-bg-light">
+            {/* Desktop sidebar */}
+            <Sidebar />
 
-          {/* Main content area */}
-          <main className="flex-1 overflow-y-auto">
-            {children}
-          </main>
-        </div>
-        <Toaster position="bottom-right" richColors />
+            {/* Main content area */}
+            <main className="flex-1 overflow-y-auto">
+              {children}
+            </main>
+          </div>
+          <Toaster position="bottom-right" richColors />
+        </FilterProvider>
       </body>
     </html>
   );

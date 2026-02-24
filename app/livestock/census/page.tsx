@@ -15,8 +15,9 @@ import { MapView } from "@/components/map/map-view";
 import { Card } from "@/components/ui/card";
 import { Hospital, Stethoscope } from "lucide-react";
 
-import infraData from "@/data/infrastructure.json";
 import type { KpiCardData, RelatedMetricCard } from "@/lib/types";
+import { useFilterContext } from "@/lib/filter-context";
+import { getDistrictData } from "@/lib/district-data";
 
 const TABLE_COLUMNS: DataTableColumn[] = [
   { key: "year", label: "Year", sortable: true },
@@ -31,10 +32,14 @@ export default function InfrastructurePage() {
   const [viewMode, setViewMode] = useState<"chart" | "table" | "map">("chart");
   const [currentYear, setCurrentYear] = useState(2021);
   const [selectedTaluka, setSelectedTaluka] = useState<string | null>(null);
+  const { filters, districtInfo } = useFilterContext();
+  const infraData = getDistrictData("infrastructure", filters.district);
 
-  const { kpis: rawKpis, chartData, tableData, relatedMetrics: rawMetrics, talukas } = infraData;
-  const kpis = rawKpis as KpiCardData[];
-  const relatedMetrics = rawMetrics as RelatedMetricCard[];
+  const kpis = infraData.kpis as KpiCardData[];
+  const chartData = infraData.chartData as any[];
+  const tableData = infraData.tableData as any[];
+  const relatedMetrics = infraData.relatedMetrics as RelatedMetricCard[];
+  const talukas = infraData.talukas as any[];
 
   /* Dual-axis series: Total Facilities (left) + Livestock in '000 (right) */
   const series = useMemo(() => [
@@ -56,7 +61,7 @@ export default function InfrastructurePage() {
   ], []);
 
   const filteredData = useMemo(
-    () => chartData.filter((d) => Number(d.year) <= currentYear),
+    () => (chartData as any[]).filter((d: any) => Number(d.year) <= currentYear),
     [chartData, currentYear]
   );
 
@@ -65,7 +70,7 @@ export default function InfrastructurePage() {
       <AppHeader
         variant="detail"
         title="Veterinary Facilities & Livestock Census"
-        description="Veterinary infrastructure and livestock population across all 14 talukas (2012–2021)."
+        description={`Veterinary infrastructure and livestock population across all talukas of ${districtInfo.name} (2012–2021).`}
         breadcrumbs={[
           { label: "Dashboard", href: "/" },
           { label: "Livestock", href: "/livestock/milk-production" },
@@ -133,8 +138,8 @@ export default function InfrastructurePage() {
                 <Card className="overflow-hidden border-border-light">
                   <MapView
                     className="h-[420px]"
-                    center={[74.7, 19.1]}
-                    zoom={9}
+                    center={districtInfo.center as [number, number]}
+                    zoom={districtInfo.zoom}
                     markers={talukas.map((t) => ({
                       lng: t.lng,
                       lat: t.lat,

@@ -1,0 +1,109 @@
+{
+  "districts": [
+    {
+      "slug": "ahilyanagar",
+      "name": "Ahilyanagar",
+      "center": [74.7479, 19.0948],
+      "zoom": 9,
+      "talukas": [
+        { "name": "Akole", "lng": 73.9009, "lat": 19.5333 },
+        { "name": "Sangamner", "lng": 74.2142, "lat": 19.5687 },
+        { "name": "Kopargaon", "lng": 74.4787, "lat": 19.8826 },
+        { "name": "Rahata", "lng": 74.4833, "lat": 19.7167 },
+        { "name": "Srirampur", "lng": 74.6559, "lat": 19.6164 },
+        { "name": "Nevasa", "lng": 74.9864, "lat": 19.5566 },
+        { "name": "Shevgaon", "lng": 75.0999, "lat": 19.3527 },
+        { "name": "Pathardi", "lng": 75.2068, "lat": 19.1687 },
+        { "name": "Nagar", "lng": 74.7479, "lat": 19.0948 },
+        { "name": "Rahuri", "lng": 74.6482, "lat": 19.3920 },
+        { "name": "Parner", "lng": 74.4437, "lat": 19.0000 },
+        { "name": "Srigonda", "lng": 74.6897, "lat": 18.8631 },
+        { "name": "Karjat", "lng": 75.0366, "lat": 18.9077 },
+        { "name": "Jamkhed", "lng": 75.3145, "lat": 18.7223 }
+      ]
+    },
+    {
+      "slug": "akola",
+      "name": "Akola",
+      "center": [77.0082, 20.7002],
+      "zoom": 9,
+      "talukas": [
+        { "name": "Akola", "lng": 77.0082, "lat": 20.7002 },
+        { "name": "Akot", "lng": 76.9900, "lat": 21.0958 },
+        { "name": "Telhara", "lng": 76.8200, "lat": 20.6500 },
+        { "name": "Balapur", "lng": 76.7900, "lat": 20.6300 },
+        { "name": "Patur", "lng": 76.9400, "lat": 20.4700 },
+        { "name": "Murtizapur", "lng": 77.3500, "lat": 20.7300 },
+        { "name": "Barshitakli", "lng": 77.0900, "lat": 20.8800 }
+      ]
+    },
+    {
+      "slug": "amravati",
+      "name": "Amravati",
+      "center": [77.7523, 20.9320],
+      "zoom": 9,
+      "talukas": [
+        { "name": "Amravati", "lng": 77.7523, "lat": 20.9320 },
+        { "name": "Bhatkuli", "lng": 77.5800, "lat": 20.8700 },
+        { "name": "Nandgaon-Khandeshwar", "lng": 77.6800, "lat": 21.0700 },
+        { "name": "Chandur Railway", "lng": 77.6200, "lat": 20.8200 },
+        { "name": "Daryapur", "lng": 77.3200, "lat": 20.9200 },
+        { "name": "Anjangaon-Surji", "lng": 77.3000, "lat": 21.1600 },
+        { "name": "Achalpur", "lng": 77.5100, "lat": 21.2600 },
+        { "name": "Chandur Bazar", "lng": 77.8000, "lat": 20.7700 },
+        { "name": "Morshi", "lng": 78.0100, "lat": 21.3000 },
+        { "name": "Warud", "lng": 78.2800, "lat": 21.4700 },
+        { "name": "Dharni", "lng": 76.8800, "lat": 21.4400 },
+        { "name": "Chikhaldara", "lng": 77.3100, "lat": 21.4200 },
+        { "name": "Teosa", "lng": 77.9600, "lat": 20.7500 },
+        { "name": "Tiosa", "lng": 77.9564, "lat": 20.7513 }
+      ]
+    },
+    {
+      "slug": "beed",
+      "name": "Beed",
+      "center": [75.7581, 18.9893],
+      "zoom": 9,
+      "talukas": [
+        { "name": "Beed", "lng": 75.7581, "lat": 18.9893 },
+        { "name": "Ashti", "lng": 75.3800, "lat": 18.9500 },
+        { "name": "Patoda", "lng": 75.2500, "lat": 19.1700 },
+        { "name": "Shirur Kasar", "lng": 75.0200, "lat": 19.2700 },
+        { "name": "Georai", "lng": 75.6800, "lat": 19.2600 },
+        { "name": "Majalgaon", "lng": 76.2100, "lat": 19.1500 },
+        { "name": "Wadwani", "lng": 76.0100, "lat": 18.8000 },
+        { "name": "Kaij", "lng": 76.3000, "lat": 18.8500 },
+        { "name": "Dharur", "lng": 76.0900, "lat": 18.8200 },
+        { "name": "Parli", "lng": 76.5300, "lat": 18.8500 },
+        { "name": "Ambejogai", "lng": 76.3900, "lat": 18.7300 }
+      ]
+    },
+    {
+      "slug": "bhandara",
+      "name": "Bhandara",
+      "center": [79.6500, 21.1700],
+      "zoom": 9,
+      "talukas": [
+        { "name": "Bhandara", "lng": 79.6500, "lat": 21.1700 },
+        { "name": "Tumsar", "lng": 79.7400, "lat": 21.3800 },
+        { "name": "Pauni", "lng": 79.6300, "lat": 20.7900 },
+        { "name": "Mohadi", "lng": 79.6700, "lat": 21.3100 },
+        { "name": "Sakoli", "lng": 79.9800, "lat": 21.0700 },
+        { "name": "Lakhni", "lng": 79.8500, "lat": 20.8800 },
+        { "name": "Lakhandur", "lng": 79.8800, "lat": 20.8500 }
+      ]
+    },
+    {
+      "slug": "dhule",
+      "name": "Dhule",
+      "center": [74.7749, 20.9042],
+      "zoom": 9,
+      "talukas": [
+        { "name": "Dhule", "lng": 74.7749, "lat": 20.9042 },
+        { "name": "Sakri", "lng": 74.3200, "lat": 20.9900 },
+        { "name": "Sindkheda", "lng": 74.7000, "lat": 21.2700 },
+        { "name": "Shirpur", "lng": 74.8800, "lat": 21.3500 }
+      ]
+    }
+  ]
+}

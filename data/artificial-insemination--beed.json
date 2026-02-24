@@ -1,0 +1,369 @@
+{
+  "kpis": [
+    {
+      "label": "District Target (2021)",
+      "value": "2L",
+      "icon": "Target",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "neutral",
+        "value": "14.2 Talukas",
+        "context": "covered"
+      }
+    },
+    {
+      "label": "Achieved (2021)",
+      "value": "28%",
+      "icon": "TrendingUp",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "down",
+        "value": "6.1%",
+        "context": "vs 2020"
+      }
+    },
+    {
+      "label": "Top Performer",
+      "value": "Rahuri",
+      "icon": "Award",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "up",
+        "value": "64.4%",
+        "context": "achievement"
+      }
+    },
+    {
+      "label": "Lowest Performer",
+      "value": "Jamkhed",
+      "icon": "AlertTriangle",
+      "iconBg": "bg-red-50",
+      "trend": {
+        "direction": "down",
+        "value": "27.9%",
+        "context": "achievement"
+      }
+    }
+  ],
+  "chartData": [
+    {
+      "year": "2012",
+      "districtTarget": 185,
+      "districtActual": 149,
+      "achievement": 56
+    },
+    {
+      "year": "2013",
+      "districtTarget": 172,
+      "districtActual": 130,
+      "achievement": 57
+    },
+    {
+      "year": "2014",
+      "districtTarget": 187,
+      "districtActual": 170,
+      "achievement": 49
+    },
+    {
+      "year": "2015",
+      "districtTarget": 213,
+      "districtActual": 140,
+      "achievement": 45
+    },
+    {
+      "year": "2016",
+      "districtTarget": 173,
+      "districtActual": 115,
+      "achievement": 38
+    },
+    {
+      "year": "2017",
+      "districtTarget": 516,
+      "districtActual": 133,
+      "achievement": 18
+    },
+    {
+      "year": "2018",
+      "districtTarget": 567,
+      "districtActual": 131,
+      "achievement": 16
+    },
+    {
+      "year": "2019",
+      "districtTarget": 200,
+      "districtActual": 156,
+      "achievement": 45
+    },
+    {
+      "year": "2020",
+      "districtTarget": 247,
+      "districtActual": 129,
+      "achievement": 33
+    },
+    {
+      "year": "2021",
+      "districtTarget": 231,
+      "districtActual": 87,
+      "achievement": 30
+    }
+  ],
+  "tableData": [
+    {
+      "year": "2012",
+      "districtTarget": "2,62,111",
+      "districtActual": "2,19,009",
+      "achievement": "83.6%",
+      "topTaluka": "Parner (96%)"
+    },
+    {
+      "year": "2013",
+      "districtTarget": "2,89,697",
+      "districtActual": "2,30,071",
+      "achievement": "79.4%",
+      "topTaluka": "Parner (95.2%)"
+    },
+    {
+      "year": "2014",
+      "districtTarget": "2,89,697",
+      "districtActual": "2,40,231",
+      "achievement": "82.9%",
+      "topTaluka": "Parner (106.4%)"
+    },
+    {
+      "year": "2015",
+      "districtTarget": "3,22,200",
+      "districtActual": "2,14,820",
+      "achievement": "66.7%",
+      "topTaluka": "Parner (83.5%)"
+    },
+    {
+      "year": "2016",
+      "districtTarget": "3,09,560",
+      "districtActual": "1,91,630",
+      "achievement": "61.9%",
+      "topTaluka": "Parner (77.5%)"
+    },
+    {
+      "year": "2017",
+      "districtTarget": "8,00,405",
+      "districtActual": "1,91,213",
+      "achievement": "23.9%",
+      "topTaluka": "Akole (40.4%)"
+    },
+    {
+      "year": "2018",
+      "districtTarget": "9,41,608",
+      "districtActual": "1,98,619",
+      "achievement": "21.1%",
+      "topTaluka": "Akole (30.3%)"
+    },
+    {
+      "year": "2019",
+      "districtTarget": "3,31,359",
+      "districtActual": "2,14,938",
+      "achievement": "64.9%",
+      "topTaluka": "Karjat (112.8%)"
+    },
+    {
+      "year": "2020",
+      "districtTarget": "3,31,359",
+      "districtActual": "1,79,556",
+      "achievement": "54.2%",
+      "topTaluka": "Karjat (64.8%)"
+    },
+    {
+      "year": "2021",
+      "districtTarget": "3,31,359",
+      "districtActual": "1,51,386",
+      "achievement": "45.7%",
+      "topTaluka": "Rahuri (57.9%)"
+    }
+  ],
+  "talukas": [
+    {
+      "name": "Beed",
+      "lng": 75.7581,
+      "lat": 18.9893,
+      "target": 19027,
+      "achievement": 39,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Ashti",
+      "lng": 75.38,
+      "lat": 18.95,
+      "target": 10971,
+      "achievement": 34,
+      "color": "#008450"
+    },
+    {
+      "name": "Patoda",
+      "lng": 75.25,
+      "lat": 19.17,
+      "target": 18849,
+      "achievement": 37,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Shirur Kasar",
+      "lng": 75.02,
+      "lat": 19.27,
+      "target": 19734,
+      "achievement": 35,
+      "color": "#3c4e6a"
+    },
+    {
+      "name": "Georai",
+      "lng": 75.68,
+      "lat": 19.26,
+      "target": 17578,
+      "achievement": 28,
+      "color": "#d4af37"
+    },
+    {
+      "name": "Majalgaon",
+      "lng": 76.21,
+      "lat": 19.15,
+      "target": 20744,
+      "achievement": 32,
+      "color": "#10b981"
+    },
+    {
+      "name": "Wadwani",
+      "lng": 76.01,
+      "lat": 18.8,
+      "target": 14169,
+      "achievement": 32,
+      "color": "#e07b39"
+    },
+    {
+      "name": "Kaij",
+      "lng": 76.3,
+      "lat": 18.85,
+      "target": 20666,
+      "achievement": 31,
+      "color": "#dc2626"
+    },
+    {
+      "name": "Dharur",
+      "lng": 76.09,
+      "lat": 18.82,
+      "target": 22599,
+      "achievement": 27,
+      "color": "#7c3aed"
+    },
+    {
+      "name": "Parli",
+      "lng": 76.53,
+      "lat": 18.85,
+      "target": 10445,
+      "achievement": 28,
+      "color": "#0891b2"
+    },
+    {
+      "name": "Ambejogai",
+      "lng": 76.39,
+      "lat": 18.73,
+      "target": 5083,
+      "achievement": 32,
+      "color": "#65a30d"
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Veterinary Facilities",
+      "subtitle": "Total across district",
+      "icon": "Stethoscope",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "2012",
+          "value": 84
+        },
+        {
+          "label": "2014",
+          "value": 141
+        },
+        {
+          "label": "2016",
+          "value": 163
+        },
+        {
+          "label": "2018",
+          "value": 133
+        },
+        {
+          "label": "2020",
+          "value": 162
+        },
+        {
+          "label": "2021",
+          "value": 160
+        }
+      ],
+      "colors": [
+        "#008450"
+      ]
+    },
+    {
+      "title": "Livestock Composition",
+      "subtitle": "Ahilyanagar 2021",
+      "icon": "PawPrint",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "Hybrid Cows",
+          "value": 55
+        },
+        {
+          "label": "Native Cows",
+          "value": 3
+        },
+        {
+          "label": "Buffalo",
+          "value": 6
+        }
+      ],
+      "colors": [
+        "#3c4e6a",
+        "#2c699a",
+        "#d4af37"
+      ]
+    },
+    {
+      "title": "Dairy Production",
+      "subtitle": "District Daily Milk (k L/day)",
+      "icon": "Droplets",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2012",
+          "value": 328
+        },
+        {
+          "label": "2014",
+          "value": 337
+        },
+        {
+          "label": "2016",
+          "value": 306
+        },
+        {
+          "label": "2018",
+          "value": 363
+        },
+        {
+          "label": "2020",
+          "value": 445
+        },
+        {
+          "label": "2021",
+          "value": 383
+        }
+      ],
+      "colors": [
+        "#2c699a"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "kpis": [
+    {
+      "label": "Total Vet Facilities",
+      "value": "183",
+      "icon": "Stethoscope",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "up",
+        "value": "1.6%",
+        "context": "vs 2020"
+      }
+    },
+    {
+      "label": "Vet Hospitals",
+      "value": "5",
+      "icon": "Hospital",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "neutral",
+        "value": "Stable",
+        "context": "since 2018"
+      }
+    },
+    {
+      "label": "First-Aid Centres",
+      "value": "114",
+      "icon": "BriefcaseMedical",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "neutral",
+        "value": "Stable",
+        "context": "since 2018"
+      }
+    },
+    {
+      "label": "Total Livestock",
+      "value": "4L",
+      "icon": "PawPrint",
+      "iconBg": "bg-violet-50",
+      "trend": {
+        "direction": "up",
+        "value": "7.5%",
+        "context": "vs 2020"
+      }
+    }
+  ],
+  "chartData": [
+    {
+      "year": "2012",
+      "totalFacilities": 121,
+      "vetHospitals": 6,
+      "firstAidCentres": 104,
+      "livestock": 114
+    },
+    {
+      "year": "2013",
+      "totalFacilities": 122,
+      "vetHospitals": 5,
+      "firstAidCentres": 116,
+      "livestock": 139
+    },
+    {
+      "year": "2014",
+      "totalFacilities": 176,
+      "vetHospitals": 0,
+      "firstAidCentres": 153,
+      "livestock": 139
+    },
+    {
+      "year": "2015",
+      "totalFacilities": 178,
+      "vetHospitals": 4,
+      "firstAidCentres": 153,
+      "livestock": 138
+    },
+    {
+      "year": "2016",
+      "totalFacilities": 188,
+      "vetHospitals": 5,
+      "firstAidCentres": 180,
+      "livestock": 139
+    },
+    {
+      "year": "2017",
+      "totalFacilities": 198,
+      "vetHospitals": 5,
+      "firstAidCentres": 194,
+      "livestock": 140
+    },
+    {
+      "year": "2018",
+      "totalFacilities": 152,
+      "vetHospitals": 5,
+      "firstAidCentres": 110,
+      "livestock": 326
+    },
+    {
+      "year": "2019",
+      "totalFacilities": 178,
+      "vetHospitals": 5,
+      "firstAidCentres": 104,
+      "livestock": 356
+    },
+    {
+      "year": "2020",
+      "totalFacilities": 146,
+      "vetHospitals": 5,
+      "firstAidCentres": 116,
+      "livestock": 349
+    },
+    {
+      "year": "2021",
+      "totalFacilities": 175,
+      "vetHospitals": 6,
+      "firstAidCentres": 118,
+      "livestock": 327
+    }
+  ],
+  "tableData": [
+    {
+      "year": "2012",
+      "totalFacilities": 121,
+      "vetHospitals": 6,
+      "firstAidCentres": 104,
+      "livestock": "1,76,013"
+    },
+    {
+      "year": "2013",
+      "totalFacilities": 111,
+      "vetHospitals": 5,
+      "firstAidCentres": 91,
+      "livestock": "1,71,794"
+    },
+    {
+      "year": "2014",
+      "totalFacilities": 182,
+      "vetHospitals": 0,
+      "firstAidCentres": 180,
+      "livestock": "1,96,100"
+    },
+    {
+      "year": "2015",
+      "totalFacilities": 158,
+      "vetHospitals": 5,
+      "firstAidCentres": 180,
+      "livestock": "1,80,182"
+    },
+    {
+      "year": "2016",
+      "totalFacilities": 152,
+      "vetHospitals": 5,
+      "firstAidCentres": 190,
+      "livestock": "1,69,717"
+    },
+    {
+      "year": "2017",
+      "totalFacilities": 152,
+      "vetHospitals": 5,
+      "firstAidCentres": 171,
+      "livestock": "1,87,348"
+    },
+    {
+      "year": "2018",
+      "totalFacilities": 166,
+      "vetHospitals": 5,
+      "firstAidCentres": 116,
+      "livestock": "4,64,776"
+    },
+    {
+      "year": "2019",
+      "totalFacilities": 165,
+      "vetHospitals": 5,
+      "firstAidCentres": 97,
+      "livestock": "4,64,776"
+    },
+    {
+      "year": "2020",
+      "totalFacilities": 167,
+      "vetHospitals": 5,
+      "firstAidCentres": 104,
+      "livestock": "4,64,776"
+    },
+    {
+      "year": "2021",
+      "totalFacilities": 153,
+      "vetHospitals": 5,
+      "firstAidCentres": 98,
+      "livestock": "5,06,911"
+    }
+  ],
+  "livestockBreakdown": {
+    "2020": [
+      {
+        "name": "Hybrid Cows",
+        "value": 245177,
+        "color": "#3c4e6a"
+      },
+      {
+        "name": "Native Cows",
+        "value": 60909,
+        "color": "#2c699a"
+      },
+      {
+        "name": "Buffalo",
+        "value": 56227,
+        "color": "#d4af37"
+      }
+    ],
+    "2021": [
+      {
+        "name": "Hybrid Cows",
+        "value": 366163,
+        "color": "#3c4e6a"
+      },
+      {
+        "name": "Native Cows",
+        "value": 13835,
+        "color": "#2c699a"
+      },
+      {
+        "name": "Buffalo",
+        "value": 28750,
+        "color": "#d4af37"
+      }
+    ]
+  },
+  "talukas": [
+    {
+      "name": "Amravati",
+      "lng": 77.7523,
+      "lat": 20.932,
+      "totalFacilities": 24,
+      "vetHospitals": 1,
+      "firstAidCentres": 14,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Bhatkuli",
+      "lng": 77.58,
+      "lat": 20.87,
+      "totalFacilities": 21,
+      "vetHospitals": 0,
+      "firstAidCentres": 11,
+      "color": "#008450"
+    },
+    {
+      "name": "Nandgaon-Khandeshwar",
+      "lng": 77.68,
+      "lat": 21.07,
+      "totalFacilities": 9,
+      "vetHospitals": 1,
+      "firstAidCentres": 6,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Chandur Railway",
+      "lng": 77.62,
+      "lat": 20.82,
+      "totalFacilities": 10,
+      "vetHospitals": 1,
+      "firstAidCentres": 4,
+      "color": "#3c4e6a"
+    },
+    {
+      "name": "Daryapur",
+      "lng": 77.32,
+      "lat": 20.92,
+      "totalFacilities": 9,
+      "vetHospitals": 1,
+      "firstAidCentres": 4,
+      "color": "#d4af37"
+    },
+    {
+      "name": "Anjangaon-Surji",
+      "lng": 77.3,
+      "lat": 21.16,
+      "totalFacilities": 12,
+      "vetHospitals": 0,
+      "firstAidCentres": 6,
+      "color": "#10b981"
+    },
+    {
+      "name": "Achalpur",
+      "lng": 77.51,
+      "lat": 21.26,
+      "totalFacilities": 11,
+      "vetHospitals": 0,
+      "firstAidCentres": 6,
+      "color": "#e07b39"
+    },
+    {
+      "name": "Chandur Bazar",
+      "lng": 77.8,
+      "lat": 20.77,
+      "totalFacilities": 11,
+      "vetHospitals": 0,
+      "firstAidCentres": 7,
+      "color": "#dc2626"
+    },
+    {
+      "name": "Morshi",
+      "lng": 78.01,
+      "lat": 21.3,
+      "totalFacilities": 16,
+      "vetHospitals": 1,
+      "firstAidCentres": 11,
+      "color": "#7c3aed"
+    },
+    {
+      "name": "Warud",
+      "lng": 78.28,
+      "lat": 21.47,
+      "totalFacilities": 14,
+      "vetHospitals": 1,
+      "firstAidCentres": 5,
+      "color": "#0891b2"
+    },
+    {
+      "name": "Dharni",
+      "lng": 76.88,
+      "lat": 21.44,
+      "totalFacilities": 15,
+      "vetHospitals": 1,
+      "firstAidCentres": 8,
+      "color": "#65a30d"
+    },
+    {
+      "name": "Chikhaldara",
+      "lng": 77.31,
+      "lat": 21.42,
+      "totalFacilities": 14,
+      "vetHospitals": 0,
+      "firstAidCentres": 8,
+      "color": "#c026d3"
+    },
+    {
+      "name": "Teosa",
+      "lng": 77.96,
+      "lat": 20.75,
+      "totalFacilities": 8,
+      "vetHospitals": 0,
+      "firstAidCentres": 6,
+      "color": "#ea580c"
+    },
+    {
+      "name": "Tiosa",
+      "lng": 77.9564,
+      "lat": 20.7513,
+      "totalFacilities": 8,
+      "vetHospitals": 0,
+      "firstAidCentres": 5,
+      "color": "#0d9488"
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Dairy Cooperatives",
+      "subtitle": "Active Societies (2012–2021)",
+      "icon": "Building2",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "2012",
+          "value": 2384
+        },
+        {
+          "label": "2014",
+          "value": 993
+        },
+        {
+          "label": "2016",
+          "value": 778
+        },
+        {
+          "label": "2018",
+          "value": 657
+        },
+        {
+          "label": "2020",
+          "value": 761
+        },
+        {
+          "label": "2021",
+          "value": 599
+        }
+      ],
+      "colors": [
+        "#3c4e6a"
+      ]
+    },
+    {
+      "title": "Livestock Composition",
+      "subtitle": "Ahilyanagar 2021",
+      "icon": "PawPrint",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "Hybrid Cows",
+          "value": 69
+        },
+        {
+          "label": "Native Cows",
+          "value": 3
+        },
+        {
+          "label": "Buffalo",
+          "value": 5
+        }
+      ],
+      "colors": [
+        "#3c4e6a",
+        "#2c699a",
+        "#d4af37"
+      ]
+    },
+    {
+      "title": "Fisheries Production",
+      "subtitle": "District Total (MT)",
+      "icon": "Fish",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2012",
+          "value": 1029
+        },
+        {
+          "label": "2014",
+          "value": 1597
+        },
+        {
+          "label": "2016",
+          "value": 1073
+        },
+        {
+          "label": "2018",
+          "value": 1342
+        },
+        {
+          "label": "2020",
+          "value": 1824
+        },
+        {
+          "label": "2021",
+          "value": 1953
+        }
+      ],
+      "colors": [
+        "#008450"
+      ]
+    }
+  ]
+}

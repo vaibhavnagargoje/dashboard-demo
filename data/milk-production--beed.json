@@ -1,0 +1,383 @@
+{
+  "kpis": [
+    {
+      "label": "District Daily Milk",
+      "value": "4L L/day",
+      "icon": "Droplets",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "down",
+        "value": "4.0%",
+        "context": "vs 2020"
+      },
+      "href": "/livestock/milk-production"
+    },
+    {
+      "label": "Top Taluka",
+      "value": "Sangamner",
+      "icon": "Award",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "up",
+        "value": "226.9k L/day",
+        "context": "daily avg"
+      }
+    },
+    {
+      "label": "Dairy Societies",
+      "value": "544",
+      "icon": "Building2",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "up",
+        "value": "0.7%",
+        "context": "vs 2020"
+      }
+    },
+    {
+      "label": "Total Members",
+      "value": "52,002",
+      "icon": "Users",
+      "iconBg": "bg-violet-50",
+      "trend": {
+        "direction": "up",
+        "value": "28.4%",
+        "context": "vs 2020"
+      }
+    }
+  ],
+  "chartData": [
+    {
+      "year": "2012",
+      "districtTotal": 317,
+      "sangamner": 166,
+      "kopargaon": 31
+    },
+    {
+      "year": "2013",
+      "districtTotal": 341,
+      "sangamner": 168,
+      "kopargaon": 36
+    },
+    {
+      "year": "2014",
+      "districtTotal": 335,
+      "sangamner": 154,
+      "kopargaon": 27
+    },
+    {
+      "year": "2015",
+      "districtTotal": 393,
+      "sangamner": 197,
+      "kopargaon": 46
+    },
+    {
+      "year": "2016",
+      "districtTotal": 305,
+      "sangamner": 178,
+      "kopargaon": 28
+    },
+    {
+      "year": "2017",
+      "districtTotal": 364,
+      "sangamner": 199,
+      "kopargaon": 41
+    },
+    {
+      "year": "2018",
+      "districtTotal": 394,
+      "sangamner": 186,
+      "kopargaon": 85
+    },
+    {
+      "year": "2019",
+      "districtTotal": 352,
+      "sangamner": 236,
+      "kopargaon": 76
+    },
+    {
+      "year": "2020",
+      "districtTotal": 398,
+      "sangamner": 207,
+      "kopargaon": 80
+    },
+    {
+      "year": "2021",
+      "districtTotal": 376,
+      "sangamner": 202,
+      "kopargaon": 71
+    }
+  ],
+  "tableData": [
+    {
+      "year": "2012",
+      "districtTotal": 317,
+      "sangamner": 166,
+      "kopargaon": 31,
+      "societies": 1925,
+      "members": 88164
+    },
+    {
+      "year": "2013",
+      "districtTotal": 331,
+      "sangamner": 163,
+      "kopargaon": 29,
+      "societies": 1785,
+      "members": 130882
+    },
+    {
+      "year": "2014",
+      "districtTotal": 318,
+      "sangamner": 174,
+      "kopargaon": 27,
+      "societies": 1078,
+      "members": 57265
+    },
+    {
+      "year": "2015",
+      "districtTotal": 370,
+      "sangamner": 164,
+      "kopargaon": 44,
+      "societies": 585,
+      "members": 28968
+    },
+    {
+      "year": "2016",
+      "districtTotal": 301,
+      "sangamner": 158,
+      "kopargaon": 37,
+      "societies": 636,
+      "members": 37657
+    },
+    {
+      "year": "2017",
+      "districtTotal": 363,
+      "sangamner": 179,
+      "kopargaon": 47,
+      "societies": 646,
+      "members": 31234
+    },
+    {
+      "year": "2018",
+      "districtTotal": 459,
+      "sangamner": 242,
+      "kopargaon": 84,
+      "societies": 540,
+      "members": 38397
+    },
+    {
+      "year": "2019",
+      "districtTotal": 345,
+      "sangamner": 242,
+      "kopargaon": 70,
+      "societies": 584,
+      "members": 33012
+    },
+    {
+      "year": "2020",
+      "districtTotal": 416,
+      "sangamner": 191,
+      "kopargaon": 75,
+      "societies": 508,
+      "members": 45122
+    },
+    {
+      "year": "2021",
+      "districtTotal": 425,
+      "sangamner": 174,
+      "kopargaon": 74,
+      "societies": 670,
+      "members": 53636
+    }
+  ],
+  "talukas": [
+    {
+      "name": "Beed",
+      "lng": 75.7581,
+      "lat": 18.9893,
+      "milkDaily": 188,
+      "societies": 141,
+      "members": 25750,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Ashti",
+      "lng": 75.38,
+      "lat": 18.95,
+      "milkDaily": 86,
+      "societies": 71,
+      "members": 8601,
+      "color": "#008450"
+    },
+    {
+      "name": "Patoda",
+      "lng": 75.25,
+      "lat": 19.17,
+      "milkDaily": 56,
+      "societies": 99,
+      "members": 5021,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Shirur Kasar",
+      "lng": 75.02,
+      "lat": 19.27,
+      "milkDaily": 18,
+      "societies": 17,
+      "members": 1157,
+      "color": "#3c4e6a"
+    },
+    {
+      "name": "Georai",
+      "lng": 75.68,
+      "lat": 19.26,
+      "milkDaily": 15,
+      "societies": 50,
+      "members": 4534,
+      "color": "#d4af37"
+    },
+    {
+      "name": "Majalgaon",
+      "lng": 76.21,
+      "lat": 19.15,
+      "milkDaily": 9,
+      "societies": 28,
+      "members": 780,
+      "color": "#10b981"
+    },
+    {
+      "name": "Wadwani",
+      "lng": 76.01,
+      "lat": 18.8,
+      "milkDaily": 8,
+      "societies": 22,
+      "members": 795,
+      "color": "#e07b39"
+    },
+    {
+      "name": "Kaij",
+      "lng": 76.3,
+      "lat": 18.85,
+      "milkDaily": 5,
+      "societies": 19,
+      "members": 752,
+      "color": "#dc2626"
+    },
+    {
+      "name": "Dharur",
+      "lng": 76.09,
+      "lat": 18.82,
+      "milkDaily": 5,
+      "societies": 24,
+      "members": 973,
+      "color": "#7c3aed"
+    },
+    {
+      "name": "Parli",
+      "lng": 76.53,
+      "lat": 18.85,
+      "milkDaily": 3,
+      "societies": 31,
+      "members": 1338,
+      "color": "#0891b2"
+    },
+    {
+      "name": "Ambejogai",
+      "lng": 76.39,
+      "lat": 18.73,
+      "milkDaily": 2,
+      "societies": 52,
+      "members": 2720,
+      "color": "#65a30d"
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Livestock Population",
+      "subtitle": "Ahilyanagar Census 2021",
+      "icon": "PawPrint",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "Hybrid Cows",
+          "value": 55
+        },
+        {
+          "label": "Native Cows",
+          "value": 3
+        },
+        {
+          "label": "Buffalo",
+          "value": 5
+        }
+      ],
+      "colors": [
+        "#3c4e6a",
+        "#2c699a",
+        "#d4af37"
+      ]
+    },
+    {
+      "title": "Dairy By-Products",
+      "subtitle": "Production (MT) — 2021",
+      "icon": "FlaskConical",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "Ghee",
+          "value": 266
+        },
+        {
+          "label": "Powder",
+          "value": 197
+        },
+        {
+          "label": "Butter",
+          "value": 91
+        },
+        {
+          "label": "Lassi",
+          "value": 20
+        }
+      ],
+      "colors": [
+        "#3c4e6a"
+      ]
+    },
+    {
+      "title": "Cold Storage Capacity",
+      "subtitle": "District Total ('000 L)",
+      "icon": "Snowflake",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2012",
+          "value": 549
+        },
+        {
+          "label": "2014",
+          "value": 493
+        },
+        {
+          "label": "2016",
+          "value": 511
+        },
+        {
+          "label": "2018",
+          "value": 433
+        },
+        {
+          "label": "2020",
+          "value": 490
+        },
+        {
+          "label": "2021",
+          "value": 497
+        }
+      ],
+      "colors": [
+        "#2c699a"
+      ]
+    }
+  ]
+}

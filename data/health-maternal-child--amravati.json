@@ -1,0 +1,460 @@
+{
+  "kpis": [
+    {
+      "label": "Registered Births",
+      "value": "1,08,275",
+      "icon": "Baby",
+      "iconBg": "bg-pink-50",
+      "trend": {
+        "direction": "up",
+        "value": "+0.1%",
+        "context": ""
+      }
+    },
+    {
+      "label": "Institutional Deliveries",
+      "value": "57,383",
+      "icon": "Building2",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "neutral",
+        "value": "HMIS 2192.0",
+        "context": ""
+      }
+    },
+    {
+      "label": "ANC 1st Trimester",
+      "value": "71%",
+      "icon": "HeartPulse",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "up",
+        "value": "104.9%",
+        "context": "of registrations (2019)"
+      }
+    },
+    {
+      "label": "Sex Ratio at Birth",
+      "value": "784",
+      "icon": "Users",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "down",
+        "value": "HMIS 2525.0",
+        "context": "girls per 1000 boys"
+      }
+    }
+  ],
+  "chartData": [
+    {
+      "year": "2012",
+      "totalBirths": 148052,
+      "boys": 78134,
+      "girls": 78587,
+      "deaths": 36536,
+      "infantDeaths": 706
+    },
+    {
+      "year": "2013",
+      "totalBirths": 131029,
+      "boys": 69006,
+      "girls": 74172,
+      "deaths": 38976,
+      "infantDeaths": 1419
+    },
+    {
+      "year": "2014",
+      "totalBirths": 135333,
+      "boys": 69444,
+      "girls": 67559,
+      "deaths": 45620,
+      "infantDeaths": 1401
+    },
+    {
+      "year": "2015",
+      "totalBirths": 165494,
+      "boys": 82053,
+      "girls": 88381,
+      "deaths": 42079,
+      "infantDeaths": 1412
+    },
+    {
+      "year": "2016",
+      "totalBirths": 121088,
+      "boys": 56160,
+      "girls": 54070,
+      "deaths": 23699,
+      "infantDeaths": 534
+    },
+    {
+      "year": "2017",
+      "totalBirths": 127962,
+      "boys": 69210,
+      "girls": 58944,
+      "deaths": 19212,
+      "infantDeaths": 536
+    },
+    {
+      "year": "2018",
+      "totalBirths": 98637,
+      "boys": 64139,
+      "girls": 51301,
+      "deaths": 18448,
+      "infantDeaths": 1023
+    },
+    {
+      "year": "2019",
+      "totalBirths": 120563,
+      "boys": 69223,
+      "girls": 56928,
+      "deaths": 24359,
+      "infantDeaths": 38739
+    },
+    {
+      "year": "2020",
+      "totalBirths": 103158,
+      "boys": 62825,
+      "girls": 46990,
+      "deaths": 15166,
+      "infantDeaths": 914
+    },
+    {
+      "year": "2021",
+      "totalBirths": 120110,
+      "boys": 57703,
+      "girls": 54806,
+      "deaths": 30248,
+      "infantDeaths": 221
+    }
+  ],
+  "tableData": [
+    {
+      "year": "2012",
+      "totalBirths": "204,518",
+      "boys": "108,550",
+      "girls": "95,968",
+      "sexRatio": "884",
+      "deaths": "51,554",
+      "infantDeaths": "974"
+    },
+    {
+      "year": "2013",
+      "totalBirths": "197,052",
+      "boys": "104,630",
+      "girls": "92,422",
+      "sexRatio": "883",
+      "deaths": "52,154",
+      "infantDeaths": "1,868"
+    },
+    {
+      "year": "2014",
+      "totalBirths": "200,908",
+      "boys": "104,718",
+      "girls": "96,190",
+      "sexRatio": "919",
+      "deaths": "53,834",
+      "infantDeaths": "1,968"
+    },
+    {
+      "year": "2015",
+      "totalBirths": "217,158",
+      "boys": "113,994",
+      "girls": "103,164",
+      "sexRatio": "905",
+      "deaths": "54,676",
+      "infantDeaths": "1,774"
+    },
+    {
+      "year": "2016",
+      "totalBirths": "155,274",
+      "boys": "81,946",
+      "girls": "73,328",
+      "sexRatio": "895",
+      "deaths": "28,280",
+      "infantDeaths": "784"
+    },
+    {
+      "year": "2017",
+      "totalBirths": "155,274",
+      "boys": "81,946",
+      "girls": "73,328",
+      "sexRatio": "895",
+      "deaths": "28,280",
+      "infantDeaths": "784"
+    },
+    {
+      "year": "2018",
+      "totalBirths": "147,090",
+      "boys": "76,940",
+      "girls": "70,150",
+      "sexRatio": "912",
+      "deaths": "22,872",
+      "infantDeaths": "1,584"
+    },
+    {
+      "year": "2019",
+      "totalBirths": "184,733",
+      "boys": "94,979",
+      "girls": "85,280",
+      "sexRatio": "898",
+      "deaths": "32,207",
+      "infantDeaths": "54,743"
+    },
+    {
+      "year": "2020",
+      "totalBirths": "145,384",
+      "boys": "75,958",
+      "girls": "69,426",
+      "sexRatio": "914",
+      "deaths": "23,762",
+      "infantDeaths": "1,144"
+    },
+    {
+      "year": "2021",
+      "totalBirths": "145,504",
+      "boys": "77,030",
+      "girls": "68,474",
+      "sexRatio": "889",
+      "deaths": "35,590",
+      "infantDeaths": "310"
+    }
+  ],
+  "talukas": [
+    {
+      "name": "Amravati",
+      "lng": 77.7523,
+      "lat": 20.932,
+      "color": "#2c699a",
+      "totalBirths": 5583,
+      "boys": 2986,
+      "girls": 2919,
+      "deaths": 1616,
+      "infantDeaths": 10
+    },
+    {
+      "name": "Bhatkuli",
+      "lng": 77.58,
+      "lat": 20.87,
+      "color": "#008450",
+      "totalBirths": 14671,
+      "boys": 7720,
+      "girls": 7478,
+      "deaths": 4088,
+      "infantDeaths": 15
+    },
+    {
+      "name": "Nandgaon-Khandeshwar",
+      "lng": 77.68,
+      "lat": 21.07,
+      "color": "#cf5c36",
+      "totalBirths": 5272,
+      "boys": 2804,
+      "girls": 2950,
+      "deaths": 1284,
+      "infantDeaths": 2
+    },
+    {
+      "name": "Chandur Railway",
+      "lng": 77.62,
+      "lat": 20.82,
+      "color": "#3c4e6a",
+      "totalBirths": 17250,
+      "boys": 11719,
+      "girls": 9391,
+      "deaths": 50,
+      "infantDeaths": 6
+    },
+    {
+      "name": "Daryapur",
+      "lng": 77.32,
+      "lat": 20.92,
+      "color": "#d4af37",
+      "totalBirths": 1867,
+      "boys": 984,
+      "girls": 905,
+      "deaths": 824,
+      "infantDeaths": 1
+    },
+    {
+      "name": "Anjangaon-Surji",
+      "lng": 77.3,
+      "lat": 21.16,
+      "color": "#10b981",
+      "totalBirths": 3363,
+      "boys": 2267,
+      "girls": 2030,
+      "deaths": 2008,
+      "infantDeaths": 21
+    },
+    {
+      "name": "Achalpur",
+      "lng": 77.51,
+      "lat": 21.26,
+      "color": "#e07b39",
+      "totalBirths": 6267,
+      "boys": 3194,
+      "girls": 3243,
+      "deaths": 1248,
+      "infantDeaths": 10
+    },
+    {
+      "name": "Chandur Bazar",
+      "lng": 77.8,
+      "lat": 20.77,
+      "color": "#dc2626",
+      "totalBirths": 2081,
+      "boys": 1139,
+      "girls": 925,
+      "deaths": 2900,
+      "infantDeaths": 12
+    },
+    {
+      "name": "Morshi",
+      "lng": 78.01,
+      "lat": 21.3,
+      "color": "#7c3aed",
+      "totalBirths": 27706,
+      "boys": 12917,
+      "girls": 12299,
+      "deaths": 5392,
+      "infantDeaths": 108
+    },
+    {
+      "name": "Warud",
+      "lng": 78.28,
+      "lat": 21.47,
+      "color": "#0891b2",
+      "totalBirths": 3465,
+      "boys": 2023,
+      "girls": 1877,
+      "deaths": 3799,
+      "infantDeaths": 19
+    },
+    {
+      "name": "Dharni",
+      "lng": 76.88,
+      "lat": 21.44,
+      "color": "#65a30d",
+      "totalBirths": 6672,
+      "boys": 3603,
+      "girls": 3079,
+      "deaths": 736,
+      "infantDeaths": 0
+    },
+    {
+      "name": "Chikhaldara",
+      "lng": 77.31,
+      "lat": 21.42,
+      "color": "#c026d3",
+      "totalBirths": 6056,
+      "boys": 2987,
+      "girls": 2421,
+      "deaths": 1845,
+      "infantDeaths": 3
+    },
+    {
+      "name": "Teosa",
+      "lng": 77.96,
+      "lat": 20.75,
+      "color": "#ea580c",
+      "totalBirths": 1795,
+      "boys": 1199,
+      "girls": 905,
+      "deaths": 1800,
+      "infantDeaths": 6
+    },
+    {
+      "name": "Tiosa",
+      "lng": 77.9564,
+      "lat": 20.7513,
+      "color": "#0d9488",
+      "totalBirths": 5037,
+      "boys": 2300,
+      "girls": 2664,
+      "deaths": 712,
+      "infantDeaths": 7
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Institutional Deliveries (K)",
+      "subtitle": "HMIS district data",
+      "icon": "Building2",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2014",
+          "value": 64
+        },
+        {
+          "label": "2015",
+          "value": 61
+        },
+        {
+          "label": "2016",
+          "value": 60
+        },
+        {
+          "label": "2017",
+          "value": 64
+        },
+        {
+          "label": "2018",
+          "value": 55
+        },
+        {
+          "label": "2019",
+          "value": 57
+        }
+      ]
+    },
+    {
+      "title": "Birth Gender Split (2021)",
+      "subtitle": "Boys vs Girls registered",
+      "icon": "Baby",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "Boys",
+          "value": 59038
+        },
+        {
+          "label": "Girls",
+          "value": 47441
+        }
+      ]
+    },
+    {
+      "title": "C-Section Rate %",
+      "subtitle": "Share of institutional deliveries",
+      "icon": "Scissors",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "2014",
+          "value": 9
+        },
+        {
+          "label": "2015",
+          "value": 6
+        },
+        {
+          "label": "2016",
+          "value": 12
+        },
+        {
+          "label": "2017",
+          "value": 13
+        },
+        {
+          "label": "2018",
+          "value": 14
+        },
+        {
+          "label": "2019",
+          "value": 13
+        }
+      ]
+    }
+  ]
+}

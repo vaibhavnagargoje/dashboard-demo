@@ -1,0 +1,471 @@
+{
+  "kpis": [
+    {
+      "label": "Fish Production (2021)",
+      "value": "1,667 T",
+      "icon": "Fish",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "down",
+        "value": "14.2%",
+        "context": "vs 2020"
+      }
+    },
+    {
+      "label": "Revenue (2021)",
+      "value": "₹5 Cr",
+      "icon": "IndianRupee",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "down",
+        "value": "19.1%",
+        "context": "vs 2020"
+      }
+    },
+    {
+      "label": "Cooperatives",
+      "value": "36",
+      "icon": "Building2",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "up",
+        "value": "1.6%",
+        "context": "vs 2020"
+      }
+    },
+    {
+      "label": "Top Taluka",
+      "value": "Rahuri",
+      "icon": "Award",
+      "iconBg": "bg-violet-50",
+      "trend": {
+        "direction": "up",
+        "value": "484.6 T",
+        "context": "production"
+      }
+    }
+  ],
+  "chartData": [
+    {
+      "year": "2012",
+      "fishProd": 768,
+      "revenue": 356
+    },
+    {
+      "year": "2013",
+      "fishProd": 1677,
+      "revenue": 883
+    },
+    {
+      "year": "2014",
+      "fishProd": 1476,
+      "revenue": 777
+    },
+    {
+      "year": "2015",
+      "fishProd": 1061,
+      "revenue": 443
+    },
+    {
+      "year": "2016",
+      "fishProd": 1061,
+      "revenue": 343
+    },
+    {
+      "year": "2017",
+      "fishProd": 1340,
+      "revenue": 795
+    },
+    {
+      "year": "2018",
+      "fishProd": 1426,
+      "revenue": 495
+    },
+    {
+      "year": "2019",
+      "fishProd": 1832,
+      "revenue": 643
+    },
+    {
+      "year": "2020",
+      "fishProd": 2229,
+      "revenue": 575
+    },
+    {
+      "year": "2021",
+      "fishProd": 1440,
+      "revenue": 550
+    }
+  ],
+  "tableData": [
+    {
+      "year": "2012",
+      "fishProd": "1,200",
+      "revenue": "₹48.5L",
+      "coops": 57,
+      "members": "4,544",
+      "areaUsed": "9,837 ha"
+    },
+    {
+      "year": "2013",
+      "fishProd": "2,165",
+      "revenue": "₹1.08Cr",
+      "coops": 61,
+      "members": "5,037",
+      "areaUsed": "10,738 ha"
+    },
+    {
+      "year": "2014",
+      "fishProd": "2,220",
+      "revenue": "₹1.11Cr",
+      "coops": 41,
+      "members": "5,037",
+      "areaUsed": "10,738 ha"
+    },
+    {
+      "year": "2015",
+      "fishProd": "1,239",
+      "revenue": "₹61.9L",
+      "coops": 53,
+      "members": "5,037",
+      "areaUsed": "10,738 ha"
+    },
+    {
+      "year": "2016",
+      "fishProd": "1,379",
+      "revenue": "₹41.4L",
+      "coops": 29,
+      "members": "2,953",
+      "areaUsed": "10,738 ha"
+    },
+    {
+      "year": "2017",
+      "fishProd": "1,791",
+      "revenue": "₹1.07Cr",
+      "coops": 30,
+      "members": "3,003",
+      "areaUsed": "10,738 ha"
+    },
+    {
+      "year": "2018",
+      "fishProd": "1,940",
+      "revenue": "₹58.2L",
+      "coops": 26,
+      "members": "2,800",
+      "areaUsed": "10,738 ha"
+    },
+    {
+      "year": "2019",
+      "fishProd": "2,730",
+      "revenue": "₹81.9L",
+      "coops": 29,
+      "members": "2,922",
+      "areaUsed": "9,870 ha"
+    },
+    {
+      "year": "2020",
+      "fishProd": "2,730",
+      "revenue": "₹81.4L",
+      "coops": 36,
+      "members": "2,906",
+      "areaUsed": "10,046 ha"
+    },
+    {
+      "year": "2021",
+      "fishProd": "2,216",
+      "revenue": "₹66.5L",
+      "coops": 30,
+      "members": "3,000",
+      "areaUsed": "9,917 ha"
+    }
+  ],
+  "byProducts": [
+    {
+      "year": "2012",
+      "ghee": 404,
+      "butter": 16,
+      "powder": 0,
+      "lassi": 13
+    },
+    {
+      "year": "2013",
+      "ghee": 483,
+      "butter": 31,
+      "powder": 0,
+      "lassi": 16
+    },
+    {
+      "year": "2014",
+      "ghee": 444,
+      "butter": 53,
+      "powder": 0,
+      "lassi": 33
+    },
+    {
+      "year": "2015",
+      "ghee": 233,
+      "butter": 132,
+      "powder": 0,
+      "lassi": 22
+    },
+    {
+      "year": "2016",
+      "ghee": 233,
+      "butter": 132,
+      "powder": 0,
+      "lassi": 24
+    },
+    {
+      "year": "2017",
+      "ghee": 342,
+      "butter": 130,
+      "powder": 0,
+      "lassi": 28
+    },
+    {
+      "year": "2018",
+      "ghee": 377,
+      "butter": 133,
+      "powder": 256,
+      "lassi": 28
+    },
+    {
+      "year": "2019",
+      "ghee": 398,
+      "butter": 147,
+      "powder": 300,
+      "lassi": 28
+    },
+    {
+      "year": "2020",
+      "ghee": 410,
+      "butter": 150,
+      "powder": 310,
+      "lassi": 28
+    },
+    {
+      "year": "2021",
+      "ghee": 422,
+      "butter": 153,
+      "powder": 315,
+      "lassi": 28
+    }
+  ],
+  "talukas": [
+    {
+      "name": "Amravati",
+      "lng": 77.7523,
+      "lat": 20.932,
+      "fishProd": 280,
+      "revenue": 97,
+      "coops": 2,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Bhatkuli",
+      "lng": 77.58,
+      "lat": 20.87,
+      "fishProd": 256,
+      "revenue": 85,
+      "coops": 7,
+      "color": "#008450"
+    },
+    {
+      "name": "Nandgaon-Khandeshwar",
+      "lng": 77.68,
+      "lat": 21.07,
+      "fishProd": 182,
+      "revenue": 57,
+      "coops": 6,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Chandur Railway",
+      "lng": 77.62,
+      "lat": 20.82,
+      "fishProd": 151,
+      "revenue": 53,
+      "coops": 2,
+      "color": "#3c4e6a"
+    },
+    {
+      "name": "Daryapur",
+      "lng": 77.32,
+      "lat": 20.92,
+      "fishProd": 134,
+      "revenue": 42,
+      "coops": 5,
+      "color": "#d4af37"
+    },
+    {
+      "name": "Anjangaon-Surji",
+      "lng": 77.3,
+      "lat": 21.16,
+      "fishProd": 107,
+      "revenue": 32,
+      "coops": 4,
+      "color": "#10b981"
+    },
+    {
+      "name": "Achalpur",
+      "lng": 77.51,
+      "lat": 21.26,
+      "fishProd": 118,
+      "revenue": 30,
+      "coops": 1,
+      "color": "#e07b39"
+    },
+    {
+      "name": "Chandur Bazar",
+      "lng": 77.8,
+      "lat": 20.77,
+      "fishProd": 106,
+      "revenue": 34,
+      "coops": 1,
+      "color": "#dc2626"
+    },
+    {
+      "name": "Morshi",
+      "lng": 78.01,
+      "lat": 21.3,
+      "fishProd": 95,
+      "revenue": 31,
+      "coops": 3,
+      "color": "#7c3aed"
+    },
+    {
+      "name": "Warud",
+      "lng": 78.28,
+      "lat": 21.47,
+      "fishProd": 83,
+      "revenue": 25,
+      "coops": 3,
+      "color": "#0891b2"
+    },
+    {
+      "name": "Dharni",
+      "lng": 76.88,
+      "lat": 21.44,
+      "fishProd": 16,
+      "revenue": 5,
+      "coops": 1,
+      "color": "#65a30d"
+    },
+    {
+      "name": "Chikhaldara",
+      "lng": 77.31,
+      "lat": 21.42,
+      "fishProd": 12,
+      "revenue": 3,
+      "coops": 1,
+      "color": "#c026d3"
+    },
+    {
+      "name": "Teosa",
+      "lng": 77.96,
+      "lat": 20.75,
+      "fishProd": 9,
+      "revenue": 3,
+      "coops": 1,
+      "color": "#ea580c"
+    },
+    {
+      "name": "Tiosa",
+      "lng": 77.9564,
+      "lat": 20.7513,
+      "fishProd": 10,
+      "revenue": 2,
+      "coops": 0,
+      "color": "#0d9488"
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Dairy By-Products",
+      "subtitle": "Production (MT) — 2021",
+      "icon": "FlaskConical",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "Ghee",
+          "value": 317
+        },
+        {
+          "label": "Powder",
+          "value": 241
+        },
+        {
+          "label": "Butter",
+          "value": 119
+        },
+        {
+          "label": "Lassi",
+          "value": 21
+        }
+      ],
+      "colors": [
+        "#3c4e6a"
+      ]
+    },
+    {
+      "title": "Livestock Composition",
+      "subtitle": "Ahilyanagar 2021",
+      "icon": "PawPrint",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "Hybrid Cows",
+          "value": 61
+        },
+        {
+          "label": "Native Cows",
+          "value": 3
+        },
+        {
+          "label": "Buffalo",
+          "value": 6
+        }
+      ],
+      "colors": [
+        "#3c4e6a",
+        "#2c699a",
+        "#d4af37"
+      ]
+    },
+    {
+      "title": "Daily Milk Production",
+      "subtitle": "District Total (k L/day)",
+      "icon": "Droplets",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2012",
+          "value": 441
+        },
+        {
+          "label": "2014",
+          "value": 379
+        },
+        {
+          "label": "2016",
+          "value": 384
+        },
+        {
+          "label": "2018",
+          "value": 522
+        },
+        {
+          "label": "2020",
+          "value": 459
+        },
+        {
+          "label": "2021",
+          "value": 399
+        }
+      ],
+      "colors": [
+        "#2c699a"
+      ]
+    }
+  ]
+}

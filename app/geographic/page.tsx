@@ -5,7 +5,8 @@ import { AppHeader } from "@/components/layout/app-header";
 import { PageFooter } from "@/components/layout/page-footer";
 import { MapView } from "@/components/map/map-view";
 import { Card } from "@/components/ui/card";
-import geoData from "@/data/geographic.json";
+import { useFilterContext } from "@/lib/filter-context";
+import { getDistrictData } from "@/lib/district-data";
 import {
   Droplets,
   Fish,
@@ -17,8 +18,13 @@ import {
 
 export default function GeographicPage() {
   const [selectedTaluka, setSelectedTaluka] = useState<string | null>(null);
+  const { filters, districtInfo } = useFilterContext();
+  const geoData = getDistrictData("geographic", filters.district);
 
-  const markers = geoData.talukas.map((t) => ({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const talukas: any[] = geoData.talukas ?? [];
+
+  const markers = talukas.map((t) => ({
     lng: t.lng,
     lat: t.lat,
     label: t.name,
@@ -26,20 +32,20 @@ export default function GeographicPage() {
     color: t.color,
   }));
 
-  const selected = geoData.talukas.find((t) => t.name === selectedTaluka);
+  const selected = talukas.find((t) => t.name === selectedTaluka);
 
   // Summary stats
-  const totalTalukas = geoData.talukas.length;
-  const totalVetFacilities = geoData.talukas.reduce((s, t) => s + t.vetFacilities, 0);
-  const totalFishProd = geoData.talukas.reduce((s, t) => s + t.fishProd, 0);
-  const avgAI = (geoData.talukas.reduce((s, t) => s + t.aiAchievement, 0) / totalTalukas).toFixed(1);
+  const totalTalukas = talukas.length;
+  const totalVetFacilities = talukas.reduce((s: number, t: any) => s + t.vetFacilities, 0);
+  const totalFishProd = talukas.reduce((s: number, t: any) => s + t.fishProd, 0);
+  const avgAI = (talukas.reduce((s: number, t: any) => s + t.aiAchievement, 0) / totalTalukas).toFixed(1);
 
   return (
     <>
       <AppHeader
         variant="detail"
         title="Geographic View"
-        description="Taluka-wise distribution of livestock data, services, and infrastructure across Ahilyanagar district (2021)."
+        description={`Taluka-wise distribution of livestock data, services, and infrastructure across ${districtInfo.name} district (2021).`}
         breadcrumbs={[
           { label: "Dashboard", href: "/" },
           { label: "Geographic View" },
@@ -95,8 +101,8 @@ export default function GeographicPage() {
             <Card className="overflow-hidden border-border-light shadow-card">
               <MapView
                 className="h-[500px] md:h-[600px]"
-                center={geoData.center as [number, number]}
-                zoom={geoData.zoom}
+                center={districtInfo.center as [number, number]}
+                zoom={districtInfo.zoom}
                 markers={markers}
                 onMarkerClick={(m) => setSelectedTaluka(m.label)}
                 selectedMarker={selectedTaluka}
@@ -181,7 +187,7 @@ export default function GeographicPage() {
                 </h4>
               </div>
               <div className="max-h-[360px] overflow-y-auto scrollbar-hide">
-                {[...geoData.talukas]
+                {[...talukas]
                   .sort((a, b) => b.milkDaily - a.milkDaily)
                   .map((t) => (
                   <button

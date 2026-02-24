@@ -1,0 +1,86 @@
+{
+  "center": [
+    77.0082,
+    20.7002
+  ],
+  "zoom": 9,
+  "talukas": [
+    {
+      "name": "Akola",
+      "lng": 77.0082,
+      "lat": 20.7002,
+      "milkDaily": 42,
+      "vetFacilities": 15,
+      "fishProd": 113,
+      "aiAchievement": 24,
+      "societies": 85,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Akot",
+      "lng": 76.99,
+      "lat": 21.0958,
+      "milkDaily": 186,
+      "vetFacilities": 13,
+      "fishProd": 79,
+      "aiAchievement": 30,
+      "societies": 114,
+      "color": "#008450"
+    },
+    {
+      "name": "Telhara",
+      "lng": 76.82,
+      "lat": 20.65,
+      "milkDaily": 75,
+      "vetFacilities": 5,
+      "fishProd": 9,
+      "aiAchievement": 19,
+      "societies": 55,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Balapur",
+      "lng": 76.79,
+      "lat": 20.63,
+      "milkDaily": 14,
+      "vetFacilities": 9,
+      "fishProd": 7,
+      "aiAchievement": 32,
+      "societies": 48,
+      "color": "#3c4e6a"
+    },
+    {
+      "name": "Patur",
+      "lng": 76.94,
+      "lat": 20.47,
+      "milkDaily": 0,
+      "vetFacilities": 6,
+      "fishProd": 82,
+      "aiAchievement": 24,
+      "societies": 14,
+      "color": "#d4af37"
+    },
+    {
+      "name": "Murtizapur",
+      "lng": 77.35,
+      "lat": 20.73,
+      "milkDaily": 18,
+      "vetFacilities": 8,
+      "fishProd": 10,
+      "aiAchievement": 31,
+      "societies": 15,
+      "color": "#10b981"
+    },
+    {
+      "name": "Barshitakli",
+      "lng": 77.09,
+      "lat": 20.88,
+      "milkDaily": 0,
+      "vetFacilities": 9,
+      "fishProd": 7,
+      "aiAchievement": 30,
+      "societies": 12,
+      "color": "#e07b39"
+    }
+  ]
+}

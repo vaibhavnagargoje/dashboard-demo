@@ -1,0 +1,442 @@
+{
+  "kpis": [
+    {
+      "label": "Normal Weight",
+      "value": "94.3%",
+      "icon": "HeartPulse",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "up",
+        "value": "+2.3%",
+        "context": ""
+      }
+    },
+    {
+      "label": "MAM Rate",
+      "value": "5.0%",
+      "icon": "AlertTriangle",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "down",
+        "value": "-27.4%",
+        "context": ""
+      }
+    },
+    {
+      "label": "SAM Rate",
+      "value": "0.7%",
+      "icon": "AlertCircle",
+      "iconBg": "bg-red-50",
+      "trend": {
+        "direction": "down",
+        "value": "-25.5%",
+        "context": ""
+      }
+    },
+    {
+      "label": "Anganwadis Working",
+      "value": "11,810",
+      "icon": "Home",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "up",
+        "value": "+16.4%",
+        "context": ""
+      }
+    }
+  ],
+  "chartData": [
+    {
+      "year": "2012",
+      "normalPct": 92.1,
+      "mamPct": 7,
+      "samPct": 0.8,
+      "workingAW": 10038
+    },
+    {
+      "year": "2013",
+      "normalPct": 93.9,
+      "mamPct": 6.4,
+      "samPct": 0.9,
+      "workingAW": 10140
+    },
+    {
+      "year": "2014",
+      "normalPct": 88,
+      "mamPct": 10,
+      "samPct": 1.5,
+      "workingAW": 10114
+    },
+    {
+      "year": "2015",
+      "normalPct": 88.9,
+      "mamPct": 9.7,
+      "samPct": 1.3,
+      "workingAW": 10132
+    },
+    {
+      "year": "2016",
+      "normalPct": 91.1,
+      "mamPct": 7.9,
+      "samPct": 1,
+      "workingAW": 10140
+    },
+    {
+      "year": "2017",
+      "normalPct": 91.1,
+      "mamPct": 7.9,
+      "samPct": 1,
+      "workingAW": 10140
+    },
+    {
+      "year": "2018",
+      "normalPct": 91.4,
+      "mamPct": 7.6,
+      "samPct": 0.9,
+      "workingAW": 10140
+    },
+    {
+      "year": "2019",
+      "normalPct": 90.2,
+      "mamPct": 8.6,
+      "samPct": 1.3,
+      "workingAW": 10140
+    },
+    {
+      "year": "2020",
+      "normalPct": 92.2,
+      "mamPct": 6.9,
+      "samPct": 0.9,
+      "workingAW": 10144
+    },
+    {
+      "year": "2021",
+      "normalPct": 94.3,
+      "mamPct": 5,
+      "samPct": 0.7,
+      "workingAW": 11810
+    }
+  ],
+  "tableData": [
+    {
+      "year": "2012",
+      "normalPct": "92.1%",
+      "mamPct": "7.0%",
+      "samPct": "0.8%",
+      "approvedAW": "10,140",
+      "workingAW": "10,038",
+      "awWorkers": "10,036"
+    },
+    {
+      "year": "2013",
+      "normalPct": "93.9%",
+      "mamPct": "6.4%",
+      "samPct": "0.9%",
+      "approvedAW": "10,140",
+      "workingAW": "10,140",
+      "awWorkers": "10,064"
+    },
+    {
+      "year": "2014",
+      "normalPct": "88.0%",
+      "mamPct": "10.0%",
+      "samPct": "1.5%",
+      "approvedAW": "10,132",
+      "workingAW": "10,114",
+      "awWorkers": "10,048"
+    },
+    {
+      "year": "2015",
+      "normalPct": "88.9%",
+      "mamPct": "9.7%",
+      "samPct": "1.3%",
+      "approvedAW": "10,132",
+      "workingAW": "10,132",
+      "awWorkers": "10,008"
+    },
+    {
+      "year": "2016",
+      "normalPct": "91.1%",
+      "mamPct": "7.9%",
+      "samPct": "1.0%",
+      "approvedAW": "10,140",
+      "workingAW": "10,140",
+      "awWorkers": "10,080"
+    },
+    {
+      "year": "2017",
+      "normalPct": "91.1%",
+      "mamPct": "7.9%",
+      "samPct": "1.0%",
+      "approvedAW": "10,140",
+      "workingAW": "10,140",
+      "awWorkers": "10,080"
+    },
+    {
+      "year": "2018",
+      "normalPct": "91.4%",
+      "mamPct": "7.6%",
+      "samPct": "0.9%",
+      "approvedAW": "10,140",
+      "workingAW": "10,140",
+      "awWorkers": "9,910"
+    },
+    {
+      "year": "2019",
+      "normalPct": "90.2%",
+      "mamPct": "8.6%",
+      "samPct": "1.3%",
+      "approvedAW": "10,140",
+      "workingAW": "10,140",
+      "awWorkers": "9,586"
+    },
+    {
+      "year": "2020",
+      "normalPct": "92.2%",
+      "mamPct": "6.9%",
+      "samPct": "0.9%",
+      "approvedAW": "10,144",
+      "workingAW": "10,144",
+      "awWorkers": "9,826"
+    },
+    {
+      "year": "2021",
+      "normalPct": "94.3%",
+      "mamPct": "5.0%",
+      "samPct": "0.7%",
+      "approvedAW": "11,810",
+      "workingAW": "11,810",
+      "awWorkers": "11,476"
+    }
+  ],
+  "talukas": [
+    {
+      "name": "Akole",
+      "lng": 73.9009,
+      "lat": 19.5333,
+      "color": "#2c699a",
+      "normalPct": 82.2,
+      "mamPct": 14.7,
+      "samPct": 3.1,
+      "workingAW": 1204,
+      "awWorkers": 1158
+    },
+    {
+      "name": "Sangamner",
+      "lng": 74.2142,
+      "lat": 19.5687,
+      "color": "#0b8457",
+      "normalPct": 95.3,
+      "mamPct": 4.2,
+      "samPct": 0.5,
+      "workingAW": 1146,
+      "awWorkers": 1134
+    },
+    {
+      "name": "Kopargaon",
+      "lng": 74.4787,
+      "lat": 19.8826,
+      "color": "#d4af37",
+      "normalPct": 96.2,
+      "mamPct": 3.6,
+      "samPct": 0.2,
+      "workingAW": 618,
+      "awWorkers": 564
+    },
+    {
+      "name": "Rahata",
+      "lng": 74.4833,
+      "lat": 19.7167,
+      "color": "#e07b39",
+      "normalPct": 94.9,
+      "mamPct": 4.6,
+      "samPct": 0.5,
+      "workingAW": 642,
+      "awWorkers": 638
+    },
+    {
+      "name": "Shrirampur",
+      "lng": 74.6559,
+      "lat": 19.6164,
+      "color": "#8b5cf6",
+      "normalPct": 94.8,
+      "mamPct": 4.7,
+      "samPct": 0.6,
+      "workingAW": 618,
+      "awWorkers": 604
+    },
+    {
+      "name": "Newasa",
+      "lng": 74.9864,
+      "lat": 19.5566,
+      "color": "#0891b2",
+      "normalPct": 97.6,
+      "mamPct": 2,
+      "samPct": 0.4,
+      "workingAW": 888,
+      "awWorkers": 934
+    },
+    {
+      "name": "Shevgaon",
+      "lng": 75.0999,
+      "lat": 19.3527,
+      "color": "#7c3aed",
+      "normalPct": 96.6,
+      "mamPct": 3.1,
+      "samPct": 0.3,
+      "workingAW": 664,
+      "awWorkers": 616
+    },
+    {
+      "name": "Pathardi",
+      "lng": 75.2068,
+      "lat": 19.1687,
+      "color": "#059669",
+      "normalPct": 97.9,
+      "mamPct": 2,
+      "samPct": 0.1,
+      "workingAW": 590,
+      "awWorkers": 584
+    },
+    {
+      "name": "Nagar",
+      "lng": 74.7479,
+      "lat": 19.0948,
+      "color": "#3c4e6a",
+      "normalPct": 94,
+      "mamPct": 5.4,
+      "samPct": 0.6,
+      "workingAW": 1682,
+      "awWorkers": 1642
+    },
+    {
+      "name": "Rahuri",
+      "lng": 74.6482,
+      "lat": 19.392,
+      "color": "#10b981",
+      "normalPct": 93.8,
+      "mamPct": 5.5,
+      "samPct": 0.8,
+      "workingAW": 748,
+      "awWorkers": 706
+    },
+    {
+      "name": "Parner",
+      "lng": 74.4437,
+      "lat": 19,
+      "color": "#f59e0b",
+      "normalPct": 94.4,
+      "mamPct": 5.1,
+      "samPct": 0.5,
+      "workingAW": 830,
+      "awWorkers": 818
+    },
+    {
+      "name": "Shrigonda",
+      "lng": 74.6897,
+      "lat": 18.8631,
+      "color": "#ef4444",
+      "normalPct": 93.4,
+      "mamPct": 6.1,
+      "samPct": 0.4,
+      "workingAW": 856,
+      "awWorkers": 826
+    },
+    {
+      "name": "Karjat",
+      "lng": 75.0366,
+      "lat": 18.9077,
+      "color": "#6366f1",
+      "normalPct": 96.1,
+      "mamPct": 3.4,
+      "samPct": 0.5,
+      "workingAW": 770,
+      "awWorkers": 720
+    },
+    {
+      "name": "Jamkhed",
+      "lng": 75.3145,
+      "lat": 18.7223,
+      "color": "#ec4899",
+      "normalPct": 93.3,
+      "mamPct": 5.8,
+      "samPct": 0.9,
+      "workingAW": 554,
+      "awWorkers": 532
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Anaemic Women (K)",
+      "subtitle": "HMIS: Moderately anaemic women",
+      "icon": "Droplets",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2014",
+          "value": 73
+        },
+        {
+          "label": "2015",
+          "value": 74
+        },
+        {
+          "label": "2016",
+          "value": 70
+        },
+        {
+          "label": "2017",
+          "value": 68
+        },
+        {
+          "label": "2018",
+          "value": 70
+        },
+        {
+          "label": "2019",
+          "value": 78
+        }
+      ]
+    },
+    {
+      "title": "Malnutrition Split (2021)",
+      "subtitle": "Normal / MAM / SAM distribution",
+      "icon": "PieChart",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "Normal",
+          "value": 94
+        },
+        {
+          "label": "MAM",
+          "value": 5
+        },
+        {
+          "label": "SAM",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "title": "Child Diseases",
+      "subtitle": "Cases reported (2019)",
+      "icon": "Thermometer",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "Pneumonia",
+          "value": 172
+        },
+        {
+          "label": "Diarrhea",
+          "value": 3322
+        },
+        {
+          "label": "Sepsis",
+          "value": 217
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "kpis": [
+    {
+      "label": "District Daily Milk",
+      "value": "3L L/day",
+      "icon": "Droplets",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "down",
+        "value": "4.5%",
+        "context": "vs 2020"
+      },
+      "href": "/livestock/milk-production"
+    },
+    {
+      "label": "Top Taluka",
+      "value": "Sangamner",
+      "icon": "Award",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "up",
+        "value": "235.4k L/day",
+        "context": "daily avg"
+      }
+    },
+    {
+      "label": "Dairy Societies",
+      "value": "464",
+      "icon": "Building2",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "up",
+        "value": "1.0%",
+        "context": "vs 2020"
+      }
+    },
+    {
+      "label": "Total Members",
+      "value": "35,245",
+      "icon": "Users",
+      "iconBg": "bg-violet-50",
+      "trend": {
+        "direction": "up",
+        "value": "34.8%",
+        "context": "vs 2020"
+      }
+    }
+  ],
+  "chartData": [
+    {
+      "year": "2012",
+      "districtTotal": 275,
+      "sangamner": 134,
+      "kopargaon": 21
+    },
+    {
+      "year": "2013",
+      "districtTotal": 235,
+      "sangamner": 125,
+      "kopargaon": 27
+    },
+    {
+      "year": "2014",
+      "districtTotal": 210,
+      "sangamner": 115,
+      "kopargaon": 25
+    },
+    {
+      "year": "2015",
+      "districtTotal": 274,
+      "sangamner": 135,
+      "kopargaon": 35
+    },
+    {
+      "year": "2016",
+      "districtTotal": 248,
+      "sangamner": 112,
+      "kopargaon": 24
+    },
+    {
+      "year": "2017",
+      "districtTotal": 251,
+      "sangamner": 120,
+      "kopargaon": 28
+    },
+    {
+      "year": "2018",
+      "districtTotal": 249,
+      "sangamner": 137,
+      "kopargaon": 59
+    },
+    {
+      "year": "2019",
+      "districtTotal": 285,
+      "sangamner": 151,
+      "kopargaon": 46
+    },
+    {
+      "year": "2020",
+      "districtTotal": 270,
+      "sangamner": 144,
+      "kopargaon": 56
+    },
+    {
+      "year": "2021",
+      "districtTotal": 296,
+      "sangamner": 139,
+      "kopargaon": 51
+    }
+  ],
+  "tableData": [
+    {
+      "year": "2012",
+      "districtTotal": 275,
+      "sangamner": 134,
+      "kopargaon": 21,
+      "societies": 1348,
+      "members": 71172
+    },
+    {
+      "year": "2013",
+      "districtTotal": 207,
+      "sangamner": 122,
+      "kopargaon": 27,
+      "societies": 1256,
+      "members": 83843
+    },
+    {
+      "year": "2014",
+      "districtTotal": 259,
+      "sangamner": 110,
+      "kopargaon": 22,
+      "societies": 635,
+      "members": 44758
+    },
+    {
+      "year": "2015",
+      "districtTotal": 234,
+      "sangamner": 122,
+      "kopargaon": 30,
+      "societies": 435,
+      "members": 24355
+    },
+    {
+      "year": "2016",
+      "districtTotal": 205,
+      "sangamner": 110,
+      "kopargaon": 26,
+      "societies": 365,
+      "members": 24581
+    },
+    {
+      "year": "2017",
+      "districtTotal": 225,
+      "sangamner": 111,
+      "kopargaon": 28,
+      "societies": 384,
+      "members": 17408
+    },
+    {
+      "year": "2018",
+      "districtTotal": 288,
+      "sangamner": 145,
+      "kopargaon": 63,
+      "societies": 349,
+      "members": 24539
+    },
+    {
+      "year": "2019",
+      "districtTotal": 274,
+      "sangamner": 140,
+      "kopargaon": 47,
+      "societies": 405,
+      "members": 21907
+    },
+    {
+      "year": "2020",
+      "districtTotal": 287,
+      "sangamner": 135,
+      "kopargaon": 57,
+      "societies": 458,
+      "members": 25926
+    },
+    {
+      "year": "2021",
+      "districtTotal": 250,
+      "sangamner": 150,
+      "kopargaon": 63,
+      "societies": 398,
+      "members": 42564
+    }
+  ],
+  "talukas": [
+    {
+      "name": "Dhule",
+      "lng": 74.7749,
+      "lat": 20.9042,
+      "milkDaily": 133,
+      "societies": 99,
+      "members": 20787,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Sakri",
+      "lng": 74.32,
+      "lat": 20.99,
+      "milkDaily": 54,
+      "societies": 56,
+      "members": 7298,
+      "color": "#008450"
+    },
+    {
+      "name": "Sindkheda",
+      "lng": 74.7,
+      "lat": 21.27,
+      "milkDaily": 32,
+      "societies": 55,
+      "members": 3682,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Shirpur",
+      "lng": 74.88,
+      "lat": 21.35,
+      "milkDaily": 13,
+      "societies": 13,
+      "members": 688,
+      "color": "#3c4e6a"
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Livestock Population",
+      "subtitle": "Ahilyanagar Census 2021",
+      "icon": "PawPrint",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "Hybrid Cows",
+          "value": 43
+        },
+        {
+          "label": "Native Cows",
+          "value": 2
+        },
+        {
+          "label": "Buffalo",
+          "value": 4
+        }
+      ],
+      "colors": [
+        "#3c4e6a",
+        "#2c699a",
+        "#d4af37"
+      ]
+    },
+    {
+      "title": "Dairy By-Products",
+      "subtitle": "Production (MT) — 2021",
+      "icon": "FlaskConical",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "Ghee",
+          "value": 212
+        },
+        {
+          "label": "Powder",
+          "value": 137
+        },
+        {
+          "label": "Butter",
+          "value": 77
+        },
+        {
+          "label": "Lassi",
+          "value": 11
+        }
+      ],
+      "colors": [
+        "#3c4e6a"
+      ]
+    },
+    {
+      "title": "Cold Storage Capacity",
+      "subtitle": "District Total ('000 L)",
+      "icon": "Snowflake",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2012",
+          "value": 465
+        },
+        {
+          "label": "2014",
+          "value": 313
+        },
+        {
+          "label": "2016",
+          "value": 363
+        },
+        {
+          "label": "2018",
+          "value": 362
+        },
+        {
+          "label": "2020",
+          "value": 350
+        },
+        {
+          "label": "2021",
+          "value": 373
+        }
+      ],
+      "colors": [
+        "#2c699a"
+      ]
+    }
+  ]
+}

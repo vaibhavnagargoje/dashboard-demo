@@ -1,0 +1,53 @@
+{
+  "center": [
+    74.7749,
+    20.9042
+  ],
+  "zoom": 9,
+  "talukas": [
+    {
+      "name": "Dhule",
+      "lng": 74.7749,
+      "lat": 20.9042,
+      "milkDaily": 40,
+      "vetFacilities": 12,
+      "fishProd": 97,
+      "aiAchievement": 20,
+      "societies": 64,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Sakri",
+      "lng": 74.32,
+      "lat": 20.99,
+      "milkDaily": 125,
+      "vetFacilities": 13,
+      "fishProd": 58,
+      "aiAchievement": 25,
+      "societies": 88,
+      "color": "#008450"
+    },
+    {
+      "name": "Sindkheda",
+      "lng": 74.7,
+      "lat": 21.27,
+      "milkDaily": 59,
+      "vetFacilities": 5,
+      "fishProd": 6,
+      "aiAchievement": 18,
+      "societies": 53,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Shirpur",
+      "lng": 74.88,
+      "lat": 21.35,
+      "milkDaily": 11,
+      "vetFacilities": 8,
+      "fishProd": 5,
+      "aiAchievement": 28,
+      "societies": 33,
+      "color": "#3c4e6a"
+    }
+  ]
+}

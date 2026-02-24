@@ -1,0 +1,347 @@
+{
+  "kpis": [
+    {
+      "label": "District Daily Milk",
+      "value": "2L L/day",
+      "icon": "Droplets",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "down",
+        "value": "5.8%",
+        "context": "vs 2020"
+      },
+      "href": "/livestock/milk-production"
+    },
+    {
+      "label": "Top Taluka",
+      "value": "Sangamner",
+      "icon": "Award",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "up",
+        "value": "384.0k L/day",
+        "context": "daily avg"
+      }
+    },
+    {
+      "label": "Dairy Societies",
+      "value": "362",
+      "icon": "Building2",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "up",
+        "value": "1.0%",
+        "context": "vs 2020"
+      }
+    },
+    {
+      "label": "Total Members",
+      "value": "39,370",
+      "icon": "Users",
+      "iconBg": "bg-violet-50",
+      "trend": {
+        "direction": "up",
+        "value": "41.6%",
+        "context": "vs 2020"
+      }
+    }
+  ],
+  "chartData": [
+    {
+      "year": "2012",
+      "districtTotal": 209,
+      "sangamner": 108,
+      "kopargaon": 22
+    },
+    {
+      "year": "2013",
+      "districtTotal": 187,
+      "sangamner": 112,
+      "kopargaon": 22
+    },
+    {
+      "year": "2014",
+      "districtTotal": 226,
+      "sangamner": 100,
+      "kopargaon": 20
+    },
+    {
+      "year": "2015",
+      "districtTotal": 234,
+      "sangamner": 120,
+      "kopargaon": 26
+    },
+    {
+      "year": "2016",
+      "districtTotal": 185,
+      "sangamner": 98,
+      "kopargaon": 20
+    },
+    {
+      "year": "2017",
+      "districtTotal": 239,
+      "sangamner": 125,
+      "kopargaon": 30
+    },
+    {
+      "year": "2018",
+      "districtTotal": 262,
+      "sangamner": 128,
+      "kopargaon": 55
+    },
+    {
+      "year": "2019",
+      "districtTotal": 266,
+      "sangamner": 150,
+      "kopargaon": 45
+    },
+    {
+      "year": "2020",
+      "districtTotal": 284,
+      "sangamner": 148,
+      "kopargaon": 45
+    },
+    {
+      "year": "2021",
+      "districtTotal": 238,
+      "sangamner": 141,
+      "kopargaon": 54
+    }
+  ],
+  "tableData": [
+    {
+      "year": "2012",
+      "districtTotal": 209,
+      "sangamner": 108,
+      "kopargaon": 22,
+      "societies": 1187,
+      "members": 60504
+    },
+    {
+      "year": "2013",
+      "districtTotal": 223,
+      "sangamner": 105,
+      "kopargaon": 21,
+      "societies": 1142,
+      "members": 65992
+    },
+    {
+      "year": "2014",
+      "districtTotal": 192,
+      "sangamner": 95,
+      "kopargaon": 19,
+      "societies": 635,
+      "members": 36925
+    },
+    {
+      "year": "2015",
+      "districtTotal": 246,
+      "sangamner": 113,
+      "kopargaon": 28,
+      "societies": 398,
+      "members": 21389
+    },
+    {
+      "year": "2016",
+      "districtTotal": 215,
+      "sangamner": 113,
+      "kopargaon": 21,
+      "societies": 400,
+      "members": 21596
+    },
+    {
+      "year": "2017",
+      "districtTotal": 232,
+      "sangamner": 116,
+      "kopargaon": 25,
+      "societies": 381,
+      "members": 16751
+    },
+    {
+      "year": "2018",
+      "districtTotal": 281,
+      "sangamner": 139,
+      "kopargaon": 60,
+      "societies": 347,
+      "members": 19295
+    },
+    {
+      "year": "2019",
+      "districtTotal": 214,
+      "sangamner": 125,
+      "kopargaon": 46,
+      "societies": 359,
+      "members": 23670
+    },
+    {
+      "year": "2020",
+      "districtTotal": 248,
+      "sangamner": 143,
+      "kopargaon": 38,
+      "societies": 319,
+      "members": 23820
+    },
+    {
+      "year": "2021",
+      "districtTotal": 217,
+      "sangamner": 106,
+      "kopargaon": 43,
+      "societies": 391,
+      "members": 37416
+    }
+  ],
+  "talukas": [
+    {
+      "name": "Bhandara",
+      "lng": 79.65,
+      "lat": 21.17,
+      "milkDaily": 140,
+      "societies": 87,
+      "members": 17672,
+      "color": "#2c699a"
+    },
+    {
+      "name": "Tumsar",
+      "lng": 79.74,
+      "lat": 21.38,
+      "milkDaily": 46,
+      "societies": 49,
+      "members": 6343,
+      "color": "#008450"
+    },
+    {
+      "name": "Pauni",
+      "lng": 79.63,
+      "lat": 20.79,
+      "milkDaily": 33,
+      "societies": 63,
+      "members": 3957,
+      "color": "#cf5c36"
+    },
+    {
+      "name": "Mohadi",
+      "lng": 79.67,
+      "lat": 21.31,
+      "milkDaily": 12,
+      "societies": 10,
+      "members": 587,
+      "color": "#3c4e6a"
+    },
+    {
+      "name": "Sakoli",
+      "lng": 79.98,
+      "lat": 21.07,
+      "milkDaily": 11,
+      "societies": 32,
+      "members": 2286,
+      "color": "#d4af37"
+    },
+    {
+      "name": "Lakhni",
+      "lng": 79.85,
+      "lat": 20.88,
+      "milkDaily": 5,
+      "societies": 17,
+      "members": 498,
+      "color": "#10b981"
+    },
+    {
+      "name": "Lakhandur",
+      "lng": 79.88,
+      "lat": 20.85,
+      "milkDaily": 5,
+      "societies": 14,
+      "members": 492,
+      "color": "#e07b39"
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Livestock Population",
+      "subtitle": "Ahilyanagar Census 2021",
+      "icon": "PawPrint",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "Hybrid Cows",
+          "value": 35
+        },
+        {
+          "label": "Native Cows",
+          "value": 2
+        },
+        {
+          "label": "Buffalo",
+          "value": 3
+        }
+      ],
+      "colors": [
+        "#3c4e6a",
+        "#2c699a",
+        "#d4af37"
+      ]
+    },
+    {
+      "title": "Dairy By-Products",
+      "subtitle": "Production (MT) — 2021",
+      "icon": "FlaskConical",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "Ghee",
+          "value": 162
+        },
+        {
+          "label": "Powder",
+          "value": 112
+        },
+        {
+          "label": "Butter",
+          "value": 67
+        },
+        {
+          "label": "Lassi",
+          "value": 11
+        }
+      ],
+      "colors": [
+        "#3c4e6a"
+      ]
+    },
+    {
+      "title": "Cold Storage Capacity",
+      "subtitle": "District Total ('000 L)",
+      "icon": "Snowflake",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2012",
+          "value": 355
+        },
+        {
+          "label": "2014",
+          "value": 348
+        },
+        {
+          "label": "2016",
+          "value": 336
+        },
+        {
+          "label": "2018",
+          "value": 340
+        },
+        {
+          "label": "2020",
+          "value": 265
+        },
+        {
+          "label": "2021",
+          "value": 279
+        }
+      ],
+      "colors": [
+        "#2c699a"
+      ]
+    }
+  ]
+}
