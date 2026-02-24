@@ -1,21 +1,23 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { cn } from "@/lib/utils";
-import "maplibre-gl/dist/maplibre-gl.css";
+
+interface MapMarker {
+  lng: number;
+  lat: number;
+  label: string;
+  value?: string;
+  color?: string;
+}
 
 interface MapViewProps {
   className?: string;
   center?: [number, number];
   zoom?: number;
-  markers?: Array<{
-    lng: number;
-    lat: number;
-    label: string;
-    value?: string;
-    color?: string;
-  }>;
+  markers?: MapMarker[];
   onMarkerClick?: (marker: { label: string; value?: string }) => void;
+  selectedMarker?: string | null;
 }
 
 export function MapView({
@@ -24,100 +26,146 @@ export function MapView({
   zoom = 9,
   markers = [],
   onMarkerClick,
+  selectedMarker,
 }: MapViewProps) {
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapRef = useRef<any>(null);
+  const markersRef = useRef<any[]>([]);
   const [loaded, setLoaded] = useState(false);
+  const onMarkerClickRef = useRef(onMarkerClick);
+  onMarkerClickRef.current = onMarkerClick;
 
+  // Initialize map
   useEffect(() => {
     if (!mapContainer.current || mapRef.current) return;
 
     let cancelled = false;
 
     (async () => {
-      const maplibregl = (await import("maplibre-gl")).default;
+      const L = (await import("leaflet")).default;
+
+      // Fix default icon paths (Leaflet issue with bundlers)
+      delete (L.Icon.Default.prototype as any)._getIconUrl;
+      L.Icon.Default.mergeOptions({
+        iconRetinaUrl:
+          "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+        iconUrl:
+          "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+        shadowUrl:
+          "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+      });
 
       if (cancelled || !mapContainer.current) return;
 
-      const map = new maplibregl.Map({
-        container: mapContainer.current,
-        style: {
-          version: 8,
-          sources: {
-            osm: {
-              type: "raster",
-              tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
-              tileSize: 256,
-              attribution:
-                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-            },
-          },
-          layers: [
-            {
-              id: "osm",
-              type: "raster",
-              source: "osm",
-            },
-          ],
-        },
-        center: center,
+      // Inject Leaflet CSS once
+      if (!document.getElementById("leaflet-css")) {
+        const link = document.createElement("link");
+        link.id = "leaflet-css";
+        link.rel = "stylesheet";
+        link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+        document.head.appendChild(link);
+        // Wait briefly for CSS to load
+        await new Promise((r) => setTimeout(r, 100));
+      }
+
+      if (cancelled || !mapContainer.current) return;
+
+      const map = L.map(mapContainer.current, {
+        center: [center[1], center[0]], // Leaflet uses [lat, lng]
         zoom: zoom,
+        zoomControl: false,
+        attributionControl: true,
       });
 
-      map.addControl(new maplibregl.NavigationControl(), "top-right");
-      map.addControl(
-        new maplibregl.ScaleControl({ maxWidth: 200 }),
-        "bottom-left"
-      );
+      // Add zoom control to top-right
+      L.control.zoom({ position: "topright" }).addTo(map);
 
-      map.on("load", () => {
-        if (!cancelled) {
-          setLoaded(true);
-          mapRef.current = map;
+      // Add scale control
+      L.control.scale({ maxWidth: 200, position: "bottomleft" }).addTo(map);
 
-          // Add markers
-          markers.forEach((m) => {
-            const el = document.createElement("div");
-            el.className = "map-marker";
-            el.style.width = "32px";
-            el.style.height = "32px";
-            el.style.borderRadius = "50%";
-            el.style.backgroundColor = m.color || "#3c4e6a";
-            el.style.border = "3px solid white";
-            el.style.boxShadow = "0 2px 8px rgba(0,0,0,0.3)";
-            el.style.cursor = "pointer";
-            el.style.display = "flex";
-            el.style.alignItems = "center";
-            el.style.justifyContent = "center";
+      // OpenStreetMap tile layer
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        maxZoom: 18,
+      }).addTo(map);
 
-            const inner = document.createElement("span");
-            inner.style.color = "white";
-            inner.style.fontSize = "10px";
-            inner.style.fontWeight = "700";
-            inner.textContent = m.label.charAt(0);
-            el.appendChild(inner);
+      // Custom circle marker icon factory
+      const createMarkerIcon = (
+        color: string,
+        letter: string,
+        isSelected: boolean
+      ) => {
+        const size = isSelected ? 38 : 30;
+        const borderWidth = isSelected ? 4 : 3;
+        return L.divIcon({
+          className: "custom-map-marker",
+          html: `<div style="
+            width:${size}px;height:${size}px;
+            border-radius:50%;
+            background:${color};
+            border:${borderWidth}px solid ${isSelected ? "#fbbf24" : "white"};
+            box-shadow:0 2px 8px rgba(0,0,0,${isSelected ? "0.5" : "0.3"});
+            display:flex;align-items:center;justify-content:center;
+            cursor:pointer;transition:all 0.2s ease;
+            ${isSelected ? "transform:scale(1.15);" : ""}
+          "><span style="color:white;font-size:${isSelected ? "13" : "11"}px;font-weight:700;font-family:Lato,sans-serif;">${letter}</span></div>`,
+          iconSize: [size, size],
+          iconAnchor: [size / 2, size / 2],
+          popupAnchor: [0, -(size / 2 + 4)],
+        });
+      };
 
-            const popup = new maplibregl.Popup({
-              offset: 20,
-              closeButton: false,
-            }).setHTML(
-              `<div style="font-family:Inter,sans-serif;padding:4px 0;">
-                <strong style="font-size:13px;color:#1e293b;">${m.label}</strong>
-                ${m.value ? `<div style="font-size:11px;color:#64748b;margin-top:2px;">${m.value}</div>` : ""}
-              </div>`
-            );
+      // Add markers
+      const leafletMarkers: any[] = [];
+      markers.forEach((m) => {
+        const icon = createMarkerIcon(
+          m.color || "#3c4e6a",
+          m.label.charAt(0),
+          false
+        );
 
-            const marker = new maplibregl.Marker({ element: el })
-              .setLngLat([m.lng, m.lat])
-              .setPopup(popup)
-              .addTo(map);
+        const marker = L.marker([m.lat, m.lng], { icon }).addTo(map);
 
-            el.addEventListener("click", () => {
-              onMarkerClick?.({ label: m.label, value: m.value });
-            });
-          });
-        }
+        // Popup with taluka info
+        const popupContent = `
+          <div style="font-family:Lato,sans-serif;padding:6px 2px;min-width:160px;">
+            <strong style="font-size:14px;color:#1e293b;display:block;margin-bottom:4px;">${m.label}</strong>
+            ${
+              m.value
+                ? `<div style="font-size:11px;color:#64748b;line-height:1.5;">${m.value
+                    .split("|")
+                    .map((v: string) => {
+                      const [key, val] = v.trim().split(":");
+                      return `<div><span style="font-weight:600;color:#475569;">${key.trim()}:</span> ${val?.trim() || ""}</div>`;
+                    })
+                    .join("")}</div>`
+                : ""
+            }
+          </div>
+        `;
+
+        marker.bindPopup(popupContent, {
+          closeButton: true,
+          maxWidth: 220,
+          className: "custom-popup",
+        });
+
+        marker.on("click", () => {
+          onMarkerClickRef.current?.({ label: m.label, value: m.value });
+        });
+
+        leafletMarkers.push({ marker, data: m, createMarkerIcon });
       });
+
+      markersRef.current = leafletMarkers;
+      mapRef.current = map;
+
+      // Force resize after mount
+      setTimeout(() => {
+        map.invalidateSize();
+        setLoaded(true);
+      }, 200);
     })();
 
     return () => {
@@ -125,16 +173,37 @@ export function MapView({
       if (mapRef.current) {
         mapRef.current.remove();
         mapRef.current = null;
+        markersRef.current = [];
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Update marker styles when selectedMarker changes
+  useEffect(() => {
+    if (!mapRef.current || markersRef.current.length === 0) return;
+
+    markersRef.current.forEach(({ marker, data, createMarkerIcon }) => {
+      const isSelected = data.label === selectedMarker;
+      const icon = createMarkerIcon(
+        data.color || "#3c4e6a",
+        data.label.charAt(0),
+        isSelected
+      );
+      marker.setIcon(icon);
+
+      if (isSelected) {
+        mapRef.current.flyTo([data.lat, data.lng], 11, { duration: 0.8 });
+        marker.openPopup();
+      }
+    });
+  }, [selectedMarker]);
+
   return (
     <div className={cn("relative rounded-lg overflow-hidden", className)}>
       <div ref={mapContainer} className="w-full h-full" />
       {!loaded && (
-        <div className="absolute inset-0 flex items-center justify-center bg-slate-100">
+        <div className="absolute inset-0 flex items-center justify-center bg-slate-100 z-[1000]">
           <div className="flex flex-col items-center gap-2">
             <div className="h-8 w-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
             <span className="text-xs text-subtext-light">Loading map...</span>

@@ -11,6 +11,9 @@ import { ViewModeTabs } from "@/components/controls/view-mode-tabs";
 import { CompareToggle } from "@/components/controls/compare-toggle";
 import { TimelineSlider } from "@/components/controls/timeline-slider";
 import { DataTable, type DataTableColumn } from "@/components/controls/data-table";
+import { MapView } from "@/components/map/map-view";
+import { Card } from "@/components/ui/card";
+import { Syringe, Stethoscope } from "lucide-react";
 
 import infraData from "@/data/infrastructure.json";
 import type { RelatedMetricCard } from "@/lib/types";
@@ -29,8 +32,9 @@ export default function InfrastructurePage() {
   const [showStateAvg, setShowStateAvg] = useState(true);
   const [showTarget, setShowTarget] = useState(false);
   const [currentYear, setCurrentYear] = useState(2024);
+  const [selectedTaluka, setSelectedTaluka] = useState<string | null>(null);
 
-  const { chartData, relatedMetrics: rawMetrics } = infraData;
+  const { chartData, relatedMetrics: rawMetrics, talukas } = infraData;
   const relatedMetrics = rawMetrics as RelatedMetricCard[];
 
   /* Build series dynamically using DualAxisSeriesConfig shape */
@@ -163,8 +167,55 @@ export default function InfrastructurePage() {
           )}
 
           {viewMode === "map" && (
-            <div className="flex items-center justify-center h-[400px] text-subtext-light text-sm">
-              Map view coming soon — see Geographic View page
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+              <div className="lg:col-span-3">
+                <Card className="overflow-hidden border-border-light">
+                  <MapView
+                    className="h-[420px]"
+                    center={[74.7, 19.1]}
+                    zoom={9}
+                    markers={talukas.map((t) => ({
+                      lng: t.lng,
+                      lat: t.lat,
+                      label: t.name,
+                      value: `Vaccinations: ${t.vaccinations} | Clinics: ${t.clinics}`,
+                      color: t.color,
+                    }))}
+                    onMarkerClick={(m) => setSelectedTaluka(m.label)}
+                    selectedMarker={selectedTaluka}
+                  />
+                </Card>
+              </div>
+              <div className="space-y-2 max-h-[420px] overflow-y-auto">
+                <div className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Taluka-wise Infrastructure</div>
+                {talukas
+                  .sort((a, b) => b.vaccinations - a.vaccinations)
+                  .map((t) => {
+                    const selected = selectedTaluka === t.name;
+                    return (
+                      <button
+                        key={t.name}
+                        onClick={() => setSelectedTaluka(t.name)}
+                        className={`w-full text-left p-2.5 rounded-lg border transition-all text-sm ${
+                          selected
+                            ? "bg-primary/5 border-primary/30 text-primary font-medium"
+                            : "bg-white border-border-light hover:border-primary/20 text-text-light"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="flex items-center gap-2">
+                            <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: t.color }} />
+                            {t.name}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-3 mt-1 ml-4 text-xs text-subtext-light">
+                          <span className="flex items-center gap-1"><Syringe className="h-3 w-3" />{t.vaccinations}</span>
+                          <span className="flex items-center gap-1"><Stethoscope className="h-3 w-3" />{t.clinics} clinics</span>
+                        </div>
+                      </button>
+                    );
+                  })}
+              </div>
             </div>
           )}
         </ChartCard>

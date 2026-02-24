@@ -11,6 +11,9 @@ import {
   Syringe,
   Stethoscope,
   MapPin,
+  TrendingUp,
+  BarChart3,
+  Users,
 } from "lucide-react";
 
 export default function GeographicPage() {
@@ -25,6 +28,10 @@ export default function GeographicPage() {
   }));
 
   const selected = geoData.talukas.find((t) => t.name === selectedTaluka);
+
+  // Summary stats
+  const totalTalukas = geoData.talukas.length;
+  const totalClinics = geoData.talukas.reduce((s, t) => s + t.clinics, 0);
 
   return (
     <>
@@ -41,6 +48,46 @@ export default function GeographicPage() {
       />
 
       <div className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8 space-y-6 bg-bg-light">
+        {/* Quick summary KPIs */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <Card className="p-3 border-border-light shadow-card flex items-center gap-3">
+            <div className="p-2 bg-primary/10 rounded-lg">
+              <MapPin className="h-4 w-4 text-primary" />
+            </div>
+            <div>
+              <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">Talukas</div>
+              <div className="text-lg font-bold text-primary">{totalTalukas}</div>
+            </div>
+          </Card>
+          <Card className="p-3 border-border-light shadow-card flex items-center gap-3">
+            <div className="p-2 bg-chart-line-1/10 rounded-lg">
+              <Droplets className="h-4 w-4 text-chart-line-1" />
+            </div>
+            <div>
+              <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">Top Producer</div>
+              <div className="text-lg font-bold text-chart-line-1">Ahilyanagar</div>
+            </div>
+          </Card>
+          <Card className="p-3 border-border-light shadow-card flex items-center gap-3">
+            <div className="p-2 bg-emerald-50 rounded-lg">
+              <Stethoscope className="h-4 w-4 text-emerald-600" />
+            </div>
+            <div>
+              <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">Total Clinics</div>
+              <div className="text-lg font-bold text-emerald-700">{totalClinics}</div>
+            </div>
+          </Card>
+          <Card className="p-3 border-border-light shadow-card flex items-center gap-3">
+            <div className="p-2 bg-amber-50 rounded-lg">
+              <TrendingUp className="h-4 w-4 text-amber-600" />
+            </div>
+            <div>
+              <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">Growth</div>
+              <div className="text-lg font-bold text-amber-700">+4.9%</div>
+            </div>
+          </Card>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Map */}
           <div className="lg:col-span-3">
@@ -51,6 +98,7 @@ export default function GeographicPage() {
                 zoom={geoData.zoom}
                 markers={markers}
                 onMarkerClick={(m) => setSelectedTaluka(m.label)}
+                selectedMarker={selectedTaluka}
               />
             </Card>
           </div>
@@ -61,8 +109,8 @@ export default function GeographicPage() {
             {selected ? (
               <Card className="p-4 border-border-light shadow-card">
                 <div className="flex items-center gap-2 mb-3">
-                  <MapPin className="h-4 w-4 text-primary" />
-                  <h3 className="font-display font-bold text-primary text-base">
+                  <div className="w-3 h-3 rounded-full" style={{ backgroundColor: selected.color }} />
+                  <h3 className="font-bold text-primary text-base">
                     {selected.name}
                   </h3>
                 </div>

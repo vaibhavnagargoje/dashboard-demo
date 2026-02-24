@@ -113,4 +113,21 @@
     border: 2px solid white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   }
+
+  /* Leaflet custom markers & popups */
+  .custom-map-marker {
+    background: transparent !important;
+    border: none !important;
+  }
+  .custom-popup .leaflet-popup-content-wrapper {
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    font-family: "Lato", sans-serif;
+  }
+  .custom-popup .leaflet-popup-tip {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .leaflet-control-zoom a {
+    font-family: "Lato", sans-serif !important;
+  }
 }

@@ -12,6 +12,9 @@ import { ViewModeTabs } from "@/components/controls/view-mode-tabs";
 import { CompareToggle } from "@/components/controls/compare-toggle";
 import { TimelineSlider } from "@/components/controls/timeline-slider";
 import { DataTable, type DataTableColumn } from "@/components/controls/data-table";
+import { MapView } from "@/components/map/map-view";
+import { Card } from "@/components/ui/card";
+import { Droplets, MapPin } from "lucide-react";
 
 import milkData from "@/data/milk-production.json";
 import type { KpiCardData, RelatedMetricCard } from "@/lib/types";
@@ -29,8 +32,9 @@ export default function MilkProductionPage() {
   const [viewMode, setViewMode] = useState<"chart" | "table" | "map">("chart");
   const [showStateAvg, setShowStateAvg] = useState(true);
   const [currentYear, setCurrentYear] = useState(2024);
+  const [selectedTaluka, setSelectedTaluka] = useState<string | null>(null);
 
-  const { kpis: rawKpis, chartData, tableData, relatedMetrics: rawMetrics } = milkData;
+  const { kpis: rawKpis, chartData, tableData, relatedMetrics: rawMetrics, talukas } = milkData;
   const kpis = rawKpis as KpiCardData[];
   const relatedMetrics = rawMetrics as RelatedMetricCard[];
 
@@ -142,8 +146,50 @@ export default function MilkProductionPage() {
           )}
 
           {viewMode === "map" && (
-            <div className="flex items-center justify-center h-[380px] text-subtext-light text-sm">
-              Map view coming soon — see Geographic View page
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+              <div className="lg:col-span-3">
+                <Card className="overflow-hidden border-border-light">
+                  <MapView
+                    className="h-[400px]"
+                    center={[74.7, 19.1]}
+                    zoom={9}
+                    markers={talukas.map((t) => ({
+                      lng: t.lng,
+                      lat: t.lat,
+                      label: t.name,
+                      value: `Production: ${t.milkProduction}k L/day`,
+                      color: t.color,
+                    }))}
+                    onMarkerClick={(m) => setSelectedTaluka(m.label)}
+                    selectedMarker={selectedTaluka}
+                  />
+                </Card>
+              </div>
+              <div className="space-y-2 max-h-[400px] overflow-y-auto">
+                <div className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Taluka-wise Production</div>
+                {talukas
+                  .sort((a, b) => b.milkProduction - a.milkProduction)
+                  .map((t) => (
+                    <button
+                      key={t.name}
+                      onClick={() => setSelectedTaluka(t.name)}
+                      className={`w-full text-left p-2.5 rounded-lg border transition-all flex items-center justify-between text-sm ${
+                        selectedTaluka === t.name
+                          ? "bg-primary/5 border-primary/30 text-primary font-medium"
+                          : "bg-white border-border-light hover:border-primary/20 text-text-light"
+                      }`}
+                    >
+                      <span className="flex items-center gap-2">
+                        <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: t.color }} />
+                        {t.name}
+                      </span>
+                      <span className="flex items-center gap-1 text-xs font-mono">
+                        <Droplets className="h-3 w-3 text-chart-line-1" />
+                        {t.milkProduction}k L
+                      </span>
+                    </button>
+                  ))}
+              </div>
             </div>
           )}
         </ChartCard>

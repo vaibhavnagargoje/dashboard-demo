@@ -94,14 +94,19 @@
     }
   ],
   "talukas": [
-    { "name": "Ahilyanagar Avg", "milkProduction": 850, "selected": true },
-    { "name": "Sangamner", "milkProduction": 320, "selected": true },
-    { "name": "Kopargaon", "milkProduction": 210, "selected": true },
-    { "name": "Akole", "milkProduction": 180, "selected": false },
-    { "name": "Shrirampur", "milkProduction": 195, "selected": false },
-    { "name": "Rahata", "milkProduction": 150, "selected": false },
-    { "name": "Newasa", "milkProduction": 145, "selected": false },
-    { "name": "Shevgaon", "milkProduction": 110, "selected": false },
-    { "name": "Pathardi", "milkProduction": 98, "selected": false }
+    { "name": "Ahilyanagar City", "lng": 74.7479, "lat": 19.0948, "milkProduction": 850, "color": "#3c4e6a" },
+    { "name": "Sangamner", "lng": 74.2142, "lat": 19.5687, "milkProduction": 320, "color": "#2c699a" },
+    { "name": "Kopargaon", "lng": 74.4787, "lat": 19.8826, "milkProduction": 210, "color": "#008450" },
+    { "name": "Akole", "lng": 73.9009, "lat": 19.5333, "milkProduction": 180, "color": "#cf5c36" },
+    { "name": "Shrirampur", "lng": 74.6559, "lat": 19.6164, "milkProduction": 195, "color": "#10b981" },
+    { "name": "Rahata", "lng": 74.4833, "lat": 19.7167, "milkProduction": 150, "color": "#d4af37" },
+    { "name": "Newasa", "lng": 74.9864, "lat": 19.5566, "milkProduction": 145, "color": "#3c4e6a" },
+    { "name": "Shevgaon", "lng": 75.0999, "lat": 19.3527, "milkProduction": 110, "color": "#2c699a" },
+    { "name": "Pathardi", "lng": 75.2068, "lat": 19.1687, "milkProduction": 98, "color": "#008450" },
+    { "name": "Parner", "lng": 74.4437, "lat": 19.0000, "milkProduction": 120, "color": "#cf5c36" },
+    { "name": "Karjat", "lng": 75.0366, "lat": 18.9077, "milkProduction": 85, "color": "#10b981" },
+    { "name": "Jamkhed", "lng": 75.3145, "lat": 18.7223, "milkProduction": 75, "color": "#d4af37" },
+    { "name": "Rahuri", "lng": 74.6482, "lat": 19.3920, "milkProduction": 160, "color": "#3c4e6a" },
+    { "name": "Nagar (Rural)", "lng": 74.7200, "lat": 19.1500, "milkProduction": 140, "color": "#2c699a" }
   ]
 }
