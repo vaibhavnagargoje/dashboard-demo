@@ -1,0 +1,484 @@
+{
+  "kpis": [
+    {
+      "label": "Public Hospitals",
+      "value": "27",
+      "icon": "Building2",
+      "iconBg": "bg-blue-50",
+      "trend": {
+        "direction": "neutral",
+        "value": "+0.0%",
+        "context": ""
+      }
+    },
+    {
+      "label": "PHCs",
+      "value": "105",
+      "icon": "Stethoscope",
+      "iconBg": "bg-emerald-50",
+      "trend": {
+        "direction": "neutral",
+        "value": "+0.0%",
+        "context": ""
+      }
+    },
+    {
+      "label": "Total Beds",
+      "value": "18,077",
+      "icon": "BedDouble",
+      "iconBg": "bg-amber-50",
+      "trend": {
+        "direction": "up",
+        "value": "+1.7%",
+        "context": ""
+      }
+    },
+    {
+      "label": "Doctors & Staff",
+      "value": "444",
+      "icon": "UserRound",
+      "iconBg": "bg-purple-50",
+      "trend": {
+        "direction": "down",
+        "value": "-57.1%",
+        "context": ""
+      }
+    }
+  ],
+  "chartData": [
+    {
+      "year": "2012",
+      "pubHospitals": 26,
+      "phcs": 96,
+      "subCentres": 557,
+      "privHospitals": 356,
+      "totalBeds": 7721,
+      "doctors": 423
+    },
+    {
+      "year": "2013",
+      "pubHospitals": 26,
+      "phcs": 96,
+      "subCentres": 557,
+      "privHospitals": 390,
+      "totalBeds": 7951,
+      "doctors": 447
+    },
+    {
+      "year": "2014",
+      "pubHospitals": 26,
+      "phcs": 96,
+      "subCentres": 555,
+      "privHospitals": 559,
+      "totalBeds": 8461,
+      "doctors": 173
+    },
+    {
+      "year": "2015",
+      "pubHospitals": 26,
+      "phcs": 96,
+      "subCentres": 555,
+      "privHospitals": 676,
+      "totalBeds": 11231,
+      "doctors": 335
+    },
+    {
+      "year": "2016",
+      "pubHospitals": 28,
+      "phcs": 103,
+      "subCentres": 555,
+      "privHospitals": 862,
+      "totalBeds": 14644,
+      "doctors": 341
+    },
+    {
+      "year": "2017",
+      "pubHospitals": 28,
+      "phcs": 103,
+      "subCentres": 555,
+      "privHospitals": 872,
+      "totalBeds": 14816,
+      "doctors": 341
+    },
+    {
+      "year": "2018",
+      "pubHospitals": 28,
+      "phcs": 103,
+      "subCentres": 555,
+      "privHospitals": 1074,
+      "totalBeds": 16136,
+      "doctors": 307
+    },
+    {
+      "year": "2019",
+      "pubHospitals": 28,
+      "phcs": 103,
+      "subCentres": 555,
+      "privHospitals": 1074,
+      "totalBeds": 16136,
+      "doctors": 917
+    },
+    {
+      "year": "2020",
+      "pubHospitals": 27,
+      "phcs": 105,
+      "subCentres": 556,
+      "privHospitals": 689,
+      "totalBeds": 17768,
+      "doctors": 1034
+    },
+    {
+      "year": "2021",
+      "pubHospitals": 27,
+      "phcs": 105,
+      "subCentres": 565,
+      "privHospitals": 684,
+      "totalBeds": 18077,
+      "doctors": 444
+    }
+  ],
+  "tableData": [
+    {
+      "year": "2012",
+      "pubHospitals": "26",
+      "phcs": "96",
+      "subCentres": "557",
+      "privHospitals": "356",
+      "totalBeds": "7,721",
+      "doctors": "423"
+    },
+    {
+      "year": "2013",
+      "pubHospitals": "26",
+      "phcs": "96",
+      "subCentres": "557",
+      "privHospitals": "390",
+      "totalBeds": "7,951",
+      "doctors": "447"
+    },
+    {
+      "year": "2014",
+      "pubHospitals": "26",
+      "phcs": "96",
+      "subCentres": "555",
+      "privHospitals": "559",
+      "totalBeds": "8,461",
+      "doctors": "173"
+    },
+    {
+      "year": "2015",
+      "pubHospitals": "26",
+      "phcs": "96",
+      "subCentres": "555",
+      "privHospitals": "676",
+      "totalBeds": "11,231",
+      "doctors": "335"
+    },
+    {
+      "year": "2016",
+      "pubHospitals": "28",
+      "phcs": "103",
+      "subCentres": "555",
+      "privHospitals": "862",
+      "totalBeds": "14,644",
+      "doctors": "341"
+    },
+    {
+      "year": "2017",
+      "pubHospitals": "28",
+      "phcs": "103",
+      "subCentres": "555",
+      "privHospitals": "872",
+      "totalBeds": "14,816",
+      "doctors": "341"
+    },
+    {
+      "year": "2018",
+      "pubHospitals": "28",
+      "phcs": "103",
+      "subCentres": "555",
+      "privHospitals": "1,074",
+      "totalBeds": "16,136",
+      "doctors": "307"
+    },
+    {
+      "year": "2019",
+      "pubHospitals": "28",
+      "phcs": "103",
+      "subCentres": "555",
+      "privHospitals": "1,074",
+      "totalBeds": "16,136",
+      "doctors": "917"
+    },
+    {
+      "year": "2020",
+      "pubHospitals": "27",
+      "phcs": "105",
+      "subCentres": "556",
+      "privHospitals": "689",
+      "totalBeds": "17,768",
+      "doctors": "1,034"
+    },
+    {
+      "year": "2021",
+      "pubHospitals": "27",
+      "phcs": "105",
+      "subCentres": "565",
+      "privHospitals": "684",
+      "totalBeds": "18,077",
+      "doctors": "444"
+    }
+  ],
+  "talukas": [
+    {
+      "name": "Akole",
+      "lng": 73.9009,
+      "lat": 19.5333,
+      "color": "#2c699a",
+      "pubHospitals": 4,
+      "phcs": 11,
+      "subCentres": 71,
+      "privHospitals": 19,
+      "beds": 311,
+      "doctors": 37
+    },
+    {
+      "name": "Sangamner",
+      "lng": 74.2142,
+      "lat": 19.5687,
+      "color": "#0b8457",
+      "pubHospitals": 2,
+      "phcs": 10,
+      "subCentres": 66,
+      "privHospitals": 109,
+      "beds": 2692,
+      "doctors": 78
+    },
+    {
+      "name": "Kopargaon",
+      "lng": 74.4787,
+      "lat": 19.8826,
+      "color": "#d4af37",
+      "pubHospitals": 1,
+      "phcs": 6,
+      "subCentres": 32,
+      "privHospitals": 45,
+      "beds": 916,
+      "doctors": 14
+    },
+    {
+      "name": "Rahata",
+      "lng": 74.4833,
+      "lat": 19.7167,
+      "color": "#e07b39",
+      "pubHospitals": 3,
+      "phcs": 6,
+      "subCentres": 30,
+      "privHospitals": 26,
+      "beds": 1979,
+      "doctors": 23
+    },
+    {
+      "name": "Shrirampur",
+      "lng": 74.6559,
+      "lat": 19.6164,
+      "color": "#8b5cf6",
+      "pubHospitals": 1,
+      "phcs": 6,
+      "subCentres": 30,
+      "privHospitals": 75,
+      "beds": 1390,
+      "doctors": 14
+    },
+    {
+      "name": "Newasa",
+      "lng": 74.9864,
+      "lat": 19.5566,
+      "color": "#0891b2",
+      "pubHospitals": 2,
+      "phcs": 9,
+      "subCentres": 42,
+      "privHospitals": 4,
+      "beds": 469,
+      "doctors": 25
+    },
+    {
+      "name": "Shevgaon",
+      "lng": 75.0999,
+      "lat": 19.3527,
+      "color": "#7c3aed",
+      "pubHospitals": 2,
+      "phcs": 7,
+      "subCentres": 37,
+      "privHospitals": 3,
+      "beds": 760,
+      "doctors": 13
+    },
+    {
+      "name": "Pathardi",
+      "lng": 75.2068,
+      "lat": 19.1687,
+      "color": "#059669",
+      "pubHospitals": 1,
+      "phcs": 6,
+      "subCentres": 35,
+      "privHospitals": 24,
+      "beds": 313,
+      "doctors": 22
+    },
+    {
+      "name": "Nagar",
+      "lng": 74.7479,
+      "lat": 19.0948,
+      "color": "#3c4e6a",
+      "pubHospitals": 3,
+      "phcs": 16,
+      "subCentres": 43,
+      "privHospitals": 207,
+      "beds": 6112,
+      "doctors": 98
+    },
+    {
+      "name": "Rahuri",
+      "lng": 74.6482,
+      "lat": 19.392,
+      "color": "#10b981",
+      "pubHospitals": 3,
+      "phcs": 6,
+      "subCentres": 40,
+      "privHospitals": 115,
+      "beds": 1420,
+      "doctors": 28
+    },
+    {
+      "name": "Parner",
+      "lng": 74.4437,
+      "lat": 19.0,
+      "color": "#f59e0b",
+      "pubHospitals": 2,
+      "phcs": 7,
+      "subCentres": 42,
+      "privHospitals": 2,
+      "beds": 699,
+      "doctors": 50
+    },
+    {
+      "name": "Shrigonda",
+      "lng": 74.6897,
+      "lat": 18.8631,
+      "color": "#ef4444",
+      "pubHospitals": 1,
+      "phcs": 7,
+      "subCentres": 39,
+      "privHospitals": 55,
+      "beds": 664,
+      "doctors": 17
+    },
+    {
+      "name": "Karjat",
+      "lng": 75.0366,
+      "lat": 18.9077,
+      "color": "#6366f1",
+      "pubHospitals": 1,
+      "phcs": 5,
+      "subCentres": 35,
+      "privHospitals": 0,
+      "beds": 290,
+      "doctors": 14
+    },
+    {
+      "name": "Jamkhed",
+      "lng": 75.3145,
+      "lat": 18.7223,
+      "color": "#ec4899",
+      "pubHospitals": 1,
+      "phcs": 3,
+      "subCentres": 23,
+      "privHospitals": 0,
+      "beds": 62,
+      "doctors": 11
+    }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Out-Patients (K)",
+      "subtitle": "District yearly out-patient visits",
+      "icon": "Users",
+      "chartType": "area",
+      "data": [
+        {
+          "label": "2014",
+          "value": 2831
+        },
+        {
+          "label": "2015",
+          "value": 3013
+        },
+        {
+          "label": "2016",
+          "value": 3242
+        },
+        {
+          "label": "2017",
+          "value": 2569
+        },
+        {
+          "label": "2018",
+          "value": 2714
+        },
+        {
+          "label": "2019",
+          "value": 3084
+        }
+      ]
+    },
+    {
+      "title": "Public vs Private Beds",
+      "subtitle": "Bed distribution (2021)",
+      "icon": "BedDouble",
+      "chartType": "donut",
+      "data": [
+        {
+          "label": "Public",
+          "value": 1684
+        },
+        {
+          "label": "Private",
+          "value": 16393
+        }
+      ]
+    },
+    {
+      "title": "Surgeries (HMIS)",
+      "subtitle": "Major operations per year",
+      "icon": "Scissors",
+      "chartType": "bar",
+      "data": [
+        {
+          "label": "2014",
+          "value": 7092
+        },
+        {
+          "label": "2015",
+          "value": 7628
+        },
+        {
+          "label": "2016",
+          "value": 6781
+        },
+        {
+          "label": "2017",
+          "value": 4433
+        },
+        {
+          "label": "2018",
+          "value": 4214
+        },
+        {
+          "label": "2019",
+          "value": 4977
+        }
+      ]
+    }
+  ]
+}

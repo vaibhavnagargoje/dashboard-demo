@@ -23,16 +23,19 @@
       "id": "health",
       "label": "Health",
       "icon": "HeartPulse",
-      "description": "Public health infrastructure, hospitals, primary health centers, and rural health statistics.",
-      "status": "coming-soon",
-      "href": "/health",
+      "description": "Public health infrastructure, immunization, maternal & child health, and nutrition data.",
+      "status": "active",
+      "href": "/health/infrastructure",
       "kpis": [
-        { "label": "PHCs", "value": "48", "trend": "+5" },
-        { "label": "Hospitals", "value": "12", "trend": "—" },
-        { "label": "Health Workers", "value": "2,400", "trend": "+8%" }
+        { "label": "PHCs", "value": "105", "trend": "2021" },
+        { "label": "Total Beds", "value": "18,077", "trend": "District" },
+        { "label": "Anganwadis", "value": "11,810", "trend": "Working" }
       ],
       "children": [
-        { "label": "Overview", "path": "/health", "page": "health" }
+        { "label": "Infrastructure", "path": "/health/infrastructure", "page": "health-infra" },
+        { "label": "Immunization", "path": "/health/immunization", "page": "health-imm" },
+        { "label": "Maternal & Child", "path": "/health/maternal-child", "page": "health-mc" },
+        { "label": "Nutrition", "path": "/health/nutrition", "page": "health-nut" }
       ]
     },
     {

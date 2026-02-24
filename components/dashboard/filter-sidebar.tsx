@@ -29,7 +29,7 @@ interface BreakdownLevel {
 interface FilterSidebarProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  variant?: "overview" | "milk" | "infra" | "funding";
+  variant?: "overview" | "milk" | "infra" | "funding" | "health";
   metrics?: FilterCheckbox[];
   talukas?: FilterTaluka[];
   timePeriods?: string[];
