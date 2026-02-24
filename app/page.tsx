@@ -7,11 +7,13 @@ import { DataStatusBar } from "@/components/dashboard/data-status-bar";
 import { KpiCard, KpiGrid } from "@/components/dashboard/kpi-card";
 import { ChartCard } from "@/components/dashboard/chart-card";
 import { FilterSidebar } from "@/components/dashboard/filter-sidebar";
+import { SectorCard } from "@/components/dashboard/sector-card";
 import { DonutChart, DonutLegend } from "@/components/charts/donut-chart";
 import { DashboardLineChart } from "@/components/charts/line-chart";
 import { WaterfallChart, type WaterfallItem } from "@/components/charts/waterfall-chart";
 
 import overviewData from "@/data/overview.json";
+import sectorsData from "@/data/sectors.json";
 import type { KpiCardData } from "@/lib/types";
 import {
   Stethoscope,
@@ -47,8 +49,8 @@ export default function OverviewPage() {
       {/* Header */}
       <AppHeader
         variant="overview"
-        title="Consolidated Narrative Dashboard"
-        subtitle="Transformation Initiative"
+        title="Ahilyanagar District Dashboard"
+        subtitle="Consolidated Overview"
         onMenuClick={() => {}}
         onFilterClick={() => setFilterOpen(true)}
       />
@@ -58,12 +60,38 @@ export default function OverviewPage() {
         {/* Live status bar */}
         <DataStatusBar />
 
-        {/* KPI Cards */}
-        <KpiGrid>
-          {kpis.map((kpi, i) => (
-            <KpiCard key={kpi.label} data={kpi} index={i} />
-          ))}
-        </KpiGrid>
+        {/* ─── Sector Cards Grid ─── */}
+        <div>
+          <h2 className="text-lg font-bold text-primary mb-4">
+            District Sectors
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {sectorsData.sectors.map((sector) => (
+              <SectorCard
+                key={sector.id}
+                id={sector.id}
+                label={sector.label}
+                icon={sector.icon}
+                description={sector.description}
+                status={sector.status}
+                href={sector.href}
+                kpis={sector.kpis}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* ─── Key Highlights ─── */}
+        <div>
+          <h2 className="text-lg font-bold text-primary mb-4">
+            Key Highlights
+          </h2>
+          <KpiGrid>
+            {kpis.map((kpi, i) => (
+              <KpiCard key={kpi.label} data={kpi} index={i} />
+            ))}
+          </KpiGrid>
+        </div>
 
         {/* ─── Row: Livestock Donut + Infra & Service Trends ─── */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -87,8 +115,8 @@ export default function OverviewPage() {
             <div className="flex justify-between items-start mb-4 pr-8">
               <div>
                 <a
-                  href="/infrastructure"
-                  className="font-display text-lg text-primary mb-0.5 hover:underline block"
+                  href="/livestock/census"
+                  className="text-lg font-bold text-primary mb-0.5 hover:underline block"
                 >
                   Infrastructure &amp; Service Trends
                 </a>
@@ -118,7 +146,7 @@ export default function OverviewPage() {
                         </div>
                         <Icon className="h-4 w-4 text-primary" />
                       </div>
-                      <div className="text-2xl font-display font-bold text-primary">
+                      <div className="text-2xl font-bold text-primary">
                         {item.value}
                       </div>
                       <p className="text-[10px] text-subtext-light mt-1">
@@ -181,8 +209,8 @@ export default function OverviewPage() {
           <div className="flex justify-between items-start mb-4 pr-8">
             <div>
               <a
-                href="/milk-production"
-                className="font-display text-lg text-primary mb-0.5 hover:underline block"
+                href="/livestock/milk-production"
+                className="text-lg font-bold text-primary mb-0.5 hover:underline block"
               >
                 Milk Production Trends
               </a>
@@ -200,7 +228,7 @@ export default function OverviewPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="space-y-3 flex flex-col justify-center">
               <a
-                href="/milk-production"
+                href="/livestock/milk-production"
                 className="p-4 bg-slate-50 rounded-lg border border-border-light hover:border-primary/30 transition-colors cursor-pointer block no-underline"
               >
                 <div className="flex items-center justify-between mb-1.5">
@@ -209,9 +237,9 @@ export default function OverviewPage() {
                   </div>
                   <Droplets className="h-4 w-4 text-primary" />
                 </div>
-                <div className="text-2xl font-display font-bold text-primary">
+                <div className="text-2xl font-bold text-primary">
                   850K{" "}
-                  <span className="text-xs font-sans font-normal text-subtext-light">
+                  <span className="text-xs font-normal text-subtext-light">
                     L/day
                   </span>
                 </div>
@@ -224,7 +252,7 @@ export default function OverviewPage() {
                   <div className="text-subtext-light text-[9px] uppercase tracking-wide font-semibold mb-1">
                     Top Taluka
                   </div>
-                  <div className="text-sm font-display font-bold text-chart-line-1">
+                  <div className="text-sm font-bold text-chart-line-1">
                     Sangamner
                   </div>
                   <div className="text-[10px] text-subtext-light mt-0.5">
@@ -235,7 +263,7 @@ export default function OverviewPage() {
                   <div className="text-subtext-light text-[9px] uppercase tracking-wide font-semibold mb-1">
                     State Avg
                   </div>
-                  <div className="text-sm font-display font-bold text-state-avg">
+                  <div className="text-sm font-bold text-state-avg">
                     720K L
                   </div>
                   <div className="text-[10px] text-subtext-light mt-0.5">

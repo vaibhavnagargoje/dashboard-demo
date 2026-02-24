@@ -66,9 +66,9 @@ const config: Config = {
       },
       /* ── Typography ────────────────────────────────── */
       fontFamily: {
-        display: ["var(--font-playfair)", "serif"],
-        body: ["var(--font-lato)", "sans-serif"],
-        sans: ["var(--font-inter)", "sans-serif"],
+        display: ["var(--font-body)", "sans-serif"],
+        body: ["var(--font-body)", "sans-serif"],
+        sans: ["var(--font-body)", "sans-serif"],
       },
       /* ── Border Radius ─────────────────────────────── */
       borderRadius: {

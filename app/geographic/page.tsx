@@ -36,7 +36,7 @@ export default function GeographicPage() {
           { label: "Dashboard", href: "/" },
           { label: "Geographic View" },
         ]}
-        backLink={{ label: "Back to Dashboard", href: "/" }}
+        backLink={{ label: "Back to Overview", href: "/" }}
         onMenuClick={() => {}}
       />
 

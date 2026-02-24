@@ -50,9 +50,10 @@ export default function FundingPage() {
         description="Tracking budget allocation, sector-wise spending, and remaining balance for FY 2023-24."
         breadcrumbs={[
           { label: "Dashboard", href: "/" },
-          { label: "Funding" },
+          { label: "Funding", href: "/funding" },
+          { label: "Budget Allocation" },
         ]}
-        backLink={{ label: "Back to Dashboard", href: "/" }}
+        backLink={{ label: "Back to Overview", href: "/" }}
         onMenuClick={() => {}}
         onFilterClick={() => setFilterOpen(true)}
       />

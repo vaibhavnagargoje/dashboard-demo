@@ -1,0 +1,101 @@
+{
+  "sectors": [
+    {
+      "id": "livestock",
+      "label": "Livestock",
+      "icon": "PawPrint",
+      "description": "Animal husbandry, dairy production, veterinary services, and livestock census data.",
+      "status": "active",
+      "href": "/livestock/milk-production",
+      "kpis": [
+        { "label": "Total Livestock", "value": "1.2M", "trend": "+3.2%" },
+        { "label": "Milk Output", "value": "850K L/day", "trend": "+4.9%" },
+        { "label": "Vaccinations", "value": "1,800/mo", "trend": "+12%" }
+      ],
+      "children": [
+        { "label": "Milk Production", "path": "/livestock/milk-production", "page": "milk" },
+        { "label": "Census & Infra", "path": "/livestock/census", "page": "census" },
+        { "label": "Vet Services", "path": "/livestock/vet-services", "page": "vet" },
+        { "label": "Export Data", "path": "/livestock/exports", "page": "exports" }
+      ]
+    },
+    {
+      "id": "health",
+      "label": "Health",
+      "icon": "HeartPulse",
+      "description": "Public health infrastructure, hospitals, primary health centers, and rural health statistics.",
+      "status": "coming-soon",
+      "href": "/health",
+      "kpis": [
+        { "label": "PHCs", "value": "48", "trend": "+5" },
+        { "label": "Hospitals", "value": "12", "trend": "—" },
+        { "label": "Health Workers", "value": "2,400", "trend": "+8%" }
+      ],
+      "children": [
+        { "label": "Overview", "path": "/health", "page": "health" }
+      ]
+    },
+    {
+      "id": "education",
+      "label": "Education",
+      "icon": "GraduationCap",
+      "description": "Schools, enrollment data, literacy rates, and educational infrastructure.",
+      "status": "coming-soon",
+      "href": "/education",
+      "kpis": [
+        { "label": "Schools", "value": "1,250", "trend": "+18" },
+        { "label": "Enrollment", "value": "3.4L", "trend": "+2.1%" },
+        { "label": "Literacy Rate", "value": "82.3%", "trend": "+0.8%" }
+      ],
+      "children": [
+        { "label": "Overview", "path": "/education", "page": "education" }
+      ]
+    },
+    {
+      "id": "funding",
+      "label": "Funding",
+      "icon": "Landmark",
+      "description": "Budget allocation, sector-wise spending, utilization tracking, and subsidy data.",
+      "status": "active",
+      "href": "/funding",
+      "kpis": [
+        { "label": "Total Budget", "value": "₹500 Cr", "trend": "FY 23-24" },
+        { "label": "Utilized", "value": "₹495 Cr", "trend": "99%" },
+        { "label": "Remaining", "value": "₹5 Cr", "trend": "1%" }
+      ],
+      "children": [
+        { "label": "Budget Allocation", "path": "/funding", "page": "funding" }
+      ]
+    },
+    {
+      "id": "transport",
+      "label": "Transport",
+      "icon": "Truck",
+      "description": "Road infrastructure, public transport coverage, and logistics network data.",
+      "status": "coming-soon",
+      "href": "/transport",
+      "kpis": [
+        { "label": "Road Length", "value": "4,800 km", "trend": "+120 km" },
+        { "label": "Bus Routes", "value": "340", "trend": "+15" },
+        { "label": "Villages Connected", "value": "98.2%", "trend": "+1.4%" }
+      ],
+      "children": [
+        { "label": "Overview", "path": "/transport", "page": "transport" }
+      ]
+    },
+    {
+      "id": "geographic",
+      "label": "Geographic",
+      "icon": "MapPinned",
+      "description": "Taluka-wise spatial distribution of all services, infrastructure, and key metrics on an interactive map.",
+      "status": "active",
+      "href": "/geographic",
+      "kpis": [
+        { "label": "Talukas", "value": "14", "trend": "Active" },
+        { "label": "Data Points", "value": "42K", "trend": "Live" },
+        { "label": "Coverage", "value": "100%", "trend": "District" }
+      ],
+      "children": []
+    }
+  ]
+}

@@ -96,9 +96,10 @@ export default function InfrastructurePage() {
         description="Veterinary clinics, vaccination drives, and mobile service coverage across talukas."
         breadcrumbs={[
           { label: "Dashboard", href: "/" },
-          { label: "Infrastructure" },
+          { label: "Livestock", href: "/livestock/milk-production" },
+          { label: "Census & Infrastructure" },
         ]}
-        backLink={{ label: "Back to Dashboard", href: "/" }}
+        backLink={{ label: "Back to Overview", href: "/" }}
         onMenuClick={() => {}}
         onFilterClick={() => setFilterOpen(true)}
       />

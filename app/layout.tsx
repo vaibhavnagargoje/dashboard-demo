@@ -1,24 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Lato, Playfair_Display } from "next/font/google";
+import { Lato } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
-import { Sidebar } from "@/components/layout/sidebar";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+import { Sidebar } from "@/components/layout/sidebar-new";
 
 const lato = Lato({
   subsets: ["latin"],
   weight: ["300", "400", "700", "900"],
   variable: "--font-body",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${lato.variable} ${playfair.variable} font-body antialiased`}
+        className={`${lato.variable} font-body antialiased`}
       >
         <div className="flex h-screen overflow-hidden bg-bg-light">
           {/* Desktop sidebar */}

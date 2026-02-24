@@ -74,9 +74,10 @@ export default function MilkProductionPage() {
         description="District & taluka-wise milk output trends from 2018 to 2024."
         breadcrumbs={[
           { label: "Dashboard", href: "/" },
+          { label: "Livestock", href: "/livestock/milk-production" },
           { label: "Milk Production" },
         ]}
-        backLink={{ label: "Back to Dashboard", href: "/" }}
+        backLink={{ label: "Back to Overview", href: "/" }}
         onMenuClick={() => {}}
         onFilterClick={() => setFilterOpen(true)}
       />
