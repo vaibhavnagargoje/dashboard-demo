@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "message": "New census data uploaded for <strong>Sangamner Taluka</strong>",
+    "highlight": "Sangamner Taluka",
+    "time": "2 hours ago",
+    "type": "info",
+    "read": false
+  },
+  {
+    "id": "2",
+    "message": "Vaccination target <strong>achieved</strong> for June",
+    "highlight": "achieved",
+    "time": "5 hours ago",
+    "type": "success",
+    "read": false
+  },
+  {
+    "id": "3",
+    "message": "Budget report Q3 ready for <strong>review</strong>",
+    "highlight": "review",
+    "time": "1 day ago",
+    "type": "warning",
+    "read": false
+  }
+]

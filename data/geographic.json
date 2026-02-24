@@ -1,0 +1,20 @@
+{
+  "center": [74.7, 19.1],
+  "zoom": 9,
+  "talukas": [
+    { "name": "Ahilyanagar City", "lng": 74.7479, "lat": 19.0948, "milkProduction": "850k L", "vaccinations": "1,800", "clinics": 18, "color": "#3c4e6a" },
+    { "name": "Sangamner", "lng": 74.2142, "lat": 19.5687, "milkProduction": "320k L", "vaccinations": "420", "clinics": 15, "color": "#2c699a" },
+    { "name": "Kopargaon", "lng": 74.4787, "lat": 19.8826, "milkProduction": "210k L", "vaccinations": "310", "clinics": 12, "color": "#008450" },
+    { "name": "Akole", "lng": 73.9009, "lat": 19.5333, "milkProduction": "180k L", "vaccinations": "250", "clinics": 10, "color": "#cf5c36" },
+    { "name": "Shrirampur", "lng": 74.6559, "lat": 19.6164, "milkProduction": "195k L", "vaccinations": "280", "clinics": 11, "color": "#10b981" },
+    { "name": "Rahata", "lng": 74.4833, "lat": 19.7167, "milkProduction": "150k L", "vaccinations": "200", "clinics": 9, "color": "#d4af37" },
+    { "name": "Newasa", "lng": 74.9864, "lat": 19.5566, "milkProduction": "145k L", "vaccinations": "190", "clinics": 10, "color": "#3c4e6a" },
+    { "name": "Shevgaon", "lng": 75.0999, "lat": 19.3527, "milkProduction": "110k L", "vaccinations": "150", "clinics": 8, "color": "#2c699a" },
+    { "name": "Pathardi", "lng": 75.2068, "lat": 19.1687, "milkProduction": "98k L", "vaccinations": "130", "clinics": 7, "color": "#008450" },
+    { "name": "Parner", "lng": 74.4437, "lat": 19.0000, "milkProduction": "120k L", "vaccinations": "175", "clinics": 9, "color": "#cf5c36" },
+    { "name": "Karjat", "lng": 75.0366, "lat": 18.9077, "milkProduction": "85k L", "vaccinations": "110", "clinics": 6, "color": "#10b981" },
+    { "name": "Jamkhed", "lng": 75.3145, "lat": 18.7223, "milkProduction": "75k L", "vaccinations": "95", "clinics": 5, "color": "#d4af37" },
+    { "name": "Rahuri", "lng": 74.6482, "lat": 19.3920, "milkProduction": "160k L", "vaccinations": "220", "clinics": 11, "color": "#3c4e6a" },
+    { "name": "Nagar (Rural)", "lng": 74.7200, "lat": 19.1500, "milkProduction": "140k L", "vaccinations": "185", "clinics": 10, "color": "#2c699a" }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "kpis": [
+    {
+      "label": "District Avg",
+      "value": "850k L",
+      "icon": "Droplets",
+      "iconBg": "bg-primary/10",
+      "trend": { "direction": "up", "value": "+4.9%", "context": "from 2023" }
+    },
+    {
+      "label": "State Avg",
+      "value": "720k L",
+      "icon": "Flag",
+      "iconBg": "bg-amber-50",
+      "trend": { "direction": "neutral", "value": "", "context": "Maharashtra benchmark" }
+    },
+    {
+      "label": "Top Taluka",
+      "value": "Sangamner",
+      "icon": "Trophy",
+      "iconBg": "bg-blue-50",
+      "trend": { "direction": "neutral", "value": "", "context": "320k L/day production" }
+    },
+    {
+      "label": "Active Talukas",
+      "value": "14",
+      "icon": "Users",
+      "iconBg": "bg-emerald-50",
+      "trend": { "direction": "neutral", "value": "", "context": "Cooperative societies reporting" }
+    }
+  ],
+  "chartData": [
+    { "year": "2018", "districtAvg": 620, "stateAvg": 580, "sangamner": 210, "kopargaon": 150 },
+    { "year": "2019", "districtAvg": 650, "stateAvg": 600, "sangamner": 230, "kopargaon": 160 },
+    { "year": "2020", "districtAvg": 680, "stateAvg": 620, "sangamner": 245, "kopargaon": 165 },
+    { "year": "2021", "districtAvg": 710, "stateAvg": 640, "sangamner": 260, "kopargaon": 175 },
+    { "year": "2022", "districtAvg": 750, "stateAvg": 670, "sangamner": 290, "kopargaon": 190 },
+    { "year": "2023", "districtAvg": 810, "stateAvg": 700, "sangamner": 310, "kopargaon": 205 },
+    { "year": "2024", "districtAvg": 850, "stateAvg": 720, "sangamner": 320, "kopargaon": 210 }
+  ],
+  "tableData": [
+    { "year": "2018", "districtAvg": 620, "stateAvg": 580, "sangamner": 210, "kopargaon": 150 },
+    { "year": "2019", "districtAvg": 650, "stateAvg": 600, "sangamner": 230, "kopargaon": 160 },
+    { "year": "2020", "districtAvg": 680, "stateAvg": 620, "sangamner": 245, "kopargaon": 165 },
+    { "year": "2021", "districtAvg": 710, "stateAvg": 640, "sangamner": 260, "kopargaon": 175 },
+    { "year": "2022", "districtAvg": 750, "stateAvg": 670, "sangamner": 290, "kopargaon": 190 },
+    { "year": "2023", "districtAvg": 810, "stateAvg": 700, "sangamner": 310, "kopargaon": 205 },
+    { "year": "2024", "districtAvg": 850, "stateAvg": 720, "sangamner": 320, "kopargaon": 210 }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Dairy Cooperative Societies",
+      "subtitle": "Active societies & memberships",
+      "icon": "Store",
+      "chartType": "bar",
+      "data": [
+        { "label": "2018", "value": 120 },
+        { "label": "2019", "value": 125 },
+        { "label": "2020", "value": 132 },
+        { "label": "2021", "value": 140 },
+        { "label": "2022", "value": 145 },
+        { "label": "2023", "value": 152 },
+        { "label": "2024", "value": 160 }
+      ],
+      "colors": ["#3c4e6a"]
+    },
+    {
+      "title": "Livestock Population",
+      "subtitle": "Cows & Buffaloes count",
+      "icon": "PawPrint",
+      "chartType": "donut",
+      "data": [
+        { "label": "Hybrid", "value": 45 },
+        { "label": "Native", "value": 25 },
+        { "label": "Buffaloes", "value": 30 }
+      ],
+      "colors": ["#2c699a", "#cf5c36", "#10b981"]
+    },
+    {
+      "title": "Cold Storage Capacity",
+      "subtitle": "Units & capacity in MT",
+      "icon": "Snowflake",
+      "chartType": "area",
+      "data": [
+        { "label": "2018", "value": 500 },
+        { "label": "2019", "value": 550 },
+        { "label": "2020", "value": 600 },
+        { "label": "2021", "value": 600 },
+        { "label": "2022", "value": 750 },
+        { "label": "2023", "value": 800 },
+        { "label": "2024", "value": 950 }
+      ],
+      "colors": ["#d4af37"]
+    }
+  ],
+  "talukas": [
+    { "name": "Ahilyanagar Avg", "milkProduction": 850, "selected": true },
+    { "name": "Sangamner", "milkProduction": 320, "selected": true },
+    { "name": "Kopargaon", "milkProduction": 210, "selected": true },
+    { "name": "Akole", "milkProduction": 180, "selected": false },
+    { "name": "Shrirampur", "milkProduction": 195, "selected": false },
+    { "name": "Rahata", "milkProduction": 150, "selected": false },
+    { "name": "Newasa", "milkProduction": 145, "selected": false },
+    { "name": "Shevgaon", "milkProduction": 110, "selected": false },
+    { "name": "Pathardi", "milkProduction": 98, "selected": false }
+  ]
+}

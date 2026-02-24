@@ -1,0 +1,94 @@
+{
+  "kpis": [
+    {
+      "label": "Total Livestock",
+      "value": "1.2M",
+      "icon": "PawPrint",
+      "iconBg": "bg-primary/10",
+      "trend": { "direction": "up", "value": "+3.2%", "context": "vs last year" }
+    },
+    {
+      "label": "Milk Output",
+      "value": "850K L",
+      "icon": "Droplets",
+      "iconBg": "bg-blue-50",
+      "trend": { "direction": "up", "value": "+8.5%", "context": "vs last year" },
+      "href": "/milk-production"
+    },
+    {
+      "label": "Vaccinations",
+      "value": "1,800",
+      "icon": "Syringe",
+      "iconBg": "bg-emerald-50",
+      "trend": { "direction": "up", "value": "+12%", "context": "this month" },
+      "href": "/infrastructure"
+    },
+    {
+      "label": "Budget Used",
+      "value": "₹500 Cr",
+      "icon": "Landmark",
+      "iconBg": "bg-orange-50",
+      "progress": { "value": 100, "label": "100% utilized" },
+      "href": "/funding"
+    }
+  ],
+  "livestockComposition": [
+    { "name": "Cattle", "value": 45, "color": "#3c4e6a" },
+    { "name": "Buffalo", "value": 25, "color": "#2c699a" },
+    { "name": "Goat", "value": 20, "color": "#008450" },
+    { "name": "Sheep & Others", "value": 10, "color": "#cf5c36" }
+  ],
+  "serviceTrends": [
+    { "month": "Jan", "vaccinations": 1200, "aiServices": 800 },
+    { "month": "Feb", "vaccinations": 1350, "aiServices": 850 },
+    { "month": "Mar", "vaccinations": 1280, "aiServices": 900 },
+    { "month": "Apr", "vaccinations": 1500, "aiServices": 920 },
+    { "month": "May", "vaccinations": 1650, "aiServices": 980 },
+    { "month": "Jun", "vaccinations": 1800, "aiServices": 1050 }
+  ],
+  "infraSummary": [
+    {
+      "label": "Vet Clinics",
+      "value": "142",
+      "sub": "Operational clinics across 14 talukas",
+      "trend": "+8 new this year",
+      "icon": "Stethoscope"
+    },
+    {
+      "label": "AI Centers",
+      "value": "85",
+      "sub": "Artificial insemination centers",
+      "trend": "+12 from 2022",
+      "icon": "FlaskConical"
+    },
+    {
+      "label": "Mobile Units",
+      "value": "28",
+      "sub": "Active mobile vet units",
+      "trend": "+5 deployed recently",
+      "icon": "Truck"
+    }
+  ],
+  "fundingWaterfall": [
+    { "category": "Total Allocation", "base": 0, "value": 500, "type": "total" },
+    { "category": "Infra Dev", "base": 300, "value": 200, "type": "expense" },
+    { "category": "Fodder Mgmt", "base": 200, "value": 100, "type": "expense" },
+    { "category": "Disease Ctrl", "base": 120, "value": 80, "type": "expense" },
+    { "category": "Direct Subsidy", "base": 0, "value": 120, "type": "expense" },
+    { "category": "Utilized Total", "base": 0, "value": 500, "type": "balance" }
+  ],
+  "milkTrends": [
+    { "year": "2018", "districtAvg": 620, "stateAvg": 580, "sangamner": 200, "kopargaon": 150 },
+    { "year": "2019", "districtAvg": 670, "stateAvg": 600, "sangamner": 220, "kopargaon": 160 },
+    { "year": "2020", "districtAvg": 650, "stateAvg": 590, "sangamner": 215, "kopargaon": 155 },
+    { "year": "2021", "districtAvg": 710, "stateAvg": 630, "sangamner": 240, "kopargaon": 170 },
+    { "year": "2022", "districtAvg": 780, "stateAvg": 660, "sangamner": 270, "kopargaon": 185 },
+    { "year": "2023", "districtAvg": 810, "stateAvg": 690, "sangamner": 295, "kopargaon": 200 },
+    { "year": "2024", "districtAvg": 850, "stateAvg": 720, "sangamner": 320, "kopargaon": 210 }
+  ],
+  "milkSideStats": [
+    { "label": "District Average", "value": "850k L", "sub": "+4.9% from 2023", "color": "#3c4e6a" },
+    { "label": "State Average", "value": "720k L", "sub": "Maharashtra benchmark", "color": "#d4af37" },
+    { "label": "Top Taluka", "value": "Sangamner", "sub": "320k L/day", "color": "#2c699a" }
+  ]
+}

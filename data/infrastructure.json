@@ -1,0 +1,70 @@
+{
+  "chartData": [
+    { "year": "2018", "vaccinations": 850, "clinics": 90, "stateAvg": 880, "target2025": 150 },
+    { "year": "2019", "vaccinations": 920, "clinics": 95, "stateAvg": 950, "target2025": 150 },
+    { "year": "2020", "vaccinations": 900, "clinics": 100, "stateAvg": 930, "target2025": 150 },
+    { "year": "2021", "vaccinations": 1100, "clinics": 110, "stateAvg": 1150, "target2025": 150 },
+    { "year": "2022", "vaccinations": 1350, "clinics": 125, "stateAvg": 1400, "target2025": 150 },
+    { "year": "2023", "vaccinations": 1600, "clinics": 135, "stateAvg": 1650, "target2025": 150 },
+    { "year": "2024", "vaccinations": 1800, "clinics": 142, "stateAvg": 1850, "target2025": 150 }
+  ],
+  "relatedMetrics": [
+    {
+      "title": "Dairy Cooperative Societies",
+      "subtitle": "Active societies & memberships",
+      "icon": "Store",
+      "chartType": "bar",
+      "data": [
+        { "label": "2018", "value": 120 },
+        { "label": "2019", "value": 125 },
+        { "label": "2020", "value": 132 },
+        { "label": "2021", "value": 140 },
+        { "label": "2022", "value": 145 },
+        { "label": "2023", "value": 152 },
+        { "label": "2024", "value": 160 }
+      ],
+      "colors": ["#3c4e6a"]
+    },
+    {
+      "title": "Livestock Population",
+      "subtitle": "Cows & Buffaloes count",
+      "icon": "PawPrint",
+      "chartType": "donut",
+      "data": [
+        { "label": "Hybrid", "value": 45 },
+        { "label": "Native", "value": 25 },
+        { "label": "Buffaloes", "value": 30 }
+      ],
+      "colors": ["#2c699a", "#cf5c36", "#10b981"]
+    },
+    {
+      "title": "Fisheries Production",
+      "subtitle": "Annual production in MT",
+      "icon": "Fish",
+      "chartType": "area",
+      "data": [
+        { "label": "2018", "value": 500 },
+        { "label": "2019", "value": 550 },
+        { "label": "2020", "value": 600 },
+        { "label": "2021", "value": 600 },
+        { "label": "2022", "value": 750 },
+        { "label": "2023", "value": 800 },
+        { "label": "2024", "value": 950 }
+      ],
+      "colors": ["#d4af37"]
+    }
+  ],
+  "availableDataPoints": [
+    { "id": "vaccinations", "label": "Vaccinations", "value": "1.8k", "checked": true },
+    { "id": "clinics", "label": "Active Clinics", "value": "142", "checked": true },
+    { "id": "aiServices", "label": "AI Services", "value": "1.0k", "checked": false },
+    { "id": "mobileUnits", "label": "Mobile Units", "value": "28", "checked": false },
+    { "id": "diseaseOutbreaks", "label": "Disease Outbreaks", "value": "12", "checked": false }
+  ],
+  "talukas": [
+    { "name": "All Talukas", "selected": true },
+    { "name": "Sangamner", "selected": false },
+    { "name": "Akole", "selected": false },
+    { "name": "Kopargaon", "selected": false }
+  ]
+}
