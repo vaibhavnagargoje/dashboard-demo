@@ -3,89 +3,57 @@
 import { useState, useMemo } from "react";
 import { AppHeader } from "@/components/layout/app-header";
 import { PageFooter } from "@/components/layout/page-footer";
+import { KpiCard, KpiGrid } from "@/components/dashboard/kpi-card";
 import { ChartCard } from "@/components/dashboard/chart-card";
 import { FilterSidebar } from "@/components/dashboard/filter-sidebar";
 import { RelatedMetricsGrid } from "@/components/dashboard/related-metrics";
 import { DualAxisLineChart } from "@/components/charts/dual-axis-line-chart";
 import { ViewModeTabs } from "@/components/controls/view-mode-tabs";
-import { CompareToggle } from "@/components/controls/compare-toggle";
 import { TimelineSlider } from "@/components/controls/timeline-slider";
 import { DataTable, type DataTableColumn } from "@/components/controls/data-table";
 import { MapView } from "@/components/map/map-view";
 import { Card } from "@/components/ui/card";
-import { Syringe, Stethoscope } from "lucide-react";
+import { Hospital, Stethoscope } from "lucide-react";
 
 import infraData from "@/data/infrastructure.json";
-import type { RelatedMetricCard } from "@/lib/types";
+import type { KpiCardData, RelatedMetricCard } from "@/lib/types";
 
 const TABLE_COLUMNS: DataTableColumn[] = [
   { key: "year", label: "Year", sortable: true },
-  { key: "vaccinations", label: "Vaccinations", align: "right", mono: true, sortable: true },
-  { key: "clinics", label: "Active Clinics", align: "right", mono: true, sortable: true },
-  { key: "stateAvg", label: "State Avg", align: "right", mono: true, sortable: true },
-  { key: "target2025", label: "Target 2025", align: "right", mono: true },
+  { key: "totalFacilities", label: "Total Facilities", align: "right", mono: true, sortable: true },
+  { key: "vetHospitals", label: "Vet Hospitals", align: "right", mono: true, sortable: true },
+  { key: "firstAidCentres", label: "First-Aid Centres", align: "right", mono: true, sortable: true },
+  { key: "livestock", label: "Livestock Population", align: "right", mono: true, sortable: true },
 ];
 
 export default function InfrastructurePage() {
   const [filterOpen, setFilterOpen] = useState(false);
   const [viewMode, setViewMode] = useState<"chart" | "table" | "map">("chart");
-  const [showStateAvg, setShowStateAvg] = useState(true);
-  const [showTarget, setShowTarget] = useState(false);
-  const [currentYear, setCurrentYear] = useState(2024);
+  const [currentYear, setCurrentYear] = useState(2021);
   const [selectedTaluka, setSelectedTaluka] = useState<string | null>(null);
 
-  const { chartData, relatedMetrics: rawMetrics, talukas } = infraData;
+  const { kpis: rawKpis, chartData, tableData, relatedMetrics: rawMetrics, talukas } = infraData;
+  const kpis = rawKpis as KpiCardData[];
   const relatedMetrics = rawMetrics as RelatedMetricCard[];
 
-  /* Build series dynamically using DualAxisSeriesConfig shape */
-  const series = useMemo(() => {
-    const s: Array<{
-      dataKey: string;
-      name: string;
-      color: string;
-      yAxisId: "left" | "right";
-      strokeWidth?: number;
-      fill?: boolean;
-      dashed?: boolean;
-    }> = [
-      {
-        dataKey: "vaccinations",
-        name: "Vaccinations",
-        color: "#2c699a",
-        yAxisId: "left",
-        strokeWidth: 2.5,
-        fill: true,
-      },
-    ];
-    if (showStateAvg) {
-      s.push({
-        dataKey: "stateAvg",
-        name: "State Avg",
-        color: "#d4af37",
-        yAxisId: "left",
-        strokeWidth: 2,
-        dashed: true,
-      });
-    }
-    s.push({
-      dataKey: "clinics",
-      name: "Active Clinics",
+  /* Dual-axis series: Total Facilities (left) + Livestock in '000 (right) */
+  const series = useMemo(() => [
+    {
+      dataKey: "totalFacilities",
+      name: "Total Vet Facilities",
+      color: "#2c699a",
+      yAxisId: "left" as const,
+      strokeWidth: 2.5,
+      fill: true,
+    },
+    {
+      dataKey: "livestock",
+      name: "Livestock ('000)",
       color: "#008450",
-      yAxisId: "right",
+      yAxisId: "right" as const,
       strokeWidth: 2,
-    });
-    if (showTarget) {
-      s.push({
-        dataKey: "target2025",
-        name: "Target 2025",
-        color: "#cf5c36",
-        yAxisId: "right",
-        strokeWidth: 1.5,
-        dashed: true,
-      });
-    }
-    return s;
-  }, [showStateAvg, showTarget]);
+    },
+  ], []);
 
   const filteredData = useMemo(
     () => chartData.filter((d) => Number(d.year) <= currentYear),
@@ -96,8 +64,8 @@ export default function InfrastructurePage() {
     <>
       <AppHeader
         variant="detail"
-        title="Infrastructure & Service Trends"
-        description="Veterinary clinics, vaccination drives, and mobile service coverage across talukas."
+        title="Veterinary Facilities & Livestock Census"
+        description="Veterinary infrastructure and livestock population across all 14 talukas (2012–2021)."
         breadcrumbs={[
           { label: "Dashboard", href: "/" },
           { label: "Livestock", href: "/livestock/milk-production" },
@@ -109,34 +77,27 @@ export default function InfrastructurePage() {
       />
 
       <div className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8 space-y-6 bg-bg-light">
+        {/* KPI strip */}
+        <KpiGrid>
+          {kpis.map((kpi, i) => (
+            <KpiCard key={kpi.label} data={kpi} index={i} />
+          ))}
+        </KpiGrid>
+
         {/* Main chart card */}
         <ChartCard
-          title="Vaccination & Clinic Trends"
-          description="Monthly vaccination counts (left axis) versus active clinic count (right axis) over time."
-          source="Source: District Veterinary Services Office, Ahilyanagar (2024)"
+          title="Veterinary Facilities & Livestock Trends"
+          description="Total veterinary facilities (left axis) versus total livestock population in thousands (right axis)."
+          source="Source: District Veterinary & Animal Husbandry Office, Ahilyanagar (2021)"
           legends={[
-            { color: "#2c699a", label: "Vaccinations" },
-            { color: "#d4af37", label: "State Avg" },
-            { color: "#008450", label: "Active Clinics" },
-            { color: "#cf5c36", label: "Target 2025" },
+            { color: "#2c699a", label: "Total Vet Facilities" },
+            { color: "#008450", label: "Livestock ('000)" },
           ]}
           headerRight={
-            <div className="flex flex-wrap items-center gap-4">
-              <CompareToggle
-                label="Compare with State Average"
-                checked={showStateAvg}
-                onCheckedChange={setShowStateAvg}
-              />
-              <CompareToggle
-                label="Show Target 2025"
-                checked={showTarget}
-                onCheckedChange={setShowTarget}
-              />
-              <ViewModeTabs
-                activeMode={viewMode}
-                onModeChange={(m) => setViewMode(m as any)}
-              />
-            </div>
+            <ViewModeTabs
+              activeMode={viewMode}
+              onModeChange={(m) => setViewMode(m as any)}
+            />
           }
         >
           {viewMode === "chart" && (
@@ -146,15 +107,15 @@ export default function InfrastructurePage() {
                   data={filteredData}
                   series={series}
                   xDataKey="year"
-                  leftAxisLabel="Vaccinations"
-                  rightAxisLabel="Clinic Count"
+                  leftAxisLabel="Vet Facilities"
+                  rightAxisLabel="Livestock ('000)"
                   height={400}
                 />
               </div>
               <div className="mt-4">
                 <TimelineSlider
-                  minYear={2018}
-                  maxYear={2024}
+                  minYear={2012}
+                  maxYear={2021}
                   value={currentYear}
                   onChange={setCurrentYear}
                 />
@@ -163,7 +124,7 @@ export default function InfrastructurePage() {
           )}
 
           {viewMode === "table" && (
-            <DataTable columns={TABLE_COLUMNS} data={chartData} />
+            <DataTable columns={TABLE_COLUMNS} data={tableData} />
           )}
 
           {viewMode === "map" && (
@@ -178,7 +139,7 @@ export default function InfrastructurePage() {
                       lng: t.lng,
                       lat: t.lat,
                       label: t.name,
-                      value: `Vaccinations: ${t.vaccinations} | Clinics: ${t.clinics}`,
+                      value: `Facilities: ${t.totalFacilities} | Hospitals: ${t.vetHospitals}`,
                       color: t.color,
                     }))}
                     onMarkerClick={(m) => setSelectedTaluka(m.label)}
@@ -187,9 +148,9 @@ export default function InfrastructurePage() {
                 </Card>
               </div>
               <div className="space-y-2 max-h-[420px] overflow-y-auto">
-                <div className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Taluka-wise Infrastructure</div>
-                {talukas
-                  .sort((a, b) => b.vaccinations - a.vaccinations)
+                <div className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Taluka-wise Facilities</div>
+                {[...talukas]
+                  .sort((a, b) => b.totalFacilities - a.totalFacilities)
                   .map((t) => {
                     const selected = selectedTaluka === t.name;
                     return (
@@ -207,10 +168,11 @@ export default function InfrastructurePage() {
                             <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: t.color }} />
                             {t.name}
                           </span>
+                          <span className="text-xs font-mono">{t.totalFacilities} total</span>
                         </div>
                         <div className="flex items-center gap-3 mt-1 ml-4 text-xs text-subtext-light">
-                          <span className="flex items-center gap-1"><Syringe className="h-3 w-3" />{t.vaccinations}</span>
-                          <span className="flex items-center gap-1"><Stethoscope className="h-3 w-3" />{t.clinics} clinics</span>
+                          <span className="flex items-center gap-1"><Hospital className="h-3 w-3" />{t.vetHospitals} hospitals</span>
+                          <span className="flex items-center gap-1"><Stethoscope className="h-3 w-3" />{t.firstAidCentres} first-aid</span>
                         </div>
                       </button>
                     );

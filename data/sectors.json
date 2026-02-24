@@ -8,9 +8,9 @@
       "status": "active",
       "href": "/livestock/milk-production",
       "kpis": [
-        { "label": "Total Livestock", "value": "1.2M", "trend": "+3.2%" },
-        { "label": "Milk Output", "value": "850K L/day", "trend": "+4.9%" },
-        { "label": "Vaccinations", "value": "1,800/mo", "trend": "+12%" }
+        { "label": "Total Livestock", "value": "5.07L", "trend": "+9.1%" },
+        { "label": "Milk Output", "value": "616k L/day", "trend": "-4.6%" },
+        { "label": "Vet Facilities", "value": "228", "trend": "+2.2%" }
       ],
       "children": [
         { "label": "Milk Production", "path": "/livestock/milk-production", "page": "milk" },

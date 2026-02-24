@@ -8,12 +8,11 @@ import { Card } from "@/components/ui/card";
 import geoData from "@/data/geographic.json";
 import {
   Droplets,
-  Syringe,
+  Fish,
   Stethoscope,
   MapPin,
   TrendingUp,
-  BarChart3,
-  Users,
+  Target,
 } from "lucide-react";
 
 export default function GeographicPage() {
@@ -23,7 +22,7 @@ export default function GeographicPage() {
     lng: t.lng,
     lat: t.lat,
     label: t.name,
-    value: `Milk: ${t.milkProduction} | Vacc: ${t.vaccinations} | Clinics: ${t.clinics}`,
+    value: `Milk: ${t.milkDaily}k L/day | Vet: ${t.vetFacilities} | Fish: ${t.fishProd}T`,
     color: t.color,
   }));
 
@@ -31,14 +30,16 @@ export default function GeographicPage() {
 
   // Summary stats
   const totalTalukas = geoData.talukas.length;
-  const totalClinics = geoData.talukas.reduce((s, t) => s + t.clinics, 0);
+  const totalVetFacilities = geoData.talukas.reduce((s, t) => s + t.vetFacilities, 0);
+  const totalFishProd = geoData.talukas.reduce((s, t) => s + t.fishProd, 0);
+  const avgAI = (geoData.talukas.reduce((s, t) => s + t.aiAchievement, 0) / totalTalukas).toFixed(1);
 
   return (
     <>
       <AppHeader
         variant="detail"
         title="Geographic View"
-        description="Taluka-wise distribution of livestock data, services, and infrastructure across Ahilyanagar district."
+        description="Taluka-wise distribution of livestock data, services, and infrastructure across Ahilyanagar district (2021)."
         breadcrumbs={[
           { label: "Dashboard", href: "/" },
           { label: "Geographic View" },
@@ -60,30 +61,30 @@ export default function GeographicPage() {
             </div>
           </Card>
           <Card className="p-3 border-border-light shadow-card flex items-center gap-3">
-            <div className="p-2 bg-chart-line-1/10 rounded-lg">
-              <Droplets className="h-4 w-4 text-chart-line-1" />
-            </div>
-            <div>
-              <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">Top Producer</div>
-              <div className="text-lg font-bold text-chart-line-1">Ahilyanagar</div>
-            </div>
-          </Card>
-          <Card className="p-3 border-border-light shadow-card flex items-center gap-3">
             <div className="p-2 bg-emerald-50 rounded-lg">
               <Stethoscope className="h-4 w-4 text-emerald-600" />
             </div>
             <div>
-              <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">Total Clinics</div>
-              <div className="text-lg font-bold text-emerald-700">{totalClinics}</div>
+              <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">Vet Facilities</div>
+              <div className="text-lg font-bold text-emerald-700">{totalVetFacilities}</div>
+            </div>
+          </Card>
+          <Card className="p-3 border-border-light shadow-card flex items-center gap-3">
+            <div className="p-2 bg-chart-line-1/10 rounded-lg">
+              <Fish className="h-4 w-4 text-chart-line-1" />
+            </div>
+            <div>
+              <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">Fish Production</div>
+              <div className="text-lg font-bold text-chart-line-1">{totalFishProd.toLocaleString()}T</div>
             </div>
           </Card>
           <Card className="p-3 border-border-light shadow-card flex items-center gap-3">
             <div className="p-2 bg-amber-50 rounded-lg">
-              <TrendingUp className="h-4 w-4 text-amber-600" />
+              <Target className="h-4 w-4 text-amber-600" />
             </div>
             <div>
-              <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">Growth</div>
-              <div className="text-lg font-bold text-amber-700">+4.9%</div>
+              <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">Avg AI Achievement</div>
+              <div className="text-lg font-bold text-amber-700">{avgAI}%</div>
             </div>
           </Card>
         </div>
@@ -119,32 +120,43 @@ export default function GeographicPage() {
                     <Droplets className="h-4 w-4 text-chart-line-1" />
                     <div>
                       <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">
-                        Milk Production
+                        Daily Milk
                       </div>
                       <div className="text-sm font-bold text-primary">
-                        {selected.milkProduction}
+                        {selected.milkDaily}k L/day
                       </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-2.5 bg-slate-50 rounded-lg">
-                    <Syringe className="h-4 w-4 text-secondary" />
+                    <Stethoscope className="h-4 w-4 text-emerald-600" />
                     <div>
                       <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">
-                        Vaccinations
+                        Vet Facilities
                       </div>
                       <div className="text-sm font-bold text-primary">
-                        {selected.vaccinations}
+                        {selected.vetFacilities}
                       </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-2.5 bg-slate-50 rounded-lg">
-                    <Stethoscope className="h-4 w-4 text-chart-line-2" />
+                    <Fish className="h-4 w-4 text-chart-line-1" />
                     <div>
                       <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">
-                        Clinics
+                        Fish Production
                       </div>
                       <div className="text-sm font-bold text-primary">
-                        {selected.clinics}
+                        {selected.fishProd} T
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 p-2.5 bg-slate-50 rounded-lg">
+                    <Target className="h-4 w-4 text-amber-600" />
+                    <div>
+                      <div className="text-[10px] uppercase tracking-wide text-subtext-light font-semibold">
+                        AI Achievement
+                      </div>
+                      <div className="text-sm font-bold text-primary">
+                        {selected.aiAchievement}%
                       </div>
                     </div>
                   </div>
@@ -169,7 +181,9 @@ export default function GeographicPage() {
                 </h4>
               </div>
               <div className="max-h-[360px] overflow-y-auto scrollbar-hide">
-                {geoData.talukas.map((t) => (
+                {[...geoData.talukas]
+                  .sort((a, b) => b.milkDaily - a.milkDaily)
+                  .map((t) => (
                   <button
                     key={t.name}
                     onClick={() => setSelectedTaluka(t.name)}
@@ -186,8 +200,8 @@ export default function GeographicPage() {
                       />
                       {t.name}
                     </span>
-                    <span className="text-xs text-subtext-light">
-                      {t.milkProduction}
+                    <span className="text-xs text-subtext-light font-mono">
+                      {t.milkDaily}k L/day
                     </span>
                   </button>
                 ))}

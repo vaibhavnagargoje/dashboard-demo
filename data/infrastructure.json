@@ -1,80 +1,128 @@
 {
+  "kpis": [
+    {
+      "label": "Total Vet Facilities",
+      "value": "228",
+      "icon": "Stethoscope",
+      "iconBg": "bg-emerald-50",
+      "trend": { "direction": "up", "value": "2.2%", "context": "vs 2020" }
+    },
+    {
+      "label": "Vet Hospitals",
+      "value": "7",
+      "icon": "Hospital",
+      "iconBg": "bg-blue-50",
+      "trend": { "direction": "neutral", "value": "Stable", "context": "since 2018" }
+    },
+    {
+      "label": "First-Aid Centres",
+      "value": "138",
+      "icon": "BriefcaseMedical",
+      "iconBg": "bg-amber-50",
+      "trend": { "direction": "neutral", "value": "Stable", "context": "since 2018" }
+    },
+    {
+      "label": "Total Livestock",
+      "value": "5.07L",
+      "icon": "PawPrint",
+      "iconBg": "bg-violet-50",
+      "trend": { "direction": "up", "value": "9.1%", "context": "vs 2020" }
+    }
+  ],
   "chartData": [
-    { "year": "2018", "vaccinations": 850, "clinics": 90, "stateAvg": 880, "target2025": 150 },
-    { "year": "2019", "vaccinations": 920, "clinics": 95, "stateAvg": 950, "target2025": 150 },
-    { "year": "2020", "vaccinations": 900, "clinics": 100, "stateAvg": 930, "target2025": 150 },
-    { "year": "2021", "vaccinations": 1100, "clinics": 110, "stateAvg": 1150, "target2025": 150 },
-    { "year": "2022", "vaccinations": 1350, "clinics": 125, "stateAvg": 1400, "target2025": 150 },
-    { "year": "2023", "vaccinations": 1600, "clinics": 135, "stateAvg": 1650, "target2025": 150 },
-    { "year": "2024", "vaccinations": 1800, "clinics": 142, "stateAvg": 1850, "target2025": 150 }
+    { "year": "2012", "totalFacilities": 145, "vetHospitals": 7, "firstAidCentres": 138, "livestock": 176 },
+    { "year": "2013", "totalFacilities": 142, "vetHospitals": 7, "firstAidCentres": 135, "livestock": 172 },
+    { "year": "2014", "totalFacilities": 226, "vetHospitals": 0, "firstAidCentres": 226, "livestock": 196 },
+    { "year": "2015", "totalFacilities": 233, "vetHospitals": 7, "firstAidCentres": 226, "livestock": 180 },
+    { "year": "2016", "totalFacilities": 233, "vetHospitals": 7, "firstAidCentres": 226, "livestock": 170 },
+    { "year": "2017", "totalFacilities": 233, "vetHospitals": 7, "firstAidCentres": 226, "livestock": 187 },
+    { "year": "2018", "totalFacilities": 224, "vetHospitals": 7, "firstAidCentres": 138, "livestock": 465 },
+    { "year": "2019", "totalFacilities": 224, "vetHospitals": 7, "firstAidCentres": 138, "livestock": 465 },
+    { "year": "2020", "totalFacilities": 223, "vetHospitals": 7, "firstAidCentres": 138, "livestock": 465 },
+    { "year": "2021", "totalFacilities": 228, "vetHospitals": 7, "firstAidCentres": 138, "livestock": 507 }
+  ],
+  "tableData": [
+    { "year": "2012", "totalFacilities": 145, "vetHospitals": 7, "firstAidCentres": 138, "livestock": "1,76,013" },
+    { "year": "2013", "totalFacilities": 142, "vetHospitals": 7, "firstAidCentres": 135, "livestock": "1,71,794" },
+    { "year": "2014", "totalFacilities": 226, "vetHospitals": 0, "firstAidCentres": 226, "livestock": "1,96,100" },
+    { "year": "2015", "totalFacilities": 233, "vetHospitals": 7, "firstAidCentres": 226, "livestock": "1,80,182" },
+    { "year": "2016", "totalFacilities": 233, "vetHospitals": 7, "firstAidCentres": 226, "livestock": "1,69,717" },
+    { "year": "2017", "totalFacilities": 233, "vetHospitals": 7, "firstAidCentres": 226, "livestock": "1,87,348" },
+    { "year": "2018", "totalFacilities": 224, "vetHospitals": 7, "firstAidCentres": 138, "livestock": "4,64,776" },
+    { "year": "2019", "totalFacilities": 224, "vetHospitals": 7, "firstAidCentres": 138, "livestock": "4,64,776" },
+    { "year": "2020", "totalFacilities": 223, "vetHospitals": 7, "firstAidCentres": 138, "livestock": "4,64,776" },
+    { "year": "2021", "totalFacilities": 228, "vetHospitals": 7, "firstAidCentres": 138, "livestock": "5,06,911" }
+  ],
+  "livestockBreakdown": {
+    "2021": [
+      { "name": "Hybrid Cows", "value": 447574, "color": "#3c4e6a" },
+      { "name": "Native Cows", "value": 20645, "color": "#2c699a" },
+      { "name": "Buffalo", "value": 38692, "color": "#d4af37" }
+    ],
+    "2020": [
+      { "name": "Hybrid Cows", "value": 299555, "color": "#3c4e6a" },
+      { "name": "Native Cows", "value": 88449, "color": "#2c699a" },
+      { "name": "Buffalo", "value": 76772, "color": "#d4af37" }
+    ]
+  },
+  "talukas": [
+    { "name": "Akole", "lng": 73.9009, "lat": 19.5333, "totalFacilities": 29, "vetHospitals": 1, "firstAidCentres": 18, "color": "#cf5c36" },
+    { "name": "Sangamner", "lng": 74.2142, "lat": 19.5687, "totalFacilities": 25, "vetHospitals": 0, "firstAidCentres": 15, "color": "#2c699a" },
+    { "name": "Kopargaon", "lng": 74.4787, "lat": 19.8826, "totalFacilities": 11, "vetHospitals": 1, "firstAidCentres": 7, "color": "#008450" },
+    { "name": "Rahata", "lng": 74.4833, "lat": 19.7167, "totalFacilities": 15, "vetHospitals": 1, "firstAidCentres": 7, "color": "#d4af37" },
+    { "name": "Srirampur", "lng": 74.6559, "lat": 19.6164, "totalFacilities": 11, "vetHospitals": 1, "firstAidCentres": 6, "color": "#10b981" },
+    { "name": "Nevasa", "lng": 74.9864, "lat": 19.5566, "totalFacilities": 15, "vetHospitals": 0, "firstAidCentres": 8, "color": "#3c4e6a" },
+    { "name": "Shevgaon", "lng": 75.0999, "lat": 19.3527, "totalFacilities": 14, "vetHospitals": 0, "firstAidCentres": 9, "color": "#2c699a" },
+    { "name": "Pathardi", "lng": 75.2068, "lat": 19.1687, "totalFacilities": 15, "vetHospitals": 0, "firstAidCentres": 10, "color": "#008450" },
+    { "name": "Nagar", "lng": 74.7479, "lat": 19.0948, "totalFacilities": 20, "vetHospitals": 1, "firstAidCentres": 14, "color": "#3c4e6a" },
+    { "name": "Rahuri", "lng": 74.6482, "lat": 19.3920, "totalFacilities": 16, "vetHospitals": 1, "firstAidCentres": 8, "color": "#cf5c36" },
+    { "name": "Parner", "lng": 74.4437, "lat": 19.0000, "totalFacilities": 18, "vetHospitals": 1, "firstAidCentres": 9, "color": "#d4af37" },
+    { "name": "Srigonda", "lng": 74.6897, "lat": 18.8631, "totalFacilities": 17, "vetHospitals": 0, "firstAidCentres": 12, "color": "#10b981" },
+    { "name": "Karjat", "lng": 75.0366, "lat": 18.9077, "totalFacilities": 12, "vetHospitals": 0, "firstAidCentres": 8, "color": "#cf5c36" },
+    { "name": "Jamkhed", "lng": 75.3145, "lat": 18.7223, "totalFacilities": 10, "vetHospitals": 0, "firstAidCentres": 7, "color": "#d4af37" }
   ],
   "relatedMetrics": [
     {
-      "title": "Dairy Cooperative Societies",
-      "subtitle": "Active societies & memberships",
-      "icon": "Store",
+      "title": "Dairy Cooperatives",
+      "subtitle": "Active Societies (2012–2021)",
+      "icon": "Building2",
       "chartType": "bar",
       "data": [
-        { "label": "2018", "value": 120 },
-        { "label": "2019", "value": 125 },
-        { "label": "2020", "value": 132 },
-        { "label": "2021", "value": 140 },
-        { "label": "2022", "value": 145 },
-        { "label": "2023", "value": 152 },
-        { "label": "2024", "value": 160 }
+        { "label": "2012", "value": 2974 },
+        { "label": "2014", "value": 1507 },
+        { "label": "2016", "value": 942 },
+        { "label": "2018", "value": 885 },
+        { "label": "2020", "value": 895 },
+        { "label": "2021", "value": 902 }
       ],
       "colors": ["#3c4e6a"]
     },
     {
-      "title": "Livestock Population",
-      "subtitle": "Cows & Buffaloes count",
+      "title": "Livestock Composition",
+      "subtitle": "Ahilyanagar 2021",
       "icon": "PawPrint",
       "chartType": "donut",
       "data": [
-        { "label": "Hybrid", "value": 45 },
-        { "label": "Native", "value": 25 },
-        { "label": "Buffaloes", "value": 30 }
+        { "label": "Hybrid Cows", "value": 88 },
+        { "label": "Native Cows", "value": 4 },
+        { "label": "Buffalo", "value": 8 }
       ],
-      "colors": ["#2c699a", "#cf5c36", "#10b981"]
+      "colors": ["#3c4e6a", "#2c699a", "#d4af37"]
     },
     {
       "title": "Fisheries Production",
-      "subtitle": "Annual production in MT",
+      "subtitle": "District Total (MT)",
       "icon": "Fish",
       "chartType": "area",
       "data": [
-        { "label": "2018", "value": 500 },
-        { "label": "2019", "value": 550 },
-        { "label": "2020", "value": 600 },
-        { "label": "2021", "value": 600 },
-        { "label": "2022", "value": 750 },
-        { "label": "2023", "value": 800 },
-        { "label": "2024", "value": 950 }
+        { "label": "2012", "value": 1200 },
+        { "label": "2014", "value": 2220 },
+        { "label": "2016", "value": 1379 },
+        { "label": "2018", "value": 1790 },
+        { "label": "2020", "value": 2730 },
+        { "label": "2021", "value": 2421 }
       ],
-      "colors": ["#d4af37"]
+      "colors": ["#008450"]
     }
-  ],
-  "availableDataPoints": [
-    { "id": "vaccinations", "label": "Vaccinations", "value": "1.8k", "checked": true },
-    { "id": "clinics", "label": "Active Clinics", "value": "142", "checked": true },
-    { "id": "aiServices", "label": "AI Services", "value": "1.0k", "checked": false },
-    { "id": "mobileUnits", "label": "Mobile Units", "value": "28", "checked": false },
-    { "id": "diseaseOutbreaks", "label": "Disease Outbreaks", "value": "12", "checked": false }
-  ],
-  "talukas": [
-    { "name": "Ahilyanagar City", "lng": 74.7479, "lat": 19.0948, "vaccinations": 1800, "clinics": 18, "color": "#3c4e6a" },
-    { "name": "Sangamner", "lng": 74.2142, "lat": 19.5687, "vaccinations": 420, "clinics": 15, "color": "#2c699a" },
-    { "name": "Kopargaon", "lng": 74.4787, "lat": 19.8826, "vaccinations": 310, "clinics": 12, "color": "#008450" },
-    { "name": "Akole", "lng": 73.9009, "lat": 19.5333, "vaccinations": 250, "clinics": 10, "color": "#cf5c36" },
-    { "name": "Shrirampur", "lng": 74.6559, "lat": 19.6164, "vaccinations": 280, "clinics": 11, "color": "#10b981" },
-    { "name": "Rahata", "lng": 74.4833, "lat": 19.7167, "vaccinations": 200, "clinics": 9, "color": "#d4af37" },
-    { "name": "Newasa", "lng": 74.9864, "lat": 19.5566, "vaccinations": 190, "clinics": 10, "color": "#3c4e6a" },
-    { "name": "Shevgaon", "lng": 75.0999, "lat": 19.3527, "vaccinations": 150, "clinics": 8, "color": "#2c699a" },
-    { "name": "Pathardi", "lng": 75.2068, "lat": 19.1687, "vaccinations": 130, "clinics": 7, "color": "#008450" },
-    { "name": "Parner", "lng": 74.4437, "lat": 19.0000, "vaccinations": 175, "clinics": 9, "color": "#cf5c36" },
-    { "name": "Karjat", "lng": 75.0366, "lat": 18.9077, "vaccinations": 110, "clinics": 6, "color": "#10b981" },
-    { "name": "Jamkhed", "lng": 75.3145, "lat": 18.7223, "vaccinations": 95, "clinics": 5, "color": "#d4af37" },
-    { "name": "Rahuri", "lng": 74.6482, "lat": 19.3920, "vaccinations": 220, "clinics": 11, "color": "#3c4e6a" },
-    { "name": "Nagar (Rural)", "lng": 74.7200, "lat": 19.1500, "vaccinations": 185, "clinics": 10, "color": "#2c699a" }
   ]
 }

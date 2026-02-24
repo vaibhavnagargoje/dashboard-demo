@@ -9,7 +9,6 @@ import { FilterSidebar } from "@/components/dashboard/filter-sidebar";
 import { RelatedMetricsGrid } from "@/components/dashboard/related-metrics";
 import { DashboardLineChart } from "@/components/charts/line-chart";
 import { ViewModeTabs } from "@/components/controls/view-mode-tabs";
-import { CompareToggle } from "@/components/controls/compare-toggle";
 import { TimelineSlider } from "@/components/controls/timeline-slider";
 import { DataTable, type DataTableColumn } from "@/components/controls/data-table";
 import { MapView } from "@/components/map/map-view";
@@ -21,48 +20,29 @@ import type { KpiCardData, RelatedMetricCard } from "@/lib/types";
 
 const TABLE_COLUMNS: DataTableColumn[] = [
   { key: "year", label: "Year", sortable: true },
-  { key: "districtAvg", label: "District Avg (k L)", align: "right", mono: true, sortable: true },
-  { key: "stateAvg", label: "State Avg (k L)", align: "right", mono: true, sortable: true },
-  { key: "sangamner", label: "Sangamner (k L)", align: "right", mono: true, sortable: true },
-  { key: "kopargaon", label: "Kopargaon (k L)", align: "right", mono: true, sortable: true },
+  { key: "districtTotal", label: "District Total (k L/day)", align: "right", mono: true, sortable: true },
+  { key: "sangamner", label: "Sangamner (k L/day)", align: "right", mono: true, sortable: true },
+  { key: "kopargaon", label: "Kopargaon (k L/day)", align: "right", mono: true, sortable: true },
+  { key: "societies", label: "Societies", align: "right", mono: true, sortable: true },
+  { key: "members", label: "Members", align: "right", mono: true, sortable: true },
 ];
 
 export default function MilkProductionPage() {
   const [filterOpen, setFilterOpen] = useState(false);
   const [viewMode, setViewMode] = useState<"chart" | "table" | "map">("chart");
-  const [showStateAvg, setShowStateAvg] = useState(true);
-  const [currentYear, setCurrentYear] = useState(2024);
+  const [currentYear, setCurrentYear] = useState(2021);
   const [selectedTaluka, setSelectedTaluka] = useState<string | null>(null);
 
   const { kpis: rawKpis, chartData, tableData, relatedMetrics: rawMetrics, talukas } = milkData;
   const kpis = rawKpis as KpiCardData[];
   const relatedMetrics = rawMetrics as RelatedMetricCard[];
 
-  /* Build series list based on toggle */
-  const series = useMemo(() => {
-    const base = [
-      {
-        dataKey: "districtAvg",
-        name: "District Avg",
-        color: "#3c4e6a",
-        strokeWidth: 2.5,
-      },
-    ];
-    if (showStateAvg) {
-      base.push({
-        dataKey: "stateAvg",
-        name: "State Avg",
-        color: "#d4af37",
-        strokeWidth: 2,
-        dashed: true,
-      } as any);
-    }
-    base.push(
-      { dataKey: "sangamner", name: "Sangamner", color: "#2c699a", strokeWidth: 1.5 },
-      { dataKey: "kopargaon", name: "Kopargaon", color: "#10b981", strokeWidth: 1.5 }
-    );
-    return base;
-  }, [showStateAvg]);
+  /* Build series list */
+  const series = useMemo(() => [
+    { dataKey: "districtTotal", name: "District Total", color: "#3c4e6a", strokeWidth: 2.5 },
+    { dataKey: "sangamner", name: "Sangamner", color: "#2c699a", strokeWidth: 1.5 },
+    { dataKey: "kopargaon", name: "Kopargaon", color: "#10b981", strokeWidth: 1.5 },
+  ], []);
 
   /* Filtered chart data up to selected year */
   const filteredData = useMemo(
@@ -75,7 +55,7 @@ export default function MilkProductionPage() {
       <AppHeader
         variant="detail"
         title="Milk Production Trends"
-        description="District & taluka-wise milk output trends from 2018 to 2024."
+        description="District & taluka-wise daily milk collection trends from 2012 to 2021."
         breadcrumbs={[
           { label: "Dashboard", href: "/" },
           { label: "Livestock", href: "/livestock/milk-production" },
@@ -97,21 +77,15 @@ export default function MilkProductionPage() {
         {/* Main chart card */}
         <ChartCard
           title="Milk Production Overview"
-          description="Compare district, state, and taluka-level production trends over time."
-          source="Source: District Dairy Development Office, Ahilyanagar (2024)"
+          description="Compare district total and top taluka daily milk collection (k L/day) over time."
+          source="Source: Dairy Co-operative Data, Ahilyanagar (2021)"
           legends={[
-            { color: "#3c4e6a", label: "District Avg" },
-            { color: "#d4af37", label: "State Avg" },
+            { color: "#3c4e6a", label: "District Total" },
             { color: "#2c699a", label: "Sangamner" },
             { color: "#10b981", label: "Kopargaon" },
           ]}
           headerRight={
             <div className="flex items-center gap-4">
-              <CompareToggle
-                label="Compare with State Average"
-                checked={showStateAvg}
-                onCheckedChange={setShowStateAvg}
-              />
               <ViewModeTabs
                 activeMode={viewMode}
                 onModeChange={(m) => setViewMode(m as any)}
@@ -132,8 +106,8 @@ export default function MilkProductionPage() {
               </div>
               <div className="mt-4">
                 <TimelineSlider
-                  minYear={2018}
-                  maxYear={2024}
+                  minYear={2012}
+                  maxYear={2021}
                   value={currentYear}
                   onChange={setCurrentYear}
                 />
@@ -157,7 +131,7 @@ export default function MilkProductionPage() {
                       lng: t.lng,
                       lat: t.lat,
                       label: t.name,
-                      value: `Production: ${t.milkProduction}k L/day`,
+                      value: `Daily Milk: ${t.milkDaily}k L/day | Societies: ${t.societies}`,
                       color: t.color,
                     }))}
                     onMarkerClick={(m) => setSelectedTaluka(m.label)}
@@ -168,7 +142,7 @@ export default function MilkProductionPage() {
               <div className="space-y-2 max-h-[400px] overflow-y-auto">
                 <div className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Taluka-wise Production</div>
                 {talukas
-                  .sort((a, b) => b.milkProduction - a.milkProduction)
+                  .sort((a, b) => b.milkDaily - a.milkDaily)
                   .map((t) => (
                     <button
                       key={t.name}
@@ -185,7 +159,7 @@ export default function MilkProductionPage() {
                       </span>
                       <span className="flex items-center gap-1 text-xs font-mono">
                         <Droplets className="h-3 w-3 text-chart-line-1" />
-                        {t.milkProduction}k L
+                        {t.milkDaily}k L/day
                       </span>
                     </button>
                   ))}

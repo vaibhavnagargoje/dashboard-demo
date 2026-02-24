@@ -98,12 +98,12 @@ export default function OverviewPage() {
           {/* Livestock Composition Donut */}
           <ChartCard
             title="Livestock Composition"
-            description="Breakdown by species (Census 2023)"
+            description="Breakdown by species (Census 2021)"
           >
             <div className="relative flex-1 flex justify-center items-center min-h-[220px] max-h-[260px]">
               <DonutChart
                 data={livestockComposition}
-                centerValue="1.2M"
+                centerValue="5.07L"
                 centerLabel="Total Head"
               />
             </div>
@@ -121,12 +121,12 @@ export default function OverviewPage() {
                   Infrastructure &amp; Service Trends
                 </a>
                 <p className="text-xs text-subtext-light font-light">
-                  Veterinary clinics status vs. monthly vaccination service delivery.
+                  Veterinary facilities, AI achievement and fisheries production trends.
                 </p>
               </div>
               <div className="hidden sm:flex gap-2">
                 <div className="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-xs rounded-full font-medium flex items-center gap-1">
-                  <TrendingUp className="h-3.5 w-3.5" /> +12%
+                  <TrendingUp className="h-3.5 w-3.5" /> 228 facilities
                 </div>
               </div>
             </div>
@@ -163,17 +163,17 @@ export default function OverviewPage() {
               <div className="md:col-span-2 relative w-full min-h-[250px] max-h-[320px]">
                 <DashboardLineChart
                   data={serviceTrends}
-                  xDataKey="month"
+                  xDataKey="year"
                   series={[
                     {
-                      dataKey: "vaccinations",
-                      name: "Vaccinations",
+                      dataKey: "vetFacilities",
+                      name: "Vet Facilities",
                       color: "#2c699a",
                       strokeWidth: 2,
                     },
                     {
-                      dataKey: "aiServices",
-                      name: "AI Services",
+                      dataKey: "aiAchievement",
+                      name: "AI Achievement %",
                       color: "#008450",
                       strokeWidth: 2,
                       dashed: true,
@@ -215,12 +215,12 @@ export default function OverviewPage() {
                 Milk Production Trends
               </a>
               <p className="text-xs text-subtext-light font-light">
-                District &amp; taluka-wise milk output trends from 2018 to 2024.
+                District daily milk collection trends from 2012 to 2021.
               </p>
             </div>
             <div className="hidden sm:flex gap-2">
               <div className="px-2.5 py-1 bg-blue-50 text-chart-line-1 text-xs rounded-full font-medium flex items-center gap-1">
-                <TrendingUp className="h-3.5 w-3.5" /> +4.9%
+                <TrendingUp className="h-3.5 w-3.5" /> 616k L/day
               </div>
             </div>
           </div>
@@ -238,13 +238,13 @@ export default function OverviewPage() {
                   <Droplets className="h-4 w-4 text-primary" />
                 </div>
                 <div className="text-2xl font-bold text-primary">
-                  850K{" "}
+                  616k{" "}
                   <span className="text-xs font-normal text-subtext-light">
                     L/day
                   </span>
                 </div>
-                <div className="flex items-center gap-1 mt-1.5 text-xs text-emerald-600">
-                  <TrendingUp className="h-3 w-3" /> +4.9% from 2023
+                <div className="flex items-center gap-1 mt-1.5 text-xs text-red-600">
+                  <TrendingUp className="h-3 w-3" /> -4.6% from 2020
                 </div>
               </a>
               <div className="grid grid-cols-2 gap-2">
@@ -256,18 +256,18 @@ export default function OverviewPage() {
                     Sangamner
                   </div>
                   <div className="text-[10px] text-subtext-light mt-0.5">
-                    320k L/day
+                    310k L/day
                   </div>
                 </div>
                 <div className="p-3 bg-slate-50 rounded-lg border border-border-light">
                   <div className="text-subtext-light text-[9px] uppercase tracking-wide font-semibold mb-1">
-                    State Avg
+                    Societies
                   </div>
                   <div className="text-sm font-bold text-state-avg">
-                    720K L
+                    902
                   </div>
                   <div className="text-[10px] text-subtext-light mt-0.5">
-                    Maharashtra
+                    Dairy Co-ops
                   </div>
                 </div>
               </div>
@@ -279,17 +279,10 @@ export default function OverviewPage() {
                 xDataKey="year"
                 series={[
                   {
-                    dataKey: "districtAvg",
-                    name: "District Avg",
+                    dataKey: "districtTotal",
+                    name: "District Total",
                     color: "#3c4e6a",
                     strokeWidth: 2.5,
-                  },
-                  {
-                    dataKey: "stateAvg",
-                    name: "State Avg",
-                    color: "#d4af37",
-                    strokeWidth: 2,
-                    dashed: true,
                   },
                   {
                     dataKey: "sangamner",
@@ -311,13 +304,10 @@ export default function OverviewPage() {
           </div>
 
           <div className="mt-4 pt-3 border-t border-border-light flex flex-col sm:flex-row justify-between items-center text-xs text-subtext-light gap-3">
-            <span>Source: District Dairy Development Office, Ahilyanagar (2024)</span>
+            <span>Source: Dairy Co-operative Data, Ahilyanagar (2021)</span>
             <div className="flex flex-wrap gap-4">
               <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 bg-[#3c4e6a] rounded-sm" /> District Avg
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 bg-[#d4af37] rounded-sm" /> State Avg
+                <span className="w-2.5 h-2.5 bg-[#3c4e6a] rounded-sm" /> District Total
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 bg-[#2c699a] rounded-sm" /> Sangamner

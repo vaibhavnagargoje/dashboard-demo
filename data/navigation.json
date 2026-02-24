@@ -1,10 +1,10 @@
 {
   "navItems": [
     { "icon": "LayoutDashboard", "label": "Overview", "path": "/", "page": "overview" },
-    { "icon": "PawPrint", "label": "Census", "path": "/infrastructure", "page": "census" },
-    { "icon": "Droplets", "label": "Milk Production", "path": "/milk-production", "page": "milk" },
-    { "icon": "Truck", "label": "Export Data", "path": "#", "page": "export" },
-    { "icon": "Stethoscope", "label": "Vet Services", "path": "/infrastructure", "page": "vet" },
+    { "icon": "PawPrint", "label": "Census & Infra", "path": "/livestock/census", "page": "census" },
+    { "icon": "Droplets", "label": "Milk Production", "path": "/livestock/milk-production", "page": "milk" },
+    { "icon": "Fish", "label": "Fisheries", "path": "/livestock/exports", "page": "export" },
+    { "icon": "Stethoscope", "label": "Vet Services", "path": "/livestock/vet-services", "page": "vet" },
     { "icon": "Landmark", "label": "Funding", "path": "/funding", "page": "funding" },
     { "icon": "Map", "label": "Geographic View", "path": "/geographic", "page": "geo" }
   ],
