@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { AppHeader } from "@/components/layout/app-header";
 import { PageFooter } from "@/components/layout/page-footer";
 import { DataStatusBar } from "@/components/dashboard/data-status-bar";
@@ -42,6 +42,30 @@ export default function OverviewPage() {
   const infraSummary = overviewData.infraSummary as any[];
   const fundingWaterfall = overviewData.fundingWaterfall as WaterfallItem[];
   const milkTrends = overviewData.milkTrends as any[];
+
+  /* ── Derived / filtered data ─── */
+  const livestockTotal = useMemo(() => {
+    const total = livestockComposition.reduce((s: number, d: any) => s + d.value, 0);
+    if (total >= 100000) return `${(total / 100000).toFixed(2)}L`;
+    if (total >= 1000) return `${(total / 1000).toFixed(1)}k`;
+    return total.toString();
+  }, [livestockComposition]);
+
+  const filteredMilkTrends = useMemo(
+    () => milkTrends.filter((d: any) => {
+      const y = Number(d.year);
+      return y >= filters.yearRange[0] && y <= filters.yearRange[1];
+    }),
+    [milkTrends, filters.yearRange]
+  );
+
+  const filteredServiceTrends = useMemo(
+    () => serviceTrends.filter((d: any) => {
+      const y = Number(d.year);
+      return y >= filters.yearRange[0] && y <= filters.yearRange[1];
+    }),
+    [serviceTrends, filters.yearRange]
+  );
 
   return (
     <>
@@ -102,7 +126,7 @@ export default function OverviewPage() {
             <div className="relative flex-1 flex justify-center items-center min-h-[220px] max-h-[260px]">
               <DonutChart
                 data={livestockComposition}
-                centerValue="5.07L"
+                centerValue={livestockTotal}
                 centerLabel="Total Head"
               />
             </div>
@@ -161,7 +185,7 @@ export default function OverviewPage() {
 
               <div className="md:col-span-2 relative w-full min-h-[250px] max-h-[320px]">
                 <DashboardLineChart
-                  data={serviceTrends}
+                  data={filteredServiceTrends}
                   xDataKey="year"
                   series={[
                     {
@@ -274,7 +298,7 @@ export default function OverviewPage() {
 
             <div className="md:col-span-2 relative w-full min-h-[250px] max-h-[320px]">
               <DashboardLineChart
-                data={milkTrends}
+                data={filteredMilkTrends}
                 xDataKey="year"
                 series={[
                   {

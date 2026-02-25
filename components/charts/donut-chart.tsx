@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import {
   PieChart,
   Pie,
@@ -30,6 +31,8 @@ export function DonutChart({
   onSegmentHover,
   activeIndex,
 }: DonutChartProps) {
+  const total = useMemo(() => data.reduce((sum, d) => sum + d.value, 0), [data]);
+
   return (
     <div className="relative flex justify-center items-center" style={{ minHeight: height, maxHeight: height + 20 }}>
       <ResponsiveContainer width="100%" height={height}>
@@ -61,7 +64,10 @@ export function DonutChart({
             ))}
           </Pie>
           <Tooltip
-            formatter={(value: number, name: string) => [`${value}%`, name]}
+            formatter={(value: number, name: string) => [
+              `${value.toLocaleString()} (${total > 0 ? ((value / total) * 100).toFixed(1) : 0}%)`,
+              name,
+            ]}
             contentStyle={{
               backgroundColor: "#fff",
               border: "1px solid #e2e5ea",
@@ -95,6 +101,8 @@ interface DonutLegendProps {
 }
 
 export function DonutLegend({ data, onHover, columns = 2, className }: DonutLegendProps) {
+  const total = useMemo(() => data.reduce((sum, d) => sum + d.value, 0), [data]);
+
   return (
     <div
       className={cn(
@@ -113,7 +121,9 @@ export function DonutLegend({ data, onHover, columns = 2, className }: DonutLege
           <span className="w-3 h-3 rounded-sm flex-shrink-0" style={{ backgroundColor: item.color }} />
           <div>
             <span className="text-text-light font-medium block">{item.name}</span>
-            <span className="text-subtext-light">{item.value}%</span>
+            <span className="text-subtext-light">
+              {item.value.toLocaleString()} ({total > 0 ? ((item.value / total) * 100).toFixed(1) : 0}%)
+            </span>
           </div>
         </button>
       ))}

@@ -43,6 +43,11 @@ export default function MaternalChildPage() {
   const relatedMetrics = data.relatedMetrics as RelatedMetricCard[];
   const talukas = data.talukas as any[];
 
+  const visibleTalukas = useMemo(
+    () => filters.talukas.length === 0 ? talukas : talukas.filter((t: any) => filters.talukas.includes(t.name)),
+    [talukas, filters.talukas]
+  );
+
   const series = useMemo(() => [
     { dataKey: "totalBirths", name: "Total Births", color: "#2c699a", yAxisId: "left" as const, fill: true, strokeWidth: 2.5 },
     { dataKey: "boys", name: "Boys", color: "#10b981", yAxisId: "left" as const, strokeWidth: 2 },
@@ -132,7 +137,7 @@ export default function MaternalChildPage() {
                     className="h-[420px]"
                     center={districtInfo.center as [number, number]}
                     zoom={districtInfo.zoom}
-                    markers={talukas.map((t) => ({
+                    markers={visibleTalukas.map((t) => ({
                       lng: t.lng,
                       lat: t.lat,
                       label: t.name,
@@ -146,7 +151,7 @@ export default function MaternalChildPage() {
               </div>
               <div className="space-y-2 max-h-[420px] overflow-y-auto">
                 <div className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Taluka-wise Births & Deaths</div>
-                {[...talukas]
+                {[...visibleTalukas]
                   .sort((a, b) => b.totalBirths - a.totalBirths)
                   .map((t) => {
                     const selected = selectedTaluka === t.name;

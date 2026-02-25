@@ -28,6 +28,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
+import { useFilterContext } from "@/lib/filter-context";
 import sectorsData from "@/data/sectors.json";
 
 /* ── Icon registry ─────────────────────────────── */
@@ -67,6 +68,7 @@ interface Sector {
 /* ── Sidebar inner content ─────────────────────── */
 function SidebarContent({ pathname }: { pathname: string }) {
   const sectors = sectorsData.sectors as Sector[];
+  const { districtInfo } = useFilterContext();
 
   return (
     <div className="flex flex-col h-full">
@@ -74,11 +76,11 @@ function SidebarContent({ pathname }: { pathname: string }) {
       <div className="p-5 border-b border-border-light">
         <Link href="/" className="flex items-center gap-3 no-underline">
           <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-sm">
-            A
+            {districtInfo.name.charAt(0).toUpperCase()}
           </div>
           <div>
             <span className="font-bold text-base leading-tight text-primary block">
-              Ahilyanagar
+              {districtInfo.name}
             </span>
             <span className="text-[11px] font-normal text-subtext-light">
               District Govt.

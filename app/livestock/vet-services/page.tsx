@@ -41,6 +41,11 @@ export default function VetServicesPage() {
   const relatedMetrics = aiData.relatedMetrics as RelatedMetricCard[];
   const talukas = aiData.talukas as any[];
 
+  const visibleTalukas = useMemo(
+    () => filters.talukas.length === 0 ? talukas : talukas.filter((t: any) => filters.talukas.includes(t.name)),
+    [talukas, filters.talukas]
+  );
+
   /* Dual-axis: Target & Actual (left, in thousands) + Achievement % (right) */
   const series = useMemo(() => [
     {
@@ -149,7 +154,7 @@ export default function VetServicesPage() {
                     className="h-[420px]"
                     center={districtInfo.center as [number, number]}
                     zoom={districtInfo.zoom}
-                    markers={talukas.map((t) => ({
+                    markers={visibleTalukas.map((t) => ({
                       lng: t.lng,
                       lat: t.lat,
                       label: t.name,
@@ -163,7 +168,7 @@ export default function VetServicesPage() {
               </div>
               <div className="space-y-2 max-h-[420px] overflow-y-auto">
                 <div className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Taluka-wise Achievement</div>
-                {[...talukas]
+                {[...visibleTalukas]
                   .sort((a, b) => b.achievement - a.achievement)
                   .map((t) => {
                     const selected = selectedTaluka === t.name;

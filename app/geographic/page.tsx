@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { AppHeader } from "@/components/layout/app-header";
 import { PageFooter } from "@/components/layout/page-footer";
 import { MapView } from "@/components/map/map-view";
@@ -24,7 +24,12 @@ export default function GeographicPage() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const talukas: any[] = geoData.talukas ?? [];
 
-  const markers = talukas.map((t) => ({
+  const visibleTalukas = useMemo(
+    () => filters.talukas.length === 0 ? talukas : talukas.filter((t: any) => filters.talukas.includes(t.name)),
+    [talukas, filters.talukas]
+  );
+
+  const markers = visibleTalukas.map((t) => ({
     lng: t.lng,
     lat: t.lat,
     label: t.name,
@@ -32,13 +37,13 @@ export default function GeographicPage() {
     color: t.color,
   }));
 
-  const selected = talukas.find((t) => t.name === selectedTaluka);
+  const selected = visibleTalukas.find((t) => t.name === selectedTaluka) ?? talukas.find((t) => t.name === selectedTaluka);
 
-  // Summary stats
-  const totalTalukas = talukas.length;
-  const totalVetFacilities = talukas.reduce((s: number, t: any) => s + t.vetFacilities, 0);
-  const totalFishProd = talukas.reduce((s: number, t: any) => s + t.fishProd, 0);
-  const avgAI = (talukas.reduce((s: number, t: any) => s + t.aiAchievement, 0) / totalTalukas).toFixed(1);
+  // Summary stats (based on visible talukas)
+  const totalTalukas = visibleTalukas.length;
+  const totalVetFacilities = visibleTalukas.reduce((s: number, t: any) => s + t.vetFacilities, 0);
+  const totalFishProd = visibleTalukas.reduce((s: number, t: any) => s + t.fishProd, 0);
+  const avgAI = totalTalukas > 0 ? (visibleTalukas.reduce((s: number, t: any) => s + t.aiAchievement, 0) / totalTalukas).toFixed(1) : "0";
 
   return (
     <>
@@ -187,7 +192,7 @@ export default function GeographicPage() {
                 </h4>
               </div>
               <div className="max-h-[360px] overflow-y-auto scrollbar-hide">
-                {[...talukas]
+                {[...visibleTalukas]
                   .sort((a, b) => b.milkDaily - a.milkDaily)
                   .map((t) => (
                   <button

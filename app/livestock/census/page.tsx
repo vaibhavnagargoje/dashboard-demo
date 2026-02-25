@@ -41,6 +41,11 @@ export default function InfrastructurePage() {
   const relatedMetrics = infraData.relatedMetrics as RelatedMetricCard[];
   const talukas = infraData.talukas as any[];
 
+  const visibleTalukas = useMemo(
+    () => filters.talukas.length === 0 ? talukas : talukas.filter((t: any) => filters.talukas.includes(t.name)),
+    [talukas, filters.talukas]
+  );
+
   /* Dual-axis series: Total Facilities (left) + Livestock in '000 (right) */
   const series = useMemo(() => [
     {
@@ -140,7 +145,7 @@ export default function InfrastructurePage() {
                     className="h-[420px]"
                     center={districtInfo.center as [number, number]}
                     zoom={districtInfo.zoom}
-                    markers={talukas.map((t) => ({
+                    markers={visibleTalukas.map((t) => ({
                       lng: t.lng,
                       lat: t.lat,
                       label: t.name,
@@ -154,7 +159,7 @@ export default function InfrastructurePage() {
               </div>
               <div className="space-y-2 max-h-[420px] overflow-y-auto">
                 <div className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Taluka-wise Facilities</div>
-                {[...talukas]
+                {[...visibleTalukas]
                   .sort((a, b) => b.totalFacilities - a.totalFacilities)
                   .map((t) => {
                     const selected = selectedTaluka === t.name;
