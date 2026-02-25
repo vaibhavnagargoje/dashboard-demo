@@ -12,6 +12,12 @@ interface MapMarker {
   radius?: number; // optional proportional sizing hint
 }
 
+interface BoundaryPoint {
+  lat: number;
+  lng: number;
+  name?: string;
+}
+
 interface MapViewProps {
   className?: string;
   center?: [number, number];
@@ -19,6 +25,7 @@ interface MapViewProps {
   markers?: MapMarker[];
   onMarkerClick?: (marker: { label: string; value?: string }) => void;
   selectedMarker?: string | null;
+  boundaryPoints?: BoundaryPoint[];
 }
 
 export function MapView({
@@ -28,6 +35,7 @@ export function MapView({
   markers = [],
   onMarkerClick,
   selectedMarker,
+  boundaryPoints,
 }: MapViewProps) {
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapRef = useRef<any>(null);
@@ -251,7 +259,46 @@ export function MapView({
         }, 100);
       }
     });
-  }, [markers, selectedMarker, zoom]);
+
+    // ── District boundary outline (convex hull of all boundary points) ──
+    if (boundaryPoints && boundaryPoints.length >= 3) {
+      const pts: [number, number][] = boundaryPoints.map((p) => [p.lat, p.lng]);
+      const hull = convexHull(pts);
+
+      // Expand hull outward from centroid for visual buffer
+      const cx = hull.reduce((s, p) => s + p[0], 0) / hull.length;
+      const cy = hull.reduce((s, p) => s + p[1], 0) / hull.length;
+      const padded = hull.map((p) => {
+        const dx = p[0] - cx;
+        const dy = p[1] - cy;
+        const scale = 1.18;
+        return [cx + dx * scale, cy + dy * scale] as [number, number];
+      });
+
+      L.polygon(padded, {
+        color: "#3c4e6a",
+        weight: 2.5,
+        dashArray: "10 6",
+        fillColor: "#3c4e6a",
+        fillOpacity: 0.02,
+        opacity: 0.55,
+      }).addTo(markerLayer);
+
+      // Label the centre of the hull
+      const labelIcon = L.divIcon({
+        className: "boundary-label",
+        html: `<span style="
+          font-size:10px;font-weight:600;color:#3c4e6a;opacity:0.5;
+          font-family:Inter,Lato,sans-serif;letter-spacing:0.5px;
+          text-transform:uppercase;white-space:nowrap;
+          text-shadow:0 0 4px #fff,0 0 4px #fff;
+        ">District Boundary</span>`,
+        iconSize: [100, 14],
+        iconAnchor: [50, 7],
+      });
+      L.marker([cx, cy], { icon: labelIcon, interactive: false }).addTo(markerLayer);
+    }
+  }, [markers, selectedMarker, zoom, loaded, boundaryPoints]);
 
   return (
     <div className={cn("relative rounded-lg overflow-hidden", className)}>
@@ -275,4 +322,24 @@ function lightenColor(hex: string, percent: number): string {
   const g = Math.min(255, ((num >> 8) & 0x00ff) + Math.round((255 - ((num >> 8) & 0x00ff)) * (percent / 100)));
   const b = Math.min(255, (num & 0x0000ff) + Math.round((255 - (num & 0x0000ff)) * (percent / 100)));
   return `#${((r << 16) | (g << 8) | b).toString(16).padStart(6, "0")}`;
+}
+
+/** Compute convex hull of 2D points using Andrew's monotone chain */
+function cross(o: [number, number], a: [number, number], b: [number, number]) {
+  return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);
+}
+function convexHull(points: [number, number][]): [number, number][] {
+  const pts = [...points].sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+  if (pts.length <= 2) return pts;
+  const lower: [number, number][] = [];
+  for (const p of pts) {
+    while (lower.length >= 2 && cross(lower[lower.length - 2], lower[lower.length - 1], p) <= 0) lower.pop();
+    lower.push(p);
+  }
+  const upper: [number, number][] = [];
+  for (const p of [...pts].reverse()) {
+    while (upper.length >= 2 && cross(upper[upper.length - 2], upper[upper.length - 1], p) <= 0) upper.pop();
+    upper.push(p);
+  }
+  return lower.slice(0, -1).concat(upper.slice(0, -1));
 }

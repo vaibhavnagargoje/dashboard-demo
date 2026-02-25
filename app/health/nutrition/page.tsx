@@ -9,11 +9,14 @@ import { FilterSidebar } from "@/components/dashboard/filter-sidebar";
 import { RelatedMetricsGrid } from "@/components/dashboard/related-metrics";
 import { DualAxisLineChart } from "@/components/charts/dual-axis-line-chart";
 import { ViewModeTabs } from "@/components/controls/view-mode-tabs";
+import { CompareToggle } from "@/components/controls/compare-toggle";
 import { TimelineSlider } from "@/components/controls/timeline-slider";
 import { DataTable, type DataTableColumn } from "@/components/controls/data-table";
 import { MapView } from "@/components/map/map-view";
 import { Card } from "@/components/ui/card";
 import { HeartPulse, AlertTriangle, Home } from "lucide-react";
+
+import stateAverages from "@/data/state-averages.json";
 
 import type { KpiCardData, RelatedMetricCard } from "@/lib/types";
 import { useFilterContext } from "@/lib/filter-context";
@@ -34,6 +37,7 @@ export default function NutritionPage() {
   const [viewMode, setViewMode] = useState<"chart" | "table" | "map">("chart");
   const [currentYear, setCurrentYear] = useState(2021);
   const [selectedTaluka, setSelectedTaluka] = useState<string | null>(null);
+  const [showStateAvg, setShowStateAvg] = useState(false);
   const { filters, districtInfo } = useFilterContext();
   const data = getDistrictData("health-nutrition", filters.district);
 
@@ -59,6 +63,22 @@ export default function NutritionPage() {
     () => (chartData as any[]).filter((d: any) => Number(d.year) <= currentYear),
     [chartData, currentYear]
   );
+
+  const chartDataWithAvg = useMemo(() => {
+    if (!showStateAvg) return filteredData;
+    const avgMap = new Map(
+      (stateAverages["health-nutrition"].data as any[]).map((d: any) => [d.year, d.stateAvg])
+    );
+    return filteredData.map((d: any) => ({ ...d, stateAvg: avgMap.get(d.year) ?? null }));
+  }, [filteredData, showStateAvg]);
+
+  const allSeries = useMemo(() => {
+    const base: any[] = [...series];
+    if (showStateAvg) {
+      base.push({ dataKey: "stateAvg", name: "State Average", color: "#94a3b8", yAxisId: "left" as const, dashed: true, strokeWidth: 1.5 });
+    }
+    return base;
+  }, [series, showStateAvg]);
 
   return (
     <>
@@ -94,18 +114,25 @@ export default function NutritionPage() {
             { color: "#2c699a", label: "Working Anganwadis" },
           ]}
           headerRight={
-            <ViewModeTabs
-              activeMode={viewMode}
-              onModeChange={(m) => setViewMode(m as any)}
-            />
+            <div className="flex items-center gap-4">
+              <CompareToggle
+                label="Compare with State Avg"
+                checked={showStateAvg}
+                onCheckedChange={setShowStateAvg}
+              />
+              <ViewModeTabs
+                activeMode={viewMode}
+                onModeChange={(m) => setViewMode(m as any)}
+              />
+            </div>
           }
         >
           {viewMode === "chart" && (
             <>
               <div className="relative w-full" style={{ height: 400 }}>
                 <DualAxisLineChart
-                  data={filteredData}
-                  series={series}
+                  data={chartDataWithAvg}
+                  series={allSeries}
                   xDataKey="year"
                   leftAxisLabel="Malnutrition %"
                   rightAxisLabel="Anganwadis"
@@ -144,6 +171,7 @@ export default function NutritionPage() {
                     }))}
                     onMarkerClick={(m) => setSelectedTaluka(m.label)}
                     selectedMarker={selectedTaluka}
+                    boundaryPoints={talukas.map((t: any) => ({ lat: t.lat, lng: t.lng, name: t.name }))}
                   />
                 </Card>
               </div>

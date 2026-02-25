@@ -111,6 +111,7 @@ export default function GeographicPage() {
                 markers={markers}
                 onMarkerClick={(m) => setSelectedTaluka(m.label)}
                 selectedMarker={selectedTaluka}
+                boundaryPoints={talukas.map((t: any) => ({ lat: t.lat, lng: t.lng, name: t.name }))}
               />
             </Card>
           </div>

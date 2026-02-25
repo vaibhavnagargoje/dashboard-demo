@@ -1,0 +1,130 @@
+{
+  "milk-production": {
+    "label": "Maharashtra Avg Daily Milk (k L/day)",
+    "yAxisId": null,
+    "data": [
+      { "year": "2012", "stateAvg": 420 },
+      { "year": "2013", "stateAvg": 435 },
+      { "year": "2014", "stateAvg": 445 },
+      { "year": "2015", "stateAvg": 465 },
+      { "year": "2016", "stateAvg": 455 },
+      { "year": "2017", "stateAvg": 475 },
+      { "year": "2018", "stateAvg": 505 },
+      { "year": "2019", "stateAvg": 525 },
+      { "year": "2020", "stateAvg": 515 },
+      { "year": "2021", "stateAvg": 535 }
+    ]
+  },
+  "infrastructure": {
+    "label": "Maharashtra Avg Vet Facilities / District",
+    "yAxisId": "left",
+    "data": [
+      { "year": "2012", "stateAvg": 120 },
+      { "year": "2013", "stateAvg": 125 },
+      { "year": "2014", "stateAvg": 148 },
+      { "year": "2015", "stateAvg": 155 },
+      { "year": "2016", "stateAvg": 158 },
+      { "year": "2017", "stateAvg": 162 },
+      { "year": "2018", "stateAvg": 168 },
+      { "year": "2019", "stateAvg": 170 },
+      { "year": "2020", "stateAvg": 175 },
+      { "year": "2021", "stateAvg": 182 }
+    ]
+  },
+  "fisheries": {
+    "label": "Maharashtra Avg Fish Production (T) / District",
+    "yAxisId": "left",
+    "data": [
+      { "year": "2012", "stateAvg": 1100 },
+      { "year": "2013", "stateAvg": 1400 },
+      { "year": "2014", "stateAvg": 1500 },
+      { "year": "2015", "stateAvg": 1300 },
+      { "year": "2016", "stateAvg": 1350 },
+      { "year": "2017", "stateAvg": 1600 },
+      { "year": "2018", "stateAvg": 1700 },
+      { "year": "2019", "stateAvg": 1900 },
+      { "year": "2020", "stateAvg": 1850 },
+      { "year": "2021", "stateAvg": 1800 }
+    ]
+  },
+  "artificial-insemination": {
+    "label": "Maharashtra Avg AI Achievement %",
+    "yAxisId": "right",
+    "data": [
+      { "year": "2012", "stateAvg": 72.0 },
+      { "year": "2013", "stateAvg": 68.5 },
+      { "year": "2014", "stateAvg": 70.0 },
+      { "year": "2015", "stateAvg": 63.0 },
+      { "year": "2016", "stateAvg": 60.5 },
+      { "year": "2017", "stateAvg": 48.0 },
+      { "year": "2018", "stateAvg": 45.0 },
+      { "year": "2019", "stateAvg": 58.0 },
+      { "year": "2020", "stateAvg": 55.0 },
+      { "year": "2021", "stateAvg": 52.5 }
+    ]
+  },
+  "health-immunization": {
+    "label": "Maharashtra Avg DPT/Penta Doses / District",
+    "yAxisId": null,
+    "data": [
+      { "year": "2012", "stateAvg": 128000 },
+      { "year": "2013", "stateAvg": 138000 },
+      { "year": "2014", "stateAvg": 315000 },
+      { "year": "2015", "stateAvg": 325000 },
+      { "year": "2016", "stateAvg": 310000 },
+      { "year": "2017", "stateAvg": 0 },
+      { "year": "2018", "stateAvg": 285000 },
+      { "year": "2019", "stateAvg": 275000 },
+      { "year": "2020", "stateAvg": 118000 },
+      { "year": "2021", "stateAvg": 142000 }
+    ]
+  },
+  "health-infrastructure": {
+    "label": "Maharashtra Avg Total Beds / District",
+    "yAxisId": "right",
+    "data": [
+      { "year": "2012", "stateAvg": 7200 },
+      { "year": "2013", "stateAvg": 7500 },
+      { "year": "2014", "stateAvg": 7800 },
+      { "year": "2015", "stateAvg": 9200 },
+      { "year": "2016", "stateAvg": 11500 },
+      { "year": "2017", "stateAvg": 12000 },
+      { "year": "2018", "stateAvg": 13000 },
+      { "year": "2019", "stateAvg": 13500 },
+      { "year": "2020", "stateAvg": 15000 },
+      { "year": "2021", "stateAvg": 15500 }
+    ]
+  },
+  "health-maternal-child": {
+    "label": "Maharashtra Avg Births / District",
+    "yAxisId": "left",
+    "data": [
+      { "year": "2012", "stateAvg": 178000 },
+      { "year": "2013", "stateAvg": 172000 },
+      { "year": "2014", "stateAvg": 175000 },
+      { "year": "2015", "stateAvg": 185000 },
+      { "year": "2016", "stateAvg": 140000 },
+      { "year": "2017", "stateAvg": 142000 },
+      { "year": "2018", "stateAvg": 135000 },
+      { "year": "2019", "stateAvg": 162000 },
+      { "year": "2020", "stateAvg": 132000 },
+      { "year": "2021", "stateAvg": 134000 }
+    ]
+  },
+  "health-nutrition": {
+    "label": "Maharashtra Avg Normal Weight %",
+    "yAxisId": "left",
+    "data": [
+      { "year": "2012", "stateAvg": 87.5 },
+      { "year": "2013", "stateAvg": 88.0 },
+      { "year": "2014", "stateAvg": 85.5 },
+      { "year": "2015", "stateAvg": 86.2 },
+      { "year": "2016", "stateAvg": 87.8 },
+      { "year": "2017", "stateAvg": 88.0 },
+      { "year": "2018", "stateAvg": 89.2 },
+      { "year": "2019", "stateAvg": 88.5 },
+      { "year": "2020", "stateAvg": 90.0 },
+      { "year": "2021", "stateAvg": 91.2 }
+    ]
+  }
+}
